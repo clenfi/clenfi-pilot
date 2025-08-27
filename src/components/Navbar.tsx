@@ -38,26 +38,28 @@ const Navbar = () => {
   return (
     <header
       className={cn(
-        "fixed top-0 left-0 right-0 z-50 py-2 sm:py-3 md:py-4 transition-all duration-300",
+        "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         isScrolled 
-          ? "bg-white/80 backdrop-blur-md shadow-sm" 
-          : "bg-transparent"
+          ? "bg-white/70 backdrop-blur-xl shadow-lg border-b border-white/20" 
+          : "bg-white/10 backdrop-blur-md border-b border-white/10"
       )}
+      style={{ height: '70px' }}
     >
-      <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8">
+      <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8 h-full">
         <a 
           href="#" 
-          className="flex items-center space-x-2"
+          className="flex items-center space-x-2 py-1"
           onClick={(e) => {
             e.preventDefault();
             scrollToTop();
           }}
-          aria-label="Pulse Robot"
+          aria-label="CLenFi"
         >
           <img 
-            src="/logo.svg" 
-            alt="Pulse Robot Logo" 
-            className="h-7 sm:h-8" 
+            src="/CLENFI.svg" 
+            alt="CLenFi Logo" 
+            className="h-28 sm:h-32 md:h-36 lg:h-40" 
+            style={{ maxHeight: '160px', width: 'auto' }}
           />
         </a>
 
@@ -73,13 +75,13 @@ const Navbar = () => {
           >
             Home
           </a>
-          <a href="#features" className="nav-link">About</a>
-          <a href="#details" className="nav-link">Contact</a>
+          <a href="#features" className="nav-link">Features</a>
+          <a href="#details" className="nav-link">How it Works</a>
         </nav>
 
         {/* Mobile menu button - increased touch target */}
         <button 
-          className="md:hidden text-gray-700 p-3 focus:outline-none" 
+          className="md:hidden text-white p-3 focus:outline-none" 
           onClick={toggleMenu}
           aria-label={isMenuOpen ? "Close menu" : "Open menu"}
         >
@@ -89,7 +91,7 @@ const Navbar = () => {
 
       {/* Mobile Navigation - improved for better touch experience */}
       <div className={cn(
-        "fixed inset-0 z-40 bg-white flex flex-col pt-16 px-6 md:hidden transition-all duration-300 ease-in-out",
+        "fixed inset-0 z-40 bg-white/90 backdrop-blur-xl flex flex-col pt-20 px-6 md:hidden transition-all duration-300 ease-in-out",
         isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
       )}>
         <nav className="flex flex-col space-y-8 items-center mt-8">
@@ -113,7 +115,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            About
+            Features
           </a>
           <a 
             href="#details" 
@@ -123,7 +125,7 @@ const Navbar = () => {
               document.body.style.overflow = '';
             }}
           >
-            Contact
+            How it Works
           </a>
         </nav>
       </div>

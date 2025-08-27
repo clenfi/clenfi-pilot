@@ -4,12 +4,17 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import HumanoidSection from "@/components/HumanoidSection";
 import SpecsSection from "@/components/SpecsSection";
+import IntroSection from "@/components/IntroSection";
+import CreditScoring from "@/components/CreditScoring";
+import NFTCreditCards from "@/components/NFTCreditCards";
 import DetailsSection from "@/components/DetailsSection";
 import ImageShowcaseSection from "@/components/ImageShowcaseSection";
 import Features from "@/components/Features";
-import Testimonials from "@/components/Testimonials";
-import Newsletter from "@/components/Newsletter";
 import MadeByHumans from "@/components/MadeByHumans";
+import CreditScoringSystem from "@/components/CreditScoringSystem";
+import FoundersCards from "@/components/FoundersCards";
+import ProofOfTrust from "@/components/ProofOfTrust";
+import ExclusiveForDevs from "@/components/ExclusiveForDevs";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -65,11 +70,16 @@ const Index = () => {
         <Hero />
         <HumanoidSection />
         <SpecsSection />
-        <DetailsSection />
+        <IntroSection />
+        <CreditScoring />
+        <NFTCreditCards />
         <ImageShowcaseSection />
+        <DetailsSection />
         <Features />
-        <Testimonials />
-        <Newsletter />
+        <CreditScoringSystem />
+        <FoundersCards />
+        <ProofOfTrust />
+        <ExclusiveForDevs />
         <MadeByHumans />
       </main>
       <Footer />

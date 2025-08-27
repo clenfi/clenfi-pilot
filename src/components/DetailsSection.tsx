@@ -1,41 +1,7 @@
 
-import React, { useState } from "react";
-import { toast } from "sonner";
+import React from "react";
+
 const DetailsSection = () => {
-  const [formData, setFormData] = useState({
-    fullName: "",
-    email: "",
-    company: ""
-  });
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-  };
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-
-    // Simple validation
-    if (!formData.fullName || !formData.email) {
-      toast.error("Please fill in all required fields");
-      return;
-    }
-
-    // Demo form submission
-    toast.success("Request submitted successfully!");
-
-    // Reset form
-    setFormData({
-      fullName: "",
-      email: "",
-      company: ""
-    });
-  };
   return <section id="details" className="w-full bg-white py-0">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         <div className="grid grid-cols-1 gap-6 md:gap-8 lg:grid-cols-2">
@@ -48,7 +14,7 @@ const DetailsSection = () => {
             backgroundPosition: "center"
           }}>
               <h2 className="text-2xl sm:text-3xl font-display text-white font-bold">
-                The details
+                Token Rewards
               </h2>
             </div>
             
@@ -58,7 +24,7 @@ const DetailsSection = () => {
             border: "1px solid #ECECEC"
           }}>
               <h3 className="text-lg sm:text-xl font-display mb-6 sm:mb-8">
-                Precision engineering meets adaptive intelligence
+                Earn CLEN tokens and Credit Tokens (CT) through protocol participation and DeFi activities
               </h3>
 
               <div className="space-y-4 sm:space-y-6">
@@ -70,7 +36,7 @@ const DetailsSection = () => {
                   </div>
                   <div className="flex-1">
                     <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">Height:</span> 5'8"
+                      <span className="font-semibold text-base">CLEN APY:</span> Up to 45%
                     </div>
                   </div>
                 </div>
@@ -83,7 +49,7 @@ const DetailsSection = () => {
                   </div>
                   <div className="flex-1">
                     <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">Capacity:</span> 55lbs
+                      <span className="font-semibold text-base">CT Rewards:</span> Daily Airdrops
                     </div>
                   </div>
                 </div>
@@ -96,7 +62,7 @@ const DetailsSection = () => {
                   </div>
                   <div className="flex-1">
                     <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">Weight:</span> 140lbs
+                      <span className="font-semibold text-base">Staking Bonus:</span> 2.5x Multiplier
                     </div>
                   </div>
                 </div>
@@ -109,7 +75,7 @@ const DetailsSection = () => {
                   </div>
                   <div className="flex-1">
                     <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">Uptime:</span> 6hr
+                      <span className="font-semibold text-base">Governance:</span> CLEN Voting Power
                     </div>
                   </div>
                 </div>
@@ -122,7 +88,7 @@ const DetailsSection = () => {
                   </div>
                   <div className="flex-1">
                     <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">Movement:</span> 1.5M/S
+                      <span className="font-semibold text-base">CT Supply:</span> 1B Max Cap
                     </div>
                   </div>
                 </div>
@@ -139,63 +105,81 @@ const DetailsSection = () => {
             backgroundPosition: "center"
           }}>
               <div className="inline-block px-4 sm:px-6 py-2 border border-white text-white rounded-full text-xs mb-4">
-                Request a demo
+                Token Rewards Program
               </div>
               <h2 className="text-2xl sm:text-3xl font-display text-white font-bold mt-auto">
-                See it for yourself
+                Earn CLEN & CT Tokens
               </h2>
             </div>
             
-            {/* Card Content - Form */}
+            {/* Card Content - Reward System Details */}
             <div className="bg-white p-4 sm:p-8" style={{
             backgroundColor: "#FFFFFF",
             border: "1px solid #ECECEC"
           }}>
-              <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
+              <div className="space-y-6">
                 <div>
-                  <input 
-                    type="text" 
-                    name="fullName" 
-                    value={formData.fullName} 
-                    onChange={handleChange} 
-                    placeholder="Full name" 
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent" 
-                    required 
-                  />
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">CLEN Token Rewards</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">Governance Participation</p>
+                        <p className="text-xs text-gray-600">Earn CLEN tokens by voting on protocol proposals and parameter changes</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">Staking Rewards</p>
+                        <p className="text-xs text-gray-600">Lock CLEN tokens to earn up to 45% APY plus protocol fee sharing</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">Liquidity Mining</p>
+                        <p className="text-xs text-gray-600">Provide liquidity to CLEN pools and earn additional token rewards</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <div>
-                  <input 
-                    type="email" 
-                    name="email" 
-                    value={formData.email} 
-                    onChange={handleChange} 
-                    placeholder="Email address" 
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent" 
-                    required 
-                  />
+
+                <div className="border-t pt-4">
+                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Credit Token (CT) System</h4>
+                  <div className="space-y-3">
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">Daily Airdrops</p>
+                        <p className="text-xs text-gray-600">Receive CT tokens daily based on your credit score and protocol activity</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">Credit Building Rewards</p>
+                        <p className="text-xs text-gray-600">Earn bonus CT for improving your on-chain credit score through consistent DeFi behavior</p>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-3">
+                      <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
+                      <div>
+                        <p className="text-sm font-medium text-gray-700">Utility Benefits</p>
+                        <p className="text-xs text-gray-600">Use CT tokens for reduced fees, priority liquidation protection, and exclusive features</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
-                
-                <div>
-                  <input 
-                    type="text" 
-                    name="company" 
-                    value={formData.company} 
-                    onChange={handleChange} 
-                    placeholder="Company (optional)" 
-                    className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:outline-none focus:ring-2 focus:ring-pulse-500 focus:border-transparent" 
-                  />
+
+                <div className="bg-gradient-to-r from-green-50 to-lime-50 p-4 rounded-lg">
+                  <h5 className="text-sm font-semibold text-gray-800 mb-2">Dual Token Benefits</h5>
+                  <p className="text-xs text-gray-600 leading-relaxed">
+                    CLEN holders govern the protocol and earn staking rewards, while CT accumulates through credit-building activities. 
+                    Together, they create a comprehensive reward system that scales with your DeFi participation and credit reputation.
+                  </p>
                 </div>
-                
-                <div>
-                  <button 
-                    type="submit" 
-                    className="w-full px-6 py-3 bg-pulse-500 hover:bg-pulse-600 text-white font-medium rounded-full transition-colors duration-300"
-                  >
-                    Request access
-                  </button>
-                </div>
-              </form>
+              </div>
             </div>
           </div>
         </div>

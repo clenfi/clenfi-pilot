@@ -2,7 +2,11 @@
 import React, { useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { ArrowRight } from "lucide-react";
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import LottieAnimation from "./LottieAnimation";
+import AnimatedText from "./AnimatedText";
+import Aurora from "./Aurora";
+import { CometCard } from "./ui/comet-card";
 
 const Hero = () => {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -23,10 +27,8 @@ const Hero = () => {
   }, []);
 
   useEffect(() => {
-    fetch('/loop-header.lottie')
-      .then(response => response.json())
-      .then(data => setLottieData(data))
-      .catch(error => console.error("Error loading Lottie animation:", error));
+    // Set lottieData to null to disable Lottie animation and show heroimage2.jpg instead
+    setLottieData(null);
   }, []);
 
   useEffect(() => {
@@ -88,14 +90,32 @@ const Hero = () => {
   
   return (
     <section 
-      className="overflow-hidden relative bg-cover" 
+      className="overflow-hidden relative min-h-screen flex items-center" 
       id="hero" 
       style={{
-        backgroundImage: 'url("/Header-background.webp")',
-        backgroundPosition: 'center 30%', 
-        padding: isMobile ? '100px 12px 40px' : '120px 20px 60px'
+        padding: isMobile ? '20px 12px' : '40px 20px'
       }}
     >
+      {/* Aurora Background */}
+      <div className="absolute inset-0 -z-20">
+        <Aurora
+          colorStops={["#22c55e", "#84cc16", "#15803d"]}
+          blend={0.5}
+          amplitude={1.0}
+          speed={0.5}
+        />
+      </div>
+      
+      {/* Original background as overlay */}
+      <div 
+        className="absolute inset-0 -z-10 opacity-30"
+        style={{
+          backgroundImage: 'url("/Header-background.webp")',
+          backgroundPosition: 'center 30%', 
+          backgroundSize: 'cover'
+        }}
+      ></div>
+      
       <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
       
       <div className="container px-4 sm:px-6 lg:px-8" ref={containerRef}>
@@ -103,81 +123,65 @@ const Hero = () => {
           <div className="w-full lg:w-1/2">
             <div 
               className="pulse-chip mb-3 sm:mb-6 opacity-0 animate-fade-in" 
-              style={{ animationDelay: "0.1s" }}
+              style={{ animationDelay: "0.5s" }}
             >
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-pulse-500 text-white mr-2">01</span>
-              <span>Purpose</span>
+              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-600 text-white mr-2">01</span>
+              <span>Innovation</span>
             </div>
             
             <h1 
-              className="section-title text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in" 
-              style={{ animationDelay: "0.3s" }}
+              className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl leading-tight opacity-0 animate-fade-in font-bold text-black" 
+              style={{ animationDelay: "1s" }}
             >
-              Atlas: Where Code<br className="hidden sm:inline" />Meets Motion
+              CREDIT MADE EASY<br className="hidden sm:inline" />FOR WEB3
             </h1>
             
             <p 
-              style={{ animationDelay: "0.5s" }} 
-              className="section-subtitle mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-gray-950 font-normal text-base sm:text-lg text-left"
+              style={{ animationDelay: "1.5s" }} 
+              className="mt-3 sm:mt-6 mb-4 sm:mb-8 leading-relaxed opacity-0 animate-fade-in text-black font-normal text-base sm:text-lg text-left"
             >
-              The humanoid companion that learns and adapts alongside you.
+              Get instant credit without putting up collateral. CLenFi builds your trust score based on how you handle money, then gives you better rates and higher limits as you prove yourself reliable. Think of it as building credit history, but for crypto.
             </p>
             
-            <div 
-              className="flex flex-col sm:flex-row gap-4 opacity-0 animate-fade-in" 
-              style={{ animationDelay: "0.7s" }}
-            >
-              <a 
-                href="#get-access" 
-                className="flex items-center justify-center group w-full sm:w-auto text-center" 
-                style={{
-                  backgroundColor: '#FE5C02',
-                  borderRadius: '1440px',
-                  boxSizing: 'border-box',
-                  color: '#FFFFFF',
-                  cursor: 'pointer',
-                  fontSize: '14px',
-                  lineHeight: '20px',
-                  padding: '16px 24px', // Slightly reduced padding for mobile
-                  border: '1px solid white',
-                }}
-              >
-                Request Access
-                <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-1" />
-              </a>
-            </div>
           </div>
           
           <div className="w-full lg:w-1/2 relative mt-6 lg:mt-0">
             {lottieData ? (
               <div className="relative z-10 animate-fade-in" style={{ animationDelay: "0.9s" }}>
-                <LottieAnimation 
-                  animationPath={lottieData} 
+                <DotLottieReact
+                  src="https://lottie.host/26263650-4d92-4681-9a11-024ca9558e36/NXKLs4KtpC.lottie"
+                  loop
+                  autoplay
                   className="w-full h-auto max-w-lg mx-auto"
-                  loop={true}
-                  autoplay={true}
                 />
               </div>
             ) : (
-              <>
-              <div className="absolute inset-0 bg-dark-900 rounded-2xl sm:rounded-3xl -z-10 shadow-xl"></div>
-              <div className="relative transition-all duration-500 ease-out overflow-hidden rounded-2xl sm:rounded-3xl shadow-2xl">
-                <img 
-                  ref={imageRef} 
-                  src="/lovable-uploads/5663820f-6c97-4492-9210-9eaa1a8dc415.png" 
-                  alt="Atlas Robot" 
-                  className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
-                  style={{ transformStyle: 'preserve-3d' }} 
-                />
-                <div className="absolute inset-0" style={{ backgroundImage: 'url("/hero-image.jpg")', backgroundSize: 'cover', backgroundPosition: 'center', mixBlendMode: 'overlay', opacity: 0.5 }}></div>
+              <div className="max-w-sm mx-auto">
+                <CometCard 
+                  className="rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden"
+                  rotateDepth={15}
+                  translateDepth={15}
+                >
+                  <div className="relative p-2">
+                    <div className="relative overflow-hidden rounded-xl border border-gray-300 bg-white shadow-inner">
+                      <img
+                        ref={imageRef}
+                        src="/heroimage2.jpg" 
+                        alt="CLenFi Crypto Credit Companion" 
+                        className="w-full h-auto object-cover transition-transform duration-500 ease-out" 
+                        style={{ display: 'block' }}
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
+                    </div>
+                  </div>
+                </CometCard>
               </div>
-              </>
             )}
           </div>
         </div>
       </div>
       
-      <div className="hidden lg:block absolute bottom-0 left-1/4 w-64 h-64 bg-pulse-100/30 rounded-full blur-3xl -z-10 parallax" data-speed="0.05"></div>
+      <div className="hidden lg:block absolute bottom-0 left-1/4 w-64 h-64 bg-green-200/30 rounded-full blur-3xl -z-10 parallax" data-speed="0.05"></div>
     </section>
   );
 };
