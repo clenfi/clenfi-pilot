@@ -65,7 +65,7 @@ const founders: Founder[] = [
   },
   {
     name: "Sachin Baluragi",
-    role: "Frontend Developer",
+    role: "Fullstack Developer",
     creditScore: 895,
     cardNumber: "4521 **** **** 4183",
     tier: "Diamond", 
