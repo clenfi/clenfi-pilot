@@ -27,12 +27,6 @@ const Newsletter = () => {
   return <section id="newsletter" className="bg-white py-0">
       <div className="section-container opacity-0 animate-on-scroll">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-center gap-4 mb-6">
-            <div className="pulse-chip">
-              <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-500 text-white mr-2">05</span>
-              <span>Newsletter</span>
-            </div>
-          </div>
           
           <h2 className="text-5xl font-display font-bold mb-4 text-left">Subscribe to the newsletter</h2>
           <p className="text-xl text-gray-700 mb-10 text-left">

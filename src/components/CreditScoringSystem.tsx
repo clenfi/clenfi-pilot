@@ -9,10 +9,10 @@ export default function CreditScoringSystem() {
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            AI-Powered Credit Scoring
+            Smart Credit Assessment
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            CLenFi tracks your payment history and financial behavior to build your personal credit score
+            CLenFi aims to create a reputation-based system that may reward responsible financial behavior over time
           </p>
         </div>
         
@@ -34,20 +34,20 @@ export default function CreditScoringSystem() {
                 </h2>
               </div>
               <p className="mt-4 text-left text-base/6 text-emerald-100">
-                Your credit score ranges from 300-900, calculated using on-chain payment history, utilization rates, and DeFi activity patterns.
+                The protocol is designed to potentially assess reputation based on on-chain behavior and responsible usage patterns.
               </p>
               <div className="mt-6 space-y-3">
                 <div className="flex justify-between text-emerald-100">
-                  <span>Score Range:</span>
-                  <span className="font-bold">300 - 900</span>
+                  <span>Assessment:</span>
+                  <span className="font-bold">Dynamic</span>
                 </div>
                 <div className="flex justify-between text-emerald-100">
-                  <span>Update Frequency:</span>
-                  <span className="font-bold">Real-time</span>
+                  <span>Updates:</span>
+                  <span className="font-bold">As Needed</span>
                 </div>
                 <div className="flex justify-between text-emerald-100">
-                  <span>Blockchains:</span>
-                  <span className="font-bold">15+ Networks</span>
+                  <span>Privacy:</span>
+                  <span className="font-bold">Protected</span>
                 </div>
               </div>
             </div>
@@ -72,72 +72,72 @@ export default function CreditScoringSystem() {
             <h2 className="max-w-80 text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white">
               Credit Tiers
             </h2>
-            <p className="mt-4 max-w-[26rem] text-left text-base/6 text-blue-100">
-              From Bronze to Diamond, each tier unlocks better rates and higher borrowing limits.
+            <p className="mt-4 max-w-full sm:max-w-md lg:max-w-lg text-left text-base/6 text-blue-100">
+              The protocol aims to potentially offer different tiers that may provide varying benefits based on reputation.
             </p>
             <div className="mt-4 space-y-2 text-blue-100 text-sm">
               <div className="flex justify-between">
-                <span>Bronze (300-450):</span>
-                <span>24% APR</span>
+                <span>Starting Tier:</span>
+                <span>Basic</span>
               </div>
               <div className="flex justify-between">
-                <span>Diamond (751-900):</span>
-                <span>9% APR</span>
+                <span>Growth Path:</span>
+                <span>Merit-Based</span>
               </div>
             </div>
           </WobbleCard>
 
           {/* Scoring Factors */}
           <WobbleCard containerClassName="col-span-1 lg:col-span-3 bg-gradient-to-br from-violet-600 to-purple-800 min-h-[400px] lg:min-h-[300px]">
-            <div className="max-w-4xl">
+            <div className="max-w-full">
               <h2 className="max-w-sm md:max-w-lg text-left text-balance text-base md:text-xl lg:text-3xl font-semibold tracking-[-0.015em] text-white mb-6">
-                Scoring Algorithm Components
+                Assessment Considerations
               </h2>
               
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center mb-3">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-2">
-                      <span className="text-white font-bold text-sm">35%</span>
+                      <span className="text-white font-bold text-sm">📊</span>
                     </div>
                   </div>
-                  <div className="text-white font-semibold mb-1">Payment History</div>
-                  <div className="text-sm text-violet-200">On-time payments vs total payments</div>
+                  <div className="text-white font-semibold mb-1">Payment Behavior</div>
+                  <div className="text-sm text-violet-200">Consistency of repayments</div>
                 </div>
                 
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center mb-3">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-2">
-                      <span className="text-white font-bold text-sm">20%</span>
+                      <span className="text-white font-bold text-sm">💰</span>
                     </div>
                   </div>
-                  <div className="text-white font-semibold mb-1">Utilization Rate</div>
-                  <div className="text-sm text-violet-200">Credit usage vs available limit</div>
+                  <div className="text-white font-semibold mb-1">Usage Patterns</div>
+                  <div className="text-sm text-violet-200">How credit is utilized</div>
                 </div>
                 
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center mb-3">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-2">
-                      <span className="text-white font-bold text-sm">15%</span>
+                      <span className="text-white font-bold text-sm">⏰</span>
                     </div>
                   </div>
-                  <div className="text-white font-semibold mb-1">Account Age</div>
-                  <div className="text-sm text-violet-200">Length of credit history</div>
+                  <div className="text-white font-semibold mb-1">History Length</div>
+                  <div className="text-sm text-violet-200">Duration of responsible usage</div>
                 </div>
                 
                 <div className="bg-white/10 rounded-lg p-4">
                   <div className="flex items-center mb-3">
                     <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center mr-2">
-                      <span className="text-white font-bold text-sm">10%</span>
+                      <span className="text-white font-bold text-sm">🔗</span>
                     </div>
                   </div>
-                  <div className="text-white font-semibold mb-1">DeFi Diversity</div>
-                  <div className="text-sm text-violet-200">Unique tokens and protocols used</div>
+                  <div className="text-white font-semibold mb-1">DeFi Activity</div>
+                  <div className="text-sm text-violet-200">Engagement across protocols</div>
                 </div>
               </div>
               
-              <p className="mt-6 max-w-[50rem] text-left text-base/6 text-violet-200">
-                Real-time scoring with automatic adjustments based on protocol stress levels and market conditions. Zero-knowledge proofs ensure privacy while maintaining accuracy.
+              <p className="mt-6 max-w-full lg:max-w-4xl text-left text-base/6 text-violet-200">
+                The protocol is designed to maintain privacy while potentially assessing reputation. Assessment methodology is subject to development and governance decisions.
               </p>
             </div>
             

@@ -12,17 +12,13 @@ const CreditScoring = () => {
   }, []);
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-green-50 to-lime-50 relative" id="credit-scoring" ref={sectionRef}>
+    <section className="py-16 sm:py-20 bg-gradient-to-br from-gray-50 to-white relative" id="credit-scoring" ref={sectionRef}>
       {/* Background decorative elements */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-200/30 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-lime-200/40 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-lime-500/10 rounded-full blur-3xl -z-10"></div>
       
       <div className="section-container">
         <div className="text-center mb-12 opacity-0 animate-on-scroll">
-          <div className="pulse-chip mx-auto mb-6">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-600 text-white mr-2">03</span>
-            <span>Credit Scoring</span>
-          </div>
           <ScrollReveal
             baseOpacity={0.2}
             enableBlur={true}
@@ -31,17 +27,17 @@ const CreditScoring = () => {
             containerClassName="section-title mb-6"
             textClassName=""
           >
-            Revolutionary On-Chain Credit Scoring System
+Smart Credit Scores That Work Everywhere
           </ScrollReveal>
           <p className="section-subtitle mx-auto max-w-3xl">
-            Build your decentralized credit profile across multiple blockchains. Our AI-powered system analyzes your DeFi behavior to unlock better rates, higher borrowing limits, and exclusive opportunities.
+            Build your credit score by paying on time and managing money responsibly. Your score works everywhere in crypto, unlocking better rates, higher limits, and exclusive opportunities.
           </p>
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Animation Side */}
           <div className="relative opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
-            <div className="relative bg-white rounded-3xl p-8 shadow-elegant">
+            <div className="relative bg-white rounded-3xl p-8 shadow-elegant border border-gray-200">
               <div className="aspect-square max-w-md mx-auto">
                 {hasAnimation ? (
                   <DotLottieReact
@@ -52,7 +48,7 @@ const CreditScoring = () => {
                   />
                 ) : (
                   // Animated fallback credit score display
-                  <div className="w-full h-full bg-gradient-to-br from-green-100 to-lime-100 rounded-2xl flex items-center justify-center relative overflow-hidden">
+                  <div className="w-full h-full bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl flex items-center justify-center relative overflow-hidden border border-gray-200">
                     {/* Animated background circles */}
                     <div className="absolute inset-0">
                       <div className="absolute top-1/4 left-1/4 w-16 h-16 bg-green-300/30 rounded-full animate-pulse"></div>
@@ -76,7 +72,7 @@ const CreditScoring = () => {
                             stroke="currentColor"
                             strokeWidth="4"
                             fill="none"
-                            className="text-gray-200"
+                            className="text-gray-300"
                           />
                           <circle
                             cx="50"
@@ -112,17 +108,17 @@ const CreditScoring = () => {
               
               {/* Score Metrics */}
               <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-                <div className="p-4 bg-green-50 rounded-xl">
-                  <div className="text-2xl font-bold text-green-600">A+</div>
-                  <div className="text-sm text-green-700">Rating</div>
+                <div className="p-4 bg-green-100 rounded-xl border border-green-200">
+                  <div className="text-2xl font-bold text-green-700">A+</div>
+                  <div className="text-sm text-green-600">Rating</div>
                 </div>
-                <div className="p-4 bg-blue-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600">85%</div>
-                  <div className="text-sm text-blue-700">Max LTV</div>
+                <div className="p-4 bg-blue-100 rounded-xl border border-blue-200">
+                  <div className="text-2xl font-bold text-blue-700">85%</div>
+                  <div className="text-sm text-blue-600">Max LTV</div>
                 </div>
-                <div className="p-4 bg-purple-50 rounded-xl">
-                  <div className="text-2xl font-bold text-purple-600">2.5x</div>
-                  <div className="text-sm text-purple-700">Rewards</div>
+                <div className="p-4 bg-purple-100 rounded-xl border border-purple-200">
+                  <div className="text-2xl font-bold text-purple-700">2.5x</div>
+                  <div className="text-sm text-purple-600">Rewards</div>
                 </div>
               </div>
             </div>
@@ -131,9 +127,9 @@ const CreditScoring = () => {
           {/* Content Side */}
           <div className="opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
             <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M9 12l2 2 4-4"/>
                     <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
                     <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
@@ -142,30 +138,30 @@ const CreditScoring = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Payment History Tracking</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Payment History Tracking</h3>
                   <p className="text-gray-600">
                     We track how well you pay back loans and manage your credit. Every on-time payment improves your score and unlocks better rates.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Dynamic Risk Assessment</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Smart Risk Evaluation</h3>
                   <p className="text-gray-600">
-                    Real-time risk evaluation adjusts your credit score based on market conditions, portfolio composition, and collateral health across all positions.
+                    Your credit score updates automatically based on how the crypto market is doing and how well you're managing your investments and payments.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                     <circle cx="9" cy="7" r="4"/>
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
@@ -173,16 +169,16 @@ const CreditScoring = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Reputation-Based Benefits</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Better Scores = Better Deals</h3>
                   <p className="text-gray-600">
-                    Higher credit scores unlock premium benefits: reduced fees, increased borrowing limits, priority liquidation protection, and exclusive yield opportunities.
+                    Higher credit scores get you amazing perks: lower fees, higher credit limits, protection during market crashes, and access to exclusive investment opportunities.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-5 h-5 sm:w-6 sm:h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
                     <line x1="16" y1="2" x2="16" y2="6"/>
                     <line x1="8" y1="2" x2="8" y2="6"/>
@@ -190,9 +186,9 @@ const CreditScoring = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Continuous Improvement</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Always Getting Better</h3>
                   <p className="text-gray-600">
-                    Your credit score evolves with every transaction. Consistent lending, timely repayments, and diversified DeFi participation boost your rating over time.
+                    Your credit score improves with every payment you make on time. Stay consistent with payments and try different crypto activities to boost your rating.
                   </p>
                 </div>
               </div>
@@ -211,23 +207,23 @@ const CreditScoring = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
             {/* Starter Tier */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 relative">
+            <div className="bg-gradient-to-br from-gray-100 to-gray-50 rounded-2xl p-6 border-2 border-gray-300 hover:border-gray-400 transition-all duration-300 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <div className="bg-gray-500 text-white px-4 py-1 rounded-full text-sm font-semibold">STARTER</div>
+                <div className="bg-gray-600 text-white px-4 py-1 rounded-full text-sm font-semibold">STARTER</div>
               </div>
               <div className="text-center pt-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                <div className="w-20 h-20 bg-gradient-to-br from-gray-500 to-gray-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
                   <span className="text-3xl font-bold text-white">C</span>
                 </div>
                 <h4 className="text-xl font-bold mb-2 text-gray-900">300-579</h4>
                 <div className="space-y-3 mb-6">
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-gray-700">60%</div>
-                    <div className="text-sm text-gray-500">Max Credit</div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="text-2xl font-bold text-gray-900">60%</div>
+                    <div className="text-sm text-gray-600">Max Credit</div>
                   </div>
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-gray-700">18%</div>
-                    <div className="text-sm text-gray-500">APR Rate</div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="text-2xl font-bold text-gray-900">18%</div>
+                    <div className="text-sm text-gray-600">APR Rate</div>
                   </div>
                 </div>
                 <div className="text-sm text-gray-600">
@@ -238,7 +234,7 @@ const CreditScoring = () => {
             </div>
 
             {/* Good Tier */}
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-100 rounded-2xl p-6 border-2 border-yellow-200 hover:border-yellow-300 transition-all duration-300 relative">
+            <div className="bg-gradient-to-br from-yellow-100 to-orange-100 rounded-2xl p-6 border-2 border-yellow-400 hover:border-yellow-500 transition-all duration-300 relative">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <div className="bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold">GOOD</div>
               </div>
@@ -248,13 +244,13 @@ const CreditScoring = () => {
                 </div>
                 <h4 className="text-xl font-bold mb-2 text-gray-900">580-669</h4>
                 <div className="space-y-3 mb-6">
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-yellow-600">70%</div>
-                    <div className="text-sm text-gray-500">Max Credit</div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="text-2xl font-bold text-yellow-700">70%</div>
+                    <div className="text-sm text-gray-600">Max Credit</div>
                   </div>
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-yellow-600">15%</div>
-                    <div className="text-sm text-gray-500">APR Rate</div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="text-2xl font-bold text-yellow-700">15%</div>
+                    <div className="text-sm text-gray-600">APR Rate</div>
                   </div>
                 </div>
                 <div className="text-sm text-gray-600">
@@ -265,7 +261,7 @@ const CreditScoring = () => {
             </div>
 
             {/* Excellent Tier */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 border-2 border-green-300 hover:border-green-400 transition-all duration-300 relative transform hover:scale-105 shadow-lg">
+            <div className="bg-gradient-to-br from-green-100 to-emerald-100 rounded-2xl p-6 border-2 border-green-500 hover:border-green-600 transition-all duration-300 relative transform hover:scale-105 shadow-lg">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <div className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">EXCELLENT</div>
               </div>
@@ -275,13 +271,13 @@ const CreditScoring = () => {
                 </div>
                 <h4 className="text-xl font-bold mb-2 text-gray-900">670-799</h4>
                 <div className="space-y-3 mb-6">
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-green-600">80%</div>
-                    <div className="text-sm text-gray-500">Max Credit</div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="text-2xl font-bold text-green-700">80%</div>
+                    <div className="text-sm text-gray-600">Max Credit</div>
                   </div>
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-green-600">12%</div>
-                    <div className="text-sm text-gray-500">APR Rate</div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="text-2xl font-bold text-green-700">12%</div>
+                    <div className="text-sm text-gray-600">APR Rate</div>
                   </div>
                 </div>
                 <div className="text-sm text-gray-600">
@@ -292,7 +288,7 @@ const CreditScoring = () => {
             </div>
 
             {/* Elite Tier */}
-            <div className="bg-gradient-to-br from-purple-50 to-indigo-100 rounded-2xl p-6 border-2 border-purple-300 hover:border-purple-400 transition-all duration-300 relative transform hover:scale-105 shadow-xl">
+            <div className="bg-gradient-to-br from-purple-100 to-indigo-100 rounded-2xl p-6 border-2 border-purple-500 hover:border-purple-600 transition-all duration-300 relative transform hover:scale-105 shadow-xl">
               <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
                 <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-1 rounded-full text-sm font-semibold">ELITE</div>
               </div>
@@ -302,13 +298,13 @@ const CreditScoring = () => {
                 </div>
                 <h4 className="text-xl font-bold mb-2 text-gray-900">800+</h4>
                 <div className="space-y-3 mb-6">
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-purple-600">85%</div>
-                    <div className="text-sm text-gray-500">Max Credit</div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="text-2xl font-bold text-purple-700">85%</div>
+                    <div className="text-sm text-gray-600">Max Credit</div>
                   </div>
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-purple-600">9%</div>
-                    <div className="text-sm text-gray-500">APR Rate</div>
+                  <div className="bg-white rounded-lg p-3 shadow-sm border border-gray-200">
+                    <div className="text-2xl font-bold text-purple-700">9%</div>
+                    <div className="text-sm text-gray-600">APR Rate</div>
                   </div>
                 </div>
                 <div className="text-sm text-gray-600">
@@ -321,7 +317,7 @@ const CreditScoring = () => {
           
           {/* Call to Action */}
           <div className="text-center mt-12">
-            <div className="inline-flex items-center gap-2 bg-green-100 px-6 py-3 rounded-full">
+            <div className="inline-flex items-center gap-2 bg-green-100 px-6 py-3 rounded-full border border-green-200">
               <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
               <span className="text-green-700 font-semibold">Start building your credit score today</span>
             </div>

@@ -20,75 +20,75 @@ const DetailsSection = () => {
             
             {/* Card Content */}
             <div className="bg-white p-4 sm:p-8" style={{
-            backgroundColor: "#FFFFFF",
-            border: "1px solid #ECECEC"
+            backgroundColor: "#ffffff",
+            border: "1px solid #e5e7eb"
           }}>
-              <h3 className="text-lg sm:text-xl font-display mb-6 sm:mb-8">
+              <h3 className="text-lg sm:text-xl font-display mb-6 sm:mb-8 text-gray-900">
                 Earn CLEN tokens and Credit Tokens (CT) through protocol participation and DeFi activities
               </h3>
 
               <div className="space-y-4 sm:space-y-6">
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-dark-900 flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1 flex-shrink-0">
                     <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 5L5 9L13 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">CLEN APY:</span> Up to 45%
+                    <div className="p-3 rounded-lg bg-gray-50 backdrop-blur-sm border border-gray-200">
+                      <span className="font-semibold text-base text-gray-900">CLEN APY:</span> <span className="text-gray-600">Up to 45%</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-dark-900 flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1 flex-shrink-0">
                     <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 5L5 9L13 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">CT Rewards:</span> Daily Airdrops
+                    <div className="p-3 rounded-lg bg-gray-50 backdrop-blur-sm border border-gray-200">
+                      <span className="font-semibold text-base text-gray-900">CT Rewards:</span> <span className="text-gray-600">Daily Airdrops</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-dark-900 flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1 flex-shrink-0">
                     <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 5L5 9L13 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">Staking Bonus:</span> 2.5x Multiplier
+                    <div className="p-3 rounded-lg bg-gray-50 backdrop-blur-sm border border-gray-200">
+                      <span className="font-semibold text-base text-gray-900">Staking Bonus:</span> <span className="text-gray-600">2.5x Multiplier</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-dark-900 flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1 flex-shrink-0">
                     <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 5L5 9L13 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">Governance:</span> CLEN Voting Power
+                    <div className="p-3 rounded-lg bg-gray-50 backdrop-blur-sm border border-gray-200">
+                      <span className="font-semibold text-base text-gray-900">Governance:</span> <span className="text-gray-600">CLEN Voting Power</span>
                     </div>
                   </div>
                 </div>
 
                 <div className="flex items-start gap-3">
-                  <div className="w-6 h-6 rounded-full bg-dark-900 flex items-center justify-center mt-1 flex-shrink-0">
+                  <div className="w-6 h-6 rounded-full bg-green-500 flex items-center justify-center mt-1 flex-shrink-0">
                     <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                       <path d="M1 5L5 9L13 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                     </svg>
                   </div>
                   <div className="flex-1">
-                    <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">CT Supply:</span> 1B Max Cap
+                    <div className="p-3 rounded-lg bg-gray-50 backdrop-blur-sm border border-gray-200">
+                      <span className="font-semibold text-base text-gray-900">CT Supply:</span> <span className="text-gray-600">1B Max Cap</span>
                     </div>
                   </div>
                 </div>
@@ -114,31 +114,31 @@ const DetailsSection = () => {
             
             {/* Card Content - Reward System Details */}
             <div className="bg-white p-4 sm:p-8" style={{
-            backgroundColor: "#FFFFFF",
-            border: "1px solid #ECECEC"
+            backgroundColor: "#ffffff",
+            border: "1px solid #e5e7eb"
           }}>
               <div className="space-y-6">
                 <div>
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">CLEN Token Rewards</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">CLEN Token Rewards</h4>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Governance Participation</p>
+                        <p className="text-sm font-medium text-gray-900">Governance Participation</p>
                         <p className="text-xs text-gray-600">Earn CLEN tokens by voting on protocol proposals and parameter changes</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Staking Rewards</p>
+                        <p className="text-sm font-medium text-gray-900">Staking Rewards</p>
                         <p className="text-xs text-gray-600">Lock CLEN tokens to earn up to 45% APY plus protocol fee sharing</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-green-500 mt-2 flex-shrink-0"></div>
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Liquidity Mining</p>
+                        <p className="text-sm font-medium text-gray-900">Liquidity Mining</p>
                         <p className="text-xs text-gray-600">Provide liquidity to CLEN pools and earn additional token rewards</p>
                       </div>
                     </div>
@@ -146,34 +146,34 @@ const DetailsSection = () => {
                 </div>
 
                 <div className="border-t pt-4">
-                  <h4 className="text-lg font-semibold text-gray-800 mb-3">Credit Token (CT) System</h4>
+                  <h4 className="text-lg font-semibold text-gray-900 mb-3">Credit Token (CT) System</h4>
                   <div className="space-y-3">
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Daily Airdrops</p>
+                        <p className="text-sm font-medium text-gray-900">Daily Airdrops</p>
                         <p className="text-xs text-gray-600">Receive CT tokens daily based on your credit score and protocol activity</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Credit Building Rewards</p>
+                        <p className="text-sm font-medium text-gray-900">Credit Building Rewards</p>
                         <p className="text-xs text-gray-600">Earn bonus CT for improving your on-chain credit score through consistent DeFi behavior</p>
                       </div>
                     </div>
                     <div className="flex items-start gap-3">
                       <div className="w-2 h-2 rounded-full bg-purple-500 mt-2 flex-shrink-0"></div>
                       <div>
-                        <p className="text-sm font-medium text-gray-700">Utility Benefits</p>
+                        <p className="text-sm font-medium text-gray-900">Utility Benefits</p>
                         <p className="text-xs text-gray-600">Use CT tokens for reduced fees, priority liquidation protection, and exclusive features</p>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="bg-gradient-to-r from-green-50 to-lime-50 p-4 rounded-lg">
-                  <h5 className="text-sm font-semibold text-gray-800 mb-2">Dual Token Benefits</h5>
+                <div className="bg-gradient-to-r from-green-50 to-lime-50 p-4 rounded-lg border border-green-200">
+                  <h5 className="text-sm font-semibold text-gray-900 mb-2">Dual Token Benefits</h5>
                   <p className="text-xs text-gray-600 leading-relaxed">
                     CLEN holders govern the protocol and earn staking rewards, while CT accumulates through credit-building activities. 
                     Together, they create a comprehensive reward system that scales with your DeFi participation and credit reputation.

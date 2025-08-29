@@ -9,12 +9,12 @@ const HumanoidSection = () => {
   const ticking = useRef(false);
   const lastScrollY = useRef(0);
 
-  // More responsive timing function with shorter duration
+  // Clean and minimal animation timing
   const cardStyle = {
     height: '60vh',
     maxHeight: '600px',
     borderRadius: '20px',
-    transition: 'transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1)',
+    transition: 'all 0.6s ease-out',
     willChange: 'transform, opacity'
   };
 
@@ -50,10 +50,10 @@ const HumanoidSection = () => {
             progress = Math.min(1, Math.max(0, Math.abs(sectionRect.top) / totalScrollDistance));
           }
           
-          // Determine which card should be visible based on progress
-          if (progress >= 0.66) {
+          // Determine which card should be visible based on progress - smoother transitions
+          if (progress >= 0.7) {
             setActiveCardIndex(2);
-          } else if (progress >= 0.33) {
+          } else if (progress >= 0.35) {
             setActiveCardIndex(1);
           } else {
             setActiveCardIndex(0);
@@ -92,19 +92,19 @@ const HumanoidSection = () => {
         <div className="container px-6 lg:px-8 mx-auto h-full flex flex-col">
           <div className="mb-2 md:mb-3">
             
-            <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2">
+            <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2 text-gray-900">
               How CLenFi Makes Credit Simple
             </h2>
           </div>
           
-          <div ref={cardsContainerRef} className="relative flex-1 perspective-1000">
+          <div ref={cardsContainerRef} className="relative flex-1" style={{ perspective: '1000px' }}>
             {/* First Card */}
             <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isFirstCardVisible ? 'animate-card-enter' : ''}`} 
+              className="absolute inset-0 overflow-hidden shadow-lg" 
               style={{
                 ...cardStyle,
                 zIndex: 10,
-                transform: `translateY(${isFirstCardVisible ? '90px' : '200px'}) scale(0.9)`,
+                transform: `translateY(${isFirstCardVisible ? '80px' : '120px'}) scale(${isFirstCardVisible ? '0.95' : '0.9'})`,
                 opacity: isFirstCardVisible ? 0.9 : 0
               }}
             >
@@ -124,75 +124,50 @@ const HumanoidSection = () => {
                 </div>
               </div>
               
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center justify-center">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-6xl items-center">
-                  <div className="max-w-lg mx-auto lg:mx-0 lg:ml-8">
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                      PAN-Based Zero-Knowledge Verification
-                    </h3>
-                    <p className="text-white/80 text-lg">
-                      Revolutionary identity verification using ZK-proofs of PAN card data, enabling credit assessment without exposing personal information to third parties.
-                    </p>
-                  </div>
-                  
-                  {/* Identity Verification Illustration */}
-                  <div className="flex justify-center lg:justify-start items-center">
-                    <div className="relative ml-0 lg:ml-12">
-                      {/* Main Identity Card - Landscape */}
-                      <div className="w-96 h-56 bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-lg rounded-3xl border-2 border-green-400/30 shadow-2xl p-8 relative overflow-hidden">
-                        {/* Background pattern */}
-                        <div className="absolute inset-0 opacity-10">
-                          <svg className="w-full h-full" viewBox="0 0 100 100">
-                            <defs>
-                              <pattern id="identityGrid" width="8" height="8" patternUnits="userSpaceOnUse">
-                                <circle cx="4" cy="4" r="1" fill="rgb(34, 197, 94)" opacity="0.3"/>
-                              </pattern>
-                            </defs>
-                            <rect width="100" height="100" fill="url(#identityGrid)" />
-                          </svg>
-                        </div>
-                        
-                        {/* Card Header */}
-                        <div className="flex justify-between items-start mb-4 relative z-10">
-                          <div>
-                            <div className="text-white font-bold text-lg">Secure Identity</div>
-                            <div className="text-green-300 text-sm">Privacy Protected</div>
+              <div className="relative z-10 p-4 sm:p-6 md:p-8 h-full flex items-center">
+                <div className="container mx-auto max-w-6xl">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    {/* Text Content */}
+                    <div className="text-center lg:text-left lg:pr-8">
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+                        PAN-Based Zero-Knowledge Verification
+                      </h3>
+                      <p className="text-white/80 text-base sm:text-lg leading-relaxed">
+                        Revolutionary identity verification using ZK-proofs of PAN card data, enabling credit assessment without exposing personal information to third parties.
+                      </p>
+                    </div>
+                    
+                    {/* Identity Verification Illustration */}
+                    <div className="flex justify-center lg:justify-end">
+                      <div className="w-full max-w-sm">
+                        {/* Main Identity Card - Clean & Minimal */}
+                        <div className="w-full h-40 sm:h-48 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-4 sm:p-6 relative">
+                          {/* Card Header */}
+                          <div className="flex justify-between items-start mb-4 sm:mb-6">
+                            <div className="flex-1">
+                              <div className="text-white font-semibold text-base sm:text-lg">Identity Verified</div>
+                              <div className="text-white/70 text-xs sm:text-sm">Zero-Knowledge Proof</div>
+                            </div>
+                            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                              </svg>
+                            </div>
                           </div>
-                          <div className="w-12 h-12 bg-green-500/30 rounded-full flex items-center justify-center">
-                            <svg className="w-6 h-6 text-green-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path>
+                          
+                          {/* Status Indicator */}
+                          <div className="flex items-center space-x-2 mt-auto">
+                            <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                            <span className="text-white/90 text-xs sm:text-sm">PAN Verified • Private</span>
+                          </div>
+                          
+                          {/* Simple Check Badge */}
+                          <div className="absolute -top-2 -right-2 w-6 h-6 sm:w-8 sm:h-8 bg-emerald-500 rounded-full flex items-center justify-center">
+                            <svg className="w-3 h-3 sm:w-4 sm:h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
+                              <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
                             </svg>
                           </div>
                         </div>
-                        
-                        {/* Verification Status */}
-                        <div className="flex items-center space-x-4 relative z-10">
-                          <div className="flex-1">
-                            <div className="flex items-center space-x-2 mb-2">
-                              <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                              <span className="text-white/90 text-sm">PAN Verified</span>
-                            </div>
-                            <div className="text-green-300 text-xs">Zero-Knowledge Proof</div>
-                          </div>
-                          <div className="text-right">
-                            <div className="text-white/90 text-sm font-semibold">ID: ****</div>
-                            <div className="text-green-300 text-xs">Private</div>
-                          </div>
-                        </div>
-                        
-                        {/* Verification Badge */}
-                        <div className="absolute -top-4 -right-4 w-12 h-12 bg-green-500 rounded-full border-4 border-green-400 flex items-center justify-center shadow-lg animate-bounce">
-                          <svg className="w-6 h-6 text-white" fill="currentColor" viewBox="0 0 20 20">
-                            <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd"></path>
-                          </svg>
-                        </div>
-                      </div>
-                      
-                      {/* Privacy Protection Indicators */}
-                      <div className="absolute inset-0 pointer-events-none">
-                        <div className="absolute top-8 -left-4 w-4 h-4 bg-green-400 rounded-full opacity-70 animate-ping" style={{animationDelay: '0s'}}></div>
-                        <div className="absolute top-16 -right-6 w-3 h-3 bg-green-300 rounded-full opacity-70 animate-ping" style={{animationDelay: '0.7s'}}></div>
-                        <div className="absolute bottom-12 -left-3 w-2 h-2 bg-green-500 rounded-full opacity-70 animate-ping" style={{animationDelay: '1.4s'}}></div>
                       </div>
                     </div>
                   </div>
@@ -202,11 +177,11 @@ const HumanoidSection = () => {
             
             {/* Second Card */}
             <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isSecondCardVisible ? 'animate-card-enter' : ''}`} 
+              className="absolute inset-0 overflow-hidden shadow-lg" 
               style={{
                 ...cardStyle,
                 zIndex: 20,
-                transform: `translateY(${isSecondCardVisible ? activeCardIndex === 1 ? '55px' : '45px' : '200px'}) scale(0.95)`,
+                transform: `translateY(${isSecondCardVisible ? activeCardIndex === 1 ? '40px' : '30px' : '120px'}) scale(${isSecondCardVisible ? '0.97' : '0.92'})`,
                 opacity: isSecondCardVisible ? 1 : 0,
                 pointerEvents: isSecondCardVisible ? 'auto' : 'none'
               }}
@@ -227,93 +202,65 @@ const HumanoidSection = () => {
                 </div>
               </div>
               
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center justify-center">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-6xl items-center">
-                  <div className="max-w-lg mx-auto lg:mx-0 lg:ml-8">
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                      Dynamic Credit Scoring (300-900)
-                    </h3>
-                    <p className="text-white/80 text-lg">
-                      Traditional credit scoring system adapted for DeFi, providing personalized interest rates and credit limits based on verified financial behavior.
-                    </p>
-                  </div>
-                  
-                  {/* Credit Score Illustration */}
-                  <div className="flex justify-center lg:justify-start items-center">
-                    <div className="relative ml-0 lg:ml-12">
-                      {/* Credit Score Dashboard - Landscape */}
-                      <div className="w-96 h-56 bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-lg rounded-3xl border-2 border-green-400/30 shadow-2xl p-8 relative overflow-hidden">
-                        {/* Background pattern */}
-                        <div className="absolute inset-0 opacity-5">
-                          <svg className="w-full h-full" viewBox="0 0 100 100">
-                            <defs>
-                              <pattern id="scoreGrid" width="10" height="10" patternUnits="userSpaceOnUse">
-                                <rect width="10" height="10" fill="none" stroke="rgb(34, 197, 94)" strokeWidth="0.5" opacity="0.3"/>
-                              </pattern>
-                            </defs>
-                            <rect width="100" height="100" fill="url(#scoreGrid)" />
-                          </svg>
-                        </div>
-                        
-                        {/* Main Content */}
-                        <div className="flex items-center justify-between h-full relative z-10">
-                          {/* Credit Score Circle */}
-                          <div className="relative">
-                            <div className="w-32 h-32 relative">
-                              <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
-                                {/* Background circle */}
-                                <circle cx="50" cy="50" r="40" stroke="rgb(255,255,255)" strokeOpacity="0.2" strokeWidth="6" fill="transparent" />
-                                {/* Progress circle */}
-                                <circle 
-                                  cx="50" 
-                                  cy="50" 
-                                  r="40" 
-                                  stroke="rgb(34, 197, 94)" 
-                                  strokeWidth="6" 
-                                  fill="transparent"
-                                  strokeLinecap="round"
-                                  strokeDasharray={`${(750-300)/(900-300) * 251}, 251`}
-                                  className="transition-all duration-2000 ease-out drop-shadow-lg"
-                                />
-                              </svg>
-                              <div className="absolute inset-0 flex flex-col items-center justify-center">
-                                <div className="text-4xl font-bold text-white">750</div>
-                                <div className="text-sm text-green-300 font-semibold">Excellent</div>
+              <div className="relative z-10 p-4 sm:p-6 md:p-8 h-full flex items-center">
+                <div className="container mx-auto max-w-6xl">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    {/* Text Content */}
+                    <div className="text-center lg:text-left lg:pr-8">
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+                        Reputation Building System
+                      </h3>
+                      <p className="text-white/80 text-base sm:text-lg leading-relaxed">
+                        On-chain credit scores that may improve with responsible usage. Build your reputation over time to potentially unlock better rates and higher limits.
+                      </p>
+                    </div>
+                    
+                    {/* Credit Score Illustration */}
+                    <div className="flex justify-center lg:justify-end">
+                      <div className="w-full max-w-sm">
+                        {/* Credit Score Dashboard - Clean & Minimal */}
+                        <div className="w-full h-40 sm:h-48 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-4 sm:p-6 relative">
+                          {/* Main Content */}
+                          <div className="flex items-center justify-between h-full">
+                            {/* Credit Score Circle */}
+                            <div className="relative flex-shrink-0">
+                              <div className="w-20 h-20 sm:w-24 sm:h-24 relative">
+                                <svg className="w-full h-full transform -rotate-90" viewBox="0 0 100 100">
+                                  {/* Background circle */}
+                                  <circle cx="50" cy="50" r="35" stroke="rgb(255,255,255)" strokeOpacity="0.2" strokeWidth="4" fill="transparent" />
+                                  {/* Progress circle */}
+                                  <circle 
+                                    cx="50" 
+                                    cy="50" 
+                                    r="35" 
+                                    stroke="rgb(16, 185, 129)" 
+                                    strokeWidth="4" 
+                                    fill="transparent"
+                                    strokeLinecap="round"
+                                    strokeDasharray={`${(750-300)/(900-300) * 220}, 220`}
+                                    className="transition-all duration-2000 ease-out"
+                                  />
+                                </svg>
+                                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                                  <div className="text-xl sm:text-2xl font-bold text-white">⭐</div>
+                                  <div className="text-xs text-white/70">Building</div>
+                                </div>
                               </div>
                             </div>
                             
-                            {/* Score Range Indicator */}
-                            <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 flex space-x-2">
-                              <div className="w-4 h-2 bg-red-400 rounded-full opacity-40"></div>
-                              <div className="w-4 h-2 bg-yellow-400 rounded-full opacity-40"></div>
-                              <div className="w-4 h-2 bg-green-400 rounded-full animate-pulse shadow-lg"></div>
-                            </div>
-                          </div>
-                          
-                          {/* Benefits Panel */}
-                          <div className="space-y-4">
-                            <div className="bg-green-500/30 backdrop-blur-sm rounded-2xl p-4 border border-green-400/30">
-                              <div className="text-white font-bold text-xl">12%</div>
-                              <div className="text-green-300 text-sm">Premium APR</div>
-                            </div>
-                            <div className="bg-green-500/30 backdrop-blur-sm rounded-2xl p-4 border border-green-400/30">
-                              <div className="text-white font-bold text-xl">$25K</div>
-                              <div className="text-green-300 text-sm">Credit Limit</div>
+                            {/* Benefits Panel */}
+                            <div className="space-y-2 sm:space-y-3 flex-1 ml-4 sm:ml-6">
+                              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-white/10">
+                                <div className="text-white font-semibold text-base sm:text-lg">Better Rates</div>
+                                <div className="text-white/70 text-xs">Potential Benefit</div>
+                              </div>
+                              <div className="bg-white/10 backdrop-blur-sm rounded-lg p-2 sm:p-3 border border-white/10">
+                                <div className="text-white font-semibold text-base sm:text-lg">Higher Limits</div>
+                                <div className="text-white/70 text-xs">Over Time</div>
+                              </div>
                             </div>
                           </div>
                         </div>
-                        
-                        {/* Progress indicator */}
-                        <div className="absolute top-4 right-4 flex items-center space-x-2">
-                          <div className="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
-                          <span className="text-green-300 text-xs font-semibold">Building Credit</span>
-                        </div>
-                      </div>
-                      
-                      {/* Floating Achievement Badges */}
-                      <div className="absolute -top-6 -left-6 bg-green-500 text-white rounded-full w-16 h-16 flex flex-col items-center justify-center text-xs font-bold shadow-lg animate-bounce">
-                        <div className="text-sm">+50</div>
-                        <div>Points</div>
                       </div>
                     </div>
                   </div>
@@ -323,11 +270,11 @@ const HumanoidSection = () => {
             
             {/* Third Card */}
             <div 
-              className={`absolute inset-0 overflow-hidden shadow-xl ${isThirdCardVisible ? 'animate-card-enter' : ''}`} 
+              className="absolute inset-0 overflow-hidden shadow-lg" 
               style={{
                 ...cardStyle,
                 zIndex: 30,
-                transform: `translateY(${isThirdCardVisible ? activeCardIndex === 2 ? '15px' : '0' : '200px'}) scale(1)`,
+                transform: `translateY(${isThirdCardVisible ? activeCardIndex === 2 ? '0px' : '-5px' : '120px'}) scale(${isThirdCardVisible ? '1' : '0.94'})`,
                 opacity: isThirdCardVisible ? 1 : 0,
                 pointerEvents: isThirdCardVisible ? 'auto' : 'none'
               }}
@@ -348,45 +295,32 @@ const HumanoidSection = () => {
                 </div>
               </div>
               
-              <div className="relative z-10 p-5 sm:p-6 md:p-8 h-full flex items-center justify-center">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full max-w-6xl items-center">
-                  <div className="max-w-lg mx-auto lg:mx-0 lg:ml-8">
-                    <h3 className="text-2xl sm:text-3xl md:text-4xl font-display text-white font-bold leading-tight mb-4">
-                      NFT-Based <span className="text-green-400">Credit Lines</span>
-                    </h3>
-                    <p className="text-white/80 text-lg">
-                      Unique NFT-based credit lines eliminate over-collateralization. Borrow up to your credit limit with minimal collateral requirements.
-                    </p>
-                  </div>
-                  
-                  {/* Credit NFT Illustration */}
-                  <div className="flex justify-center lg:justify-start items-center">
-                    <div className="relative ml-0 lg:ml-12">
-                      {/* Credit Line Interface - Landscape */}
-                      <div className="w-96 h-56 bg-gradient-to-r from-green-500/20 to-green-600/20 backdrop-blur-lg rounded-3xl border-2 border-green-400/30 shadow-2xl p-8 relative overflow-hidden">
-                        {/* Background pattern */}
-                        <div className="absolute inset-0 opacity-5">
-                          <svg className="w-full h-full" viewBox="0 0 100 100">
-                            <defs>
-                              <pattern id="creditGrid" width="12" height="12" patternUnits="userSpaceOnUse">
-                                <path d="M 12 0 L 0 0 0 12" fill="none" stroke="rgb(34, 197, 94)" strokeWidth="0.5"/>
-                                <circle cx="6" cy="6" r="1" fill="rgb(34, 197, 94)" opacity="0.3"/>
-                              </pattern>
-                            </defs>
-                            <rect width="100" height="100" fill="url(#creditGrid)" />
-                          </svg>
-                        </div>
-                        
-                        {/* Main Content */}
-                        <div className="relative z-10 h-full flex flex-col justify-between">
+              <div className="relative z-10 p-4 sm:p-6 md:p-8 h-full flex items-center">
+                <div className="container mx-auto max-w-6xl">
+                  <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                    {/* Text Content */}
+                    <div className="text-center lg:text-left lg:pr-8">
+                      <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white leading-tight mb-4">
+                        NFT-Based <span className="text-emerald-400">Credit Lines</span>
+                      </h3>
+                      <p className="text-white/80 text-base sm:text-lg leading-relaxed">
+                        Unique NFT-based credit lines eliminate over-collateralization. Borrow up to your credit limit with minimal collateral requirements.
+                      </p>
+                    </div>
+                    
+                    {/* Credit NFT Illustration */}
+                    <div className="flex justify-center lg:justify-end">
+                      <div className="w-full max-w-sm">
+                        {/* Credit Line Interface - Clean & Minimal */}
+                        <div className="w-full h-40 sm:h-48 bg-white/10 backdrop-blur-sm rounded-2xl border border-white/20 shadow-lg p-4 sm:p-6 relative">
                           {/* Header */}
-                          <div className="flex items-center justify-between">
-                            <div>
-                              <div className="text-white font-bold text-xl">CLenFi Credit</div>
-                              <div className="text-green-300 text-sm">NFT-Based Credit Line</div>
+                          <div className="flex items-center justify-between mb-4 sm:mb-6">
+                            <div className="flex-1">
+                              <div className="text-white font-semibold text-base sm:text-lg">Credit Line</div>
+                              <div className="text-white/70 text-xs sm:text-sm">NFT-Based</div>
                             </div>
-                            <div className="w-16 h-12 bg-green-500/30 rounded-2xl flex items-center justify-center border border-green-400/30">
-                              <svg className="w-8 h-8 text-green-300" fill="currentColor" viewBox="0 0 20 20">
+                            <div className="w-8 h-8 sm:w-10 sm:h-10 bg-white/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                              <svg className="w-4 h-4 sm:w-5 sm:h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
                                 <path d="M4 4a2 2 0 00-2 2v1h16V6a2 2 0 00-2-2H4z"></path>
                                 <path fillRule="evenodd" d="M18 9H2v5a2 2 0 002 2h12a2 2 0 002-2V9zM4 13a1 1 0 011-1h1a1 1 0 110 2H5a1 1 0 01-1-1zm5-1a1 1 0 100 2h1a1 1 0 100-2H9z" clipRule="evenodd"></path>
                               </svg>
@@ -394,48 +328,21 @@ const HumanoidSection = () => {
                           </div>
                           
                           {/* Credit Details */}
-                          <div className="grid grid-cols-2 gap-6">
-                            <div className="space-y-2">
-                              <div className="text-white/80 text-sm">Available Credit</div>
-                              <div className="text-white text-3xl font-bold">$10,000</div>
-                              <div className="flex items-center space-x-2">
-                                <div className="w-3 h-3 bg-green-400 rounded-full animate-pulse"></div>
-                                <span className="text-green-300 text-sm">Ready to Use</span>
-                              </div>
+                          <div className="grid grid-cols-2 gap-3 sm:gap-4 mb-3 sm:mb-4">
+                            <div>
+                              <div className="text-white/70 text-xs sm:text-sm mb-1">Potential Credit</div>
+                              <div className="text-white text-lg sm:text-2xl font-bold">Dynamic</div>
                             </div>
-                            
-                            <div className="space-y-2">
-                              <div className="text-white/80 text-sm">Collateral Required</div>
-                              <div className="text-green-400 text-3xl font-bold">$0</div>
-                              <div className="text-green-300 text-sm">Trust-Based</div>
+                            <div>
+                              <div className="text-white/70 text-xs sm:text-sm mb-1">Collateral</div>
+                              <div className="text-emerald-400 text-lg sm:text-2xl font-bold">Minimal</div>
                             </div>
                           </div>
                           
-                          {/* NFT ID */}
-                          <div className="flex items-center justify-between">
-                            <div className="text-green-300 text-sm">#NFT001 • Credit Line</div>
-                            <div className="flex space-x-2">
-                              <div className="w-2 h-2 bg-green-400 rounded-full animate-ping"></div>
-                              <div className="w-2 h-2 bg-green-400 rounded-full animate-ping" style={{animationDelay: '0.5s'}}></div>
-                              <div className="w-2 h-2 bg-green-400 rounded-full animate-ping" style={{animationDelay: '1s'}}></div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      
-                      {/* Zero Collateral Badge */}
-                      <div className="absolute -top-8 -right-8 bg-green-500 text-white rounded-full w-20 h-20 flex flex-col items-center justify-center text-sm font-bold shadow-2xl animate-bounce border-4 border-green-400">
-                        <div className="text-lg">0%</div>
-                        <div className="text-xs">Collateral</div>
-                      </div>
-                      
-                      {/* Instant Access Indicator */}
-                      <div className="absolute -bottom-6 -left-6 bg-green-500/90 backdrop-blur-sm rounded-2xl px-4 py-3 text-white border border-green-400/50 shadow-xl">
-                        <div className="flex items-center space-x-3">
-                          <div className="w-3 h-3 bg-green-300 rounded-full animate-pulse"></div>
-                          <div>
-                            <div className="text-sm font-semibold">Instant Access</div>
-                            <div className="text-xs text-green-200">No Waiting</div>
+                          {/* Status */}
+                          <div className="flex items-center space-x-2 mt-auto">
+                            <div className="w-2 h-2 bg-emerald-400 rounded-full"></div>
+                            <span className="text-white/90 text-xs sm:text-sm">Ready to Use</span>
                           </div>
                         </div>
                       </div>

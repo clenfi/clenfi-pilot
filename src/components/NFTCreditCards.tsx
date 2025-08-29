@@ -8,17 +8,13 @@ const NFTCreditCards = () => {
   };
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-green-50 to-lime-50 relative" id="nft-cards">
+    <section className="py-16 sm:py-20 bg-white relative" id="nft-cards">
       {/* Background decorative elements */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-200/20 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-lime-200/30 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-green-500/10 rounded-full blur-3xl -z-10"></div>
+      <div className="absolute bottom-1/4 right-1/4 w-80 h-80 bg-lime-500/10 rounded-full blur-3xl -z-10"></div>
       
       <div className="section-container">
         <div className="text-center mb-12 opacity-0 animate-on-scroll">
-          <div className="pulse-chip mx-auto mb-6">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-600 text-white mr-2">04</span>
-            <span>NFT Credit System</span>
-          </div>
           <ScrollReveal
             baseOpacity={0.2}
             enableBlur={true}
@@ -27,10 +23,10 @@ const NFTCreditCards = () => {
             containerClassName="section-title mb-6"
             textClassName=""
           >
-            Dynamic NFT Credit Cards
+            Smart Credit Cards That Improve
           </ScrollReveal>
           <p className="section-subtitle mx-auto max-w-3xl">
-            Experience the future of DeFi lending with our revolutionary NFT-based credit system. Each card represents a unique financial instrument backed by blockchain technology, featuring dynamically upgradable NFTs that evolve with your credit profile.
+            Get a smart credit card that gets better as you do. Your digital card automatically upgrades when you pay on time, unlocking higher limits and better rates - just like building credit history in the real world.
           </p>
         </div>
 
@@ -38,25 +34,25 @@ const NFTCreditCards = () => {
           {/* Content Side */}
           <div className="opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
             <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M9 12l2 2 4-4"/>
                     <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
                     <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Privacy-First Identity</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Secure Identity Verification</h3>
                   <p className="text-gray-600">
-                    Our zero-knowledge identity verification system uses PAN card data to create a privacy-preserving digital identity. Your sensitive information stays encrypted while providing verifiable credentials.
+                    Verify who you are using your government ID - safely and privately. Your personal information never gets stored anywhere, but we can still confirm you're a real person.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                     <circle cx="9" cy="7" r="4"/>
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
@@ -64,38 +60,38 @@ const NFTCreditCards = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Dynamically Upgradable NFTs</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Cards That Level Up</h3>
                   <p className="text-gray-600">
-                    Credit NFTs (cNFTs) automatically upgrade as your credit score improves. From Starter to Elite tiers, your NFT artwork, metadata, and benefits evolve to match your growing reputation and unlock premium features.
+                    Your digital credit card automatically gets better as you prove you're reliable. Start with basic benefits and unlock premium features, higher limits, and exclusive perks as you build your reputation.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M7 21h10l2-12H5l2 12z"/>
                     <path d="M5 9V7a4 4 0 0 1 8 0v2"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Tradeable Debt Instruments</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Flexible Payment Options</h3>
                   <p className="text-gray-600">
-                    Debt NFTs (dNFTs) represent transferable debt positions, enabling advanced DeFi strategies. Trade debt, hedge positions, or create sophisticated financial instruments while maintaining liquidation protection.
+                    Get creative with how you handle your credit. Transfer payments to others, set up automatic payments, or even trade your credit positions - all while staying protected from sudden market crashes.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                  <svg className="w-6 h-6 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Real-Time Updates</h3>
+                  <h3 className="text-xl font-semibold mb-2 text-gray-900">Always Up-to-Date</h3>
                   <p className="text-gray-600">
-                    All NFT metadata updates automatically based on on-chain events. Your credit cards reflect live collateral ratios, debt positions, and market conditions in real-time.
+                    Your credit card information updates automatically. See your current balance, available credit, and payment status in real-time - no waiting for monthly statements.
                   </p>
                 </div>
               </div>
@@ -105,8 +101,8 @@ const NFTCreditCards = () => {
           {/* CardSwap Animation */}
           <div className="relative opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
             <CardSwap
-              width={400}
-              height={280}
+              width={280}
+              height={200}
               cardDistance={50}
               verticalDistance={60}
               delay={4000}
@@ -119,10 +115,10 @@ const NFTCreditCards = () => {
                 <div className="card-content">
                   <div className="card-badge">Verified</div>
                   <div className="card-icon">ID</div>
-                  <h3 className="card-title">Identity Verification NFT</h3>
+                  <h3 className="card-title">Identity Verification</h3>
                   <p className="card-description">
-                    Zero-knowledge proof based identity verification using PAN card data. 
-                    Secure, private, and instantly verifiable on-chain identity.
+                    Prove you're a real person using your government ID. 
+                    Secure, private, and instantly verified.
                   </p>
                 </div>
               </Card>
@@ -130,23 +126,23 @@ const NFTCreditCards = () => {
               <Card customClass="credit-card">
                 <div className="card-content">
                   <div className="card-badge">Upgradable</div>
-                  <div className="card-icon">cNFT</div>
+                  <div className="card-icon">💳</div>
                   <h3 className="card-title">Credit NFT (cNFT)</h3>
                   <p className="card-description">
-                    Dynamically upgradable NFT that evolves with your credit score. 
-                    Artwork, tier status, and benefits automatically upgrade as you build trust.
+                    Your digital credit card that gets better over time. 
+                    Artwork, rewards, and benefits automatically improve as you build trust.
                   </p>
                 </div>
               </Card>
               
               <Card customClass="debt-card">
                 <div className="card-content">
-                  <div className="card-badge">Tradeable</div>
-                  <div className="card-icon">dNFT</div>
+                  <div className="card-badge">Flexible</div>
+                  <div className="card-icon">💰</div>
                   <h3 className="card-title">Debt NFT (dNFT)</h3>
                   <p className="card-description">
-                    Transferable debt instrument allowing debt trading, hedging, 
-                    and sophisticated DeFi strategies with built-in liquidation protection.
+                    Manage your credit flexibly - transfer to others, set up auto-pay, 
+                    or get creative with payments while staying protected.
                   </p>
                 </div>
               </Card>
@@ -156,43 +152,43 @@ const NFTCreditCards = () => {
 
         {/* Technical Benefits */}
         <div className="mt-16 opacity-0 animate-on-scroll" style={{ animationDelay: "0.6s" }}>
-          <h3 className="text-2xl font-bold text-center mb-8">NFT Credit System Benefits</h3>
+          <h3 className="text-2xl font-bold text-center mb-8 text-gray-900">Smart Credit Card Benefits</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-100 hover:border-green-200 transition-all duration-300 text-center">
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-green-500 transition-all duration-300 text-center">
               <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-green-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M9 12l2 2 4-4"/>
                   <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
                 </svg>
               </div>
-              <h4 className="font-semibold mb-2 text-lg">Composability</h4>
+              <h4 className="font-semibold mb-2 text-lg text-gray-900">Works Everywhere</h4>
               <p className="text-gray-600 text-sm">
-                NFT credit cards work seamlessly across all DeFi protocols, creating unlimited financial opportunities and integrations.
+                Use your credit card anywhere in crypto. It works with all major platforms and apps, giving you unlimited opportunities.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-100 hover:border-green-200 transition-all duration-300 text-center">
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-green-500 transition-all duration-300 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-blue-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
                   <circle cx="9" cy="7" r="4"/>
                 </svg>
               </div>
-              <h4 className="font-semibold mb-2 text-lg">Transferability</h4>
+              <h4 className="font-semibold mb-2 text-lg text-gray-900">You Own It</h4>
               <p className="text-gray-600 text-sm">
-                Trade, transfer, or use your credit positions as collateral in other protocols. True ownership of your financial instruments.
+                Trade, transfer, or use your credit in other apps. You truly own your credit card and can do whatever you want with it.
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 border-2 border-gray-100 hover:border-green-200 transition-all duration-300 text-center">
+            <div className="bg-white rounded-xl p-6 border-2 border-gray-200 hover:border-green-500 transition-all duration-300 text-center">
               <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mx-auto mb-4">
                 <svg className="w-8 h-8 text-purple-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
                 </svg>
               </div>
-              <h4 className="font-semibold mb-2 text-lg">Automation</h4>
+              <h4 className="font-semibold mb-2 text-lg text-gray-900">Hands-Free Updates</h4>
               <p className="text-gray-600 text-sm">
-                Smart contracts handle all updates automatically. Your NFTs evolve with market conditions without manual intervention.
+                Everything happens automatically. Your card updates, rewards get added, and benefits unlock without you having to do anything.
               </p>
             </div>
           </div>

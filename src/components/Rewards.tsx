@@ -13,27 +13,27 @@ const Rewards = () => {
 
   const clenUtilities = [
     {
-      title: "Staking Boost",
-      description: "Stake CLEN to boost CT earnings by up to 30%",
-      details: "Lock periods: 1-12 months for +5% to +30% CT multiplier",
+      title: "Reward Boost",
+      description: "Hold CLenFi coins to earn up to 30% more points",
+      details: "Keep coins locked for 1-12 months for +5% to +30% bonus",
       icon: "📈"
     },
     {
       title: "Fee Discounts", 
-      description: "Pay protocol fees in CLEN for up to 25% discount",
-      details: "Save on transaction fees with hard caps per user & epoch",
+      description: "Pay fees with CLenFi coins to save up to 25%",
+      details: "Use coins instead of cash to pay platform fees and save money",
       icon: "💰"
     },
     {
-      title: "Premium Access",
-      description: "Access exclusive coupon auctions and partner perks",
-      details: "Gated NFT coupons and premium merchant partnerships",
+      title: "VIP Access",
+      description: "Get exclusive deals and special partner offers",
+      details: "Access to special discounts and premium merchant partnerships",
       icon: "🎯"
     },
     {
-      title: "Governance Polls",
-      description: "Participate in non-binding community sentiment votes",
-      details: "CLEN-weighted Snapshot polls reviewed by Proof of Trust",
+      title: "Community Voice",
+      description: "Vote on important platform decisions",
+      details: "Your opinion matters - help shape the future of CLenFi",
       icon: "🗳️"
     }
   ];
@@ -48,13 +48,13 @@ const Rewards = () => {
         <div className="text-center mb-12 animate-on-scroll">
           <div className="pulse-chip mx-auto mb-6">
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-600 text-white mr-2">🎁</span>
-            <span>Token Rewards</span>
+            <span>Rewards</span>
           </div>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-gray-900">
-            Dual-Token Rewards System
+            Get Rewarded for Good Credit
           </h2>
           <p className="section-subtitle mx-auto max-w-3xl">
-            Earn CT Points for responsible repayment behavior and unlock CLEN token utilities for enhanced benefits, fee discounts, and premium access.
+            Earn reward points every time you pay on time. Use points to reduce interest costs or get exclusive discounts. Plus, collect CLenFi coins for even better benefits and premium features.
           </p>
         </div>
 
@@ -79,7 +79,7 @@ const Rewards = () => {
                   : 'text-gray-600 hover:text-green-600'
               }`}
             >
-              CT Points
+              Reward Points
             </button>
             <button
               onClick={() => setActiveTab('clen-token')}
@@ -89,7 +89,7 @@ const Rewards = () => {
                   : 'text-gray-600 hover:text-green-600'
               }`}
             >
-              CLEN Token
+              CLenFi Coins
             </button>
           </div>
         </div>
@@ -105,8 +105,8 @@ const Rewards = () => {
                     <span className="text-white font-bold">1</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Repay On-Time</h4>
-                    <p className="text-gray-600">Make timely repayments to earn CT Points based on interest paid and your credit tier multiplier.</p>
+                    <h4 className="font-semibold mb-2">Pay On Time</h4>
+                    <p className="text-gray-600">Pay your credit card bill on time to earn reward points. Better credit scores earn more points per payment.</p>
                   </div>
                 </div>
                 
@@ -115,8 +115,8 @@ const Rewards = () => {
                     <span className="text-white font-bold">2</span>
                   </div>
                   <div>
-                    <h4 className="font-semibold mb-2">Stake CLEN</h4>
-                    <p className="text-gray-600">Stake CLEN tokens to boost your CT earnings by up to 30% and unlock fee discounts.</p>
+                    <h4 className="font-semibold mb-2">Hold CLenFi Coins</h4>
+                    <p className="text-gray-600">Keep CLenFi coins in your account to earn up to 30% more reward points and get discounts on fees.</p>
                   </div>
                 </div>
                 
@@ -126,7 +126,7 @@ const Rewards = () => {
                   </div>
                   <div>
                     <h4 className="font-semibold mb-2">Use Rewards</h4>
-                    <p className="text-gray-600">Apply CT Points to reduce interest payments or redeem exclusive coupon NFTs.</p>
+                    <p className="text-gray-600">Use your reward points to lower your interest charges or get exclusive discounts and perks.</p>
                   </div>
                 </div>
               </div>
@@ -136,12 +136,12 @@ const Rewards = () => {
               <h4 className="text-xl font-bold mb-6 text-center">Reward Statistics</h4>
               <div className="grid grid-cols-2 gap-6">
                 <div className="text-center p-4 bg-green-50 rounded-xl">
-                  <div className="text-2xl font-bold text-green-600">0.5 CT</div>
-                  <div className="text-sm text-green-700">Per $1 Interest</div>
+                  <div className="text-2xl font-bold text-green-600">0.5 Points</div>
+                  <div className="text-sm text-green-700">Per $1 Interest Paid</div>
                 </div>
                 <div className="text-center p-4 bg-blue-50 rounded-xl">
                   <div className="text-2xl font-bold text-blue-600">Up to 30%</div>
-                  <div className="text-sm text-blue-700">CLEN Staking Boost</div>
+                  <div className="text-sm text-blue-700">Extra Points Bonus</div>
                 </div>
                 <div className="text-center p-4 bg-purple-50 rounded-xl">
                   <div className="text-2xl font-bold text-purple-600">25%</div>
@@ -149,7 +149,7 @@ const Rewards = () => {
                 </div>
                 <div className="text-center p-4 bg-orange-50 rounded-xl">
                   <div className="text-2xl font-bold text-orange-600">1B</div>
-                  <div className="text-sm text-orange-700">CLEN Max Supply</div>
+                  <div className="text-sm text-orange-700">CLenFi Coins Total</div>
                 </div>
               </div>
             </div>
@@ -160,8 +160,8 @@ const Rewards = () => {
         {activeTab === 'ct-points' && (
           <div className="animate-on-scroll">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">CT Points - Credit Tokens</h3>
-              <p className="text-gray-600 max-w-2xl mx-auto">Non-transferable points earned through responsible repayment behavior. Use CT Points to reduce interest payments or redeem exclusive coupon NFTs.</p>
+              <h3 className="text-2xl font-bold mb-4">Reward Points</h3>
+              <p className="text-gray-600 max-w-2xl mx-auto">Points you earn by paying your bills on time - like credit card cashback, but better. Use points to lower your interest charges or get exclusive discounts.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-4 mb-8">
@@ -177,17 +177,16 @@ const Rewards = () => {
             
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
               <div className="bg-white rounded-2xl p-6 shadow-lg">
-                <h4 className="text-lg font-semibold mb-4">Earning Formula</h4>
-                <div className="bg-gray-50 rounded-lg p-4 font-mono text-sm">
-                  <div className="text-gray-700">CT_earned = min(UserCap, EpochCap,</div>
-                  <div className="text-gray-700 ml-4">interestPaid × baseEarnRate × TierMult ×</div>
-                  <div className="text-gray-700 ml-4">ScoreFactor × (1 + Bonuses))</div>
+                <h4 className="text-lg font-semibold mb-4">How You Earn Points</h4>
+                <div className="bg-gray-50 rounded-lg p-4">
+                  <div className="text-center text-gray-700 text-lg font-semibold mb-4">More Interest Paid = More Points Earned</div>
+                  <div className="text-center text-gray-600">Plus bonuses for good behavior!</div>
                 </div>
                 <div className="mt-4 space-y-2 text-sm text-gray-600">
-                  <div>• Base Rate: 0.50 CT per $1 interest</div>
-                  <div>• Early Payment Bonus: +10%</div>
-                  <div>• Streak Bonus: +10/20/30%</div>
-                  <div>• CLEN Staking Boost: +0-30%</div>
+                  <div>• Base Rate: 0.5 points per $1 interest paid</div>
+                  <div>• Pay Early Bonus: +10% extra points</div>
+                  <div>• On-time Streak: +10/20/30% for 3/6/12 months</div>
+                  <div>• CLenFi Coins Bonus: +0-30% extra points</div>
                 </div>
               </div>
               
@@ -199,8 +198,8 @@ const Rewards = () => {
                       <span className="text-green-600">💰</span>
                     </div>
                     <div>
-                      <div className="font-medium">Interest Reduction</div>
-                      <div className="text-sm text-gray-600">Apply CT Points directly to reduce your interest payments</div>
+                      <div className="font-medium">Lower Interest</div>
+                      <div className="text-sm text-gray-600">Use points to directly reduce what you owe in interest</div>
                     </div>
                   </div>
                   <div className="flex items-start gap-3">
@@ -208,8 +207,8 @@ const Rewards = () => {
                       <span className="text-blue-600">🎟️</span>
                     </div>
                     <div>
-                      <div className="font-medium">Coupon NFTs</div>
-                      <div className="text-sm text-gray-600">Redeem CT Points for exclusive merchant coupons and discounts</div>
+                      <div className="font-medium">Exclusive Discounts</div>
+                      <div className="text-sm text-gray-600">Trade points for special coupons and deals from partner stores</div>
                     </div>
                   </div>
                 </div>
@@ -222,8 +221,8 @@ const Rewards = () => {
         {activeTab === 'clen-token' && (
           <div className="animate-on-scroll">
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-4">CLEN Token Utilities</h3>
-              <p className="text-gray-600 max-w-2xl mx-auto">Transferable utility token with 1B maximum supply. Stake CLEN to boost rewards, get fee discounts, and access premium features.</p>
+              <h3 className="text-2xl font-bold mb-4">CLenFi Coins Benefits</h3>
+              <p className="text-gray-600 max-w-2xl mx-auto">CLenFi's special coins that you can buy, sell, or trade. Hold them to get bigger rewards, pay less fees, and unlock premium features.</p>
             </div>
             
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-8">
@@ -264,12 +263,12 @@ const Rewards = () => {
         {/* Bottom CTA */}
         <div className="mt-16 text-center animate-on-scroll">
           <div className="bg-gray-50 rounded-2xl p-8">
-            <h3 className="text-xl font-bold mb-4">Governance & Control</h3>
+            <h3 className="text-xl font-bold mb-4">How Rewards Are Managed</h3>
             <p className="text-gray-600 mb-4 max-w-2xl mx-auto">
-              All reward parameters are controlled by the Proof of Trust (PoT) 7-of-11 multisig governance. CLEN polls provide community sentiment but are non-binding.
+              All reward rules are managed by our expert council of 11 trusted members. Community votes help guide decisions, but experts have final say to keep things secure.
             </p>
             <div className="text-sm text-gray-500">
-              Rewards are sustainably funded by protocol fees with hard caps and epoch budgets to prevent over-issuance.
+              Rewards come from platform fees and are carefully budgeted to ensure they're always sustainable and fair.
             </div>
           </div>
         </div>

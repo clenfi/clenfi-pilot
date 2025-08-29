@@ -1,12 +1,13 @@
 
 import React, { useEffect } from "react";
-import Navbar from "@/components/Navbar";
+import ResizableNavbarDemo from "@/components/resizable-navbar-demo";
 import Hero from "@/components/Hero";
 import HumanoidSection from "@/components/HumanoidSection";
 import SpecsSection from "@/components/SpecsSection";
 import IntroSection from "@/components/IntroSection";
 import CreditScoring from "@/components/CreditScoring";
 import NFTCreditCards from "@/components/NFTCreditCards";
+import HowItWorks from "@/components/HowItWorks";
 import DetailsSection from "@/components/DetailsSection";
 import ImageShowcaseSection from "@/components/ImageShowcaseSection";
 import Features from "@/components/Features";
@@ -52,8 +53,8 @@ const Index = () => {
         const targetElement = document.getElementById(targetId);
         if (!targetElement) return;
         
-        // Increased offset to account for mobile nav
-        const offset = window.innerWidth < 768 ? 100 : 80;
+        // Increased offset to account for fixed navbar
+        const offset = window.innerWidth < 768 ? 120 : 100;
         
         window.scrollTo({
           top: targetElement.offsetTop - offset,
@@ -65,14 +66,15 @@ const Index = () => {
 
   return (
     <div className="min-h-screen">
-      <Navbar />
-      <main className="space-y-4 sm:space-y-8"> {/* Reduced space on mobile */}
+      <ResizableNavbarDemo />
+      <main className="space-y-4 sm:space-y-8"> {/* Removed top padding */}
         <Hero />
         <HumanoidSection />
         <SpecsSection />
         <IntroSection />
         <CreditScoring />
         <NFTCreditCards />
+        <HowItWorks />
         <ImageShowcaseSection />
         <DetailsSection />
         <Features />

@@ -29,7 +29,7 @@ const VideoSection = () => {
 
         <div className="max-w-5xl mx-auto opacity-0 animate-on-scroll" style={{ animationDelay: "0.3s" }}>
           <div className="relative bg-white rounded-3xl p-4 sm:p-6 shadow-2xl">
-            <div className="relative aspect-video rounded-2xl overflow-hidden bg-gray-900">
+            <div className="relative aspect-video rounded-2xl overflow-hidden bg-gray-800">
               <video
                 className="w-full h-full object-cover"
                 controls

@@ -25,8 +25,8 @@ const founders: Founder[] = [
     cardNumber: "4521 **** **** 1847",
     tier: "Diamond",
     joinDate: "01/24",
-    bgGradient: "from-gray-900 via-gray-800 to-black",
-    textColor: "text-white",
+    bgGradient: "from-gray-100 via-gray-50 to-white",
+    textColor: "text-gray-900",
     socialLinks: {
       linkedin: "https://linkedin.com/in/punit-clenfi",
       twitter: "https://twitter.com/punit_clenfi",
@@ -40,8 +40,8 @@ const founders: Founder[] = [
     cardNumber: "4521 **** **** 2956",
     tier: "Diamond",
     joinDate: "01/24",
-    bgGradient: "from-purple-900 via-purple-800 to-indigo-900",
-    textColor: "text-white",
+    bgGradient: "from-purple-100 via-purple-50 to-indigo-100",
+    textColor: "text-gray-900",
     socialLinks: {
       linkedin: "https://linkedin.com/in/sai-jadhav-clenfi",
       twitter: "https://twitter.com/sai_jadhav_dev",
@@ -55,8 +55,8 @@ const founders: Founder[] = [
     cardNumber: "4521 **** **** 3074",
     tier: "Diamond",
     joinDate: "01/24",
-    bgGradient: "from-blue-900 via-blue-800 to-cyan-900",
-    textColor: "text-white",
+    bgGradient: "from-blue-100 via-blue-50 to-cyan-100",
+    textColor: "text-gray-900",
     socialLinks: {
       linkedin: "https://linkedin.com/in/rahul-jadvani",
       twitter: "https://twitter.com/rahul_jadvani",
@@ -70,8 +70,8 @@ const founders: Founder[] = [
     cardNumber: "4521 **** **** 4183",
     tier: "Diamond", 
     joinDate: "01/24",
-    bgGradient: "from-emerald-900 via-green-800 to-teal-900",
-    textColor: "text-white",
+    bgGradient: "from-emerald-100 via-green-50 to-teal-100",
+    textColor: "text-gray-900",
     socialLinks: {
       linkedin: "https://linkedin.com/in/sachin-baluragi",
       twitter: "https://twitter.com/sachin_baluragi",
@@ -94,31 +94,31 @@ function CreditCard({ founder, delay }: { founder: Founder; delay: number }) {
         >
           <div className={`relative w-full h-52 rounded-2xl bg-gradient-to-br ${founder.bgGradient} p-6 shadow-2xl`}>
             {/* Background pattern */}
-            <div className="absolute inset-0 rounded-2xl opacity-10">
-              <div className="absolute top-4 right-4 w-16 h-16 border border-white/30 rounded-full"></div>
-              <div className="absolute top-8 right-8 w-8 h-8 border border-white/20 rounded-full"></div>
-              <div className="absolute bottom-4 left-4 w-12 h-12 border border-white/20 rounded-full"></div>
+            <div className="absolute inset-0 rounded-2xl opacity-20">
+              <div className="absolute top-4 right-4 w-16 h-16 border border-gray-400/30 rounded-full"></div>
+              <div className="absolute top-8 right-8 w-8 h-8 border border-gray-400/20 rounded-full"></div>
+              <div className="absolute bottom-4 left-4 w-12 h-12 border border-gray-400/20 rounded-full"></div>
             </div>
 
             {/* Card Header */}
             <div className="relative z-10 flex justify-between items-start mb-6">
               <div>
-                <div className="text-white/80 text-xs font-medium tracking-wider">CLENFI</div>
-                <div className="text-white text-lg font-bold">{founder.tier}</div>
+                <div className="text-gray-600 text-xs font-medium tracking-wider">CLENFI</div>
+                <div className="text-gray-900 text-lg font-bold">{founder.tier}</div>
               </div>
               <div className="flex items-center space-x-1">
-                <div className="w-8 h-8 bg-white/20 rounded-full flex items-center justify-center">
-                  <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 24 24">
+                <div className="w-8 h-8 bg-gray-800/20 rounded-full flex items-center justify-center">
+                  <svg className="w-4 h-4 text-gray-800" fill="currentColor" viewBox="0 0 24 24">
                     <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
                   </svg>
                 </div>
-                <div className="text-white/60 text-xs">#{founder.creditScore}</div>
+                <div className="text-gray-700 text-xs">#{founder.creditScore}</div>
               </div>
             </div>
 
             {/* Card Number */}
             <div className="relative z-10 mb-4">
-              <div className="text-white text-lg font-mono tracking-wider">
+              <div className="text-gray-900 text-lg font-mono tracking-wider">
                 {founder.cardNumber}
               </div>
             </div>
@@ -126,13 +126,13 @@ function CreditCard({ founder, delay }: { founder: Founder; delay: number }) {
             {/* Card Footer */}
             <div className="relative z-10 flex justify-between items-end">
               <div>
-                <div className="text-white/60 text-xs uppercase tracking-wide">Cardholder</div>
-                <div className="text-white text-sm font-semibold">{founder.name}</div>
-                <div className="text-white/70 text-xs">{founder.role}</div>
+                <div className="text-gray-600 text-xs uppercase tracking-wide">Cardholder</div>
+                <div className="text-gray-900 text-sm font-semibold">{founder.name}</div>
+                <div className="text-gray-700 text-xs">{founder.role}</div>
               </div>
               <div className="text-right">
-                <div className="text-white/60 text-xs">Valid Thru</div>
-                <div className="text-white text-sm font-mono">{founder.joinDate}</div>
+                <div className="text-gray-600 text-xs">Valid Thru</div>
+                <div className="text-gray-900 text-sm font-mono">{founder.joinDate}</div>
               </div>
             </div>
 
@@ -145,7 +145,7 @@ function CreditCard({ founder, delay }: { founder: Founder; delay: number }) {
 
             {/* NFC Symbol */}
             <div className="absolute top-16 right-12">
-              <svg className="w-6 h-6 text-white/40" fill="currentColor" viewBox="0 0 24 24">
+              <svg className="w-6 h-6 text-gray-500" fill="currentColor" viewBox="0 0 24 24">
                 <path d="M6 18h12v-2H6v2zm0-4h12v-2H6v2zm0-4h12V8H6v2zm0-4h12V4H6v2z"/>
               </svg>
             </div>
@@ -172,7 +172,7 @@ function CreditCard({ founder, delay }: { founder: Founder; delay: number }) {
             href={founder.socialLinks.twitter} 
             target="_blank" 
             rel="noopener noreferrer"
-            className="w-10 h-10 bg-black hover:bg-gray-800 rounded-full flex items-center justify-center text-white transition-colors duration-200"
+            className="w-10 h-10 bg-gray-800 hover:bg-gray-900 rounded-full flex items-center justify-center text-white transition-colors duration-200"
           >
             <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
               <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
@@ -198,14 +198,14 @@ function CreditCard({ founder, delay }: { founder: Founder; delay: number }) {
 
 export default function FoundersCards() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100">
+    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-white">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
             Meet Our Founders
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            The visionaries building the future of DeFi credit with their elite Diamond-tier reputation
+            The team behind CLenFi, building better credit for everyone with their proven track record
           </p>
         </div>
         

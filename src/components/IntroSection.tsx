@@ -3,15 +3,15 @@ import RotatingText from "./RotatingText";
 
 const IntroSection = () => {
   return (
-    <section className="w-full py-12 sm:py-16 bg-gradient-to-br from-green-100 to-lime-50" id="introduction">
+    <section className="w-full py-12 sm:py-16 bg-white" id="introduction">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Main Title with Rotating Animation */}
         <div className="text-center mb-16">
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold leading-tight mb-8">
-            <span className="text-black">Your </span>
+            <span className="text-gray-900">Your </span>
             <RotatingText
               texts={['Trust', 'Reputation', 'Credibility']}
-              mainClassName="px-2 sm:px-2 md:px-3 bg-green-400 text-white overflow-hidden py-1 sm:py-1 md:py-2 justify-center rounded-lg inline-flex"
+              mainClassName="px-2 sm:px-2 md:px-3 bg-green-400 text-gray-900 overflow-hidden py-1 sm:py-1 md:py-2 justify-center rounded-lg inline-flex"
               staggerFrom="last"
               initial={{ y: "100%" }}
               animate={{ y: 0 }}
@@ -21,10 +21,10 @@ const IntroSection = () => {
               transition={{ type: "spring", damping: 30, stiffness: 400 }}
               rotationInterval={3000}
             />
-            <span className="text-black"> is Your Credit</span>
+            <span className="text-gray-900"> is Your Credit</span>
           </h2>
           
-          <p className="text-xl text-gray-700 max-w-4xl mx-auto mb-12">
+          <p className="text-xl text-gray-600 max-w-4xl mx-auto mb-12">
             Stop locking up 150% of what you want to borrow. CLenFi is the first crypto credit platform that works like a traditional credit card - 
             <strong> build trust, get credit, pay over time</strong>. No massive collateral requirements, just proof that you're reliable with money.
           </p>
@@ -44,7 +44,7 @@ const IntroSection = () => {
             <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow">
               <div className="text-center mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                   </svg>
                 </div>
@@ -59,7 +59,7 @@ const IntroSection = () => {
             <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow">
               <div className="text-center mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
-                  <div className="text-white font-bold text-2xl">750</div>
+                  <div className="text-gray-900 font-bold text-2xl">750</div>
                 </div>
                 <h4 className="text-xl font-bold mb-2 text-gray-900">Trust Score</h4>
               </div>
@@ -72,7 +72,7 @@ const IntroSection = () => {
             <div className="bg-white rounded-2xl p-6 shadow-xl border border-gray-200 hover:shadow-2xl transition-shadow">
               <div className="text-center mb-6">
                 <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-2xl mx-auto mb-4 flex items-center justify-center shadow-lg">
-                  <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <svg className="w-10 h-10 text-gray-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z"></path>
                   </svg>
                 </div>
@@ -127,7 +127,7 @@ const IntroSection = () => {
           
           {/* Illustration Side */}
           <div className="relative">
-            <div className="bg-gradient-to-br from-green-50 to-blue-50 rounded-2xl p-8">
+            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-8">
               <img 
                 src="/card.jpg" 
                 alt="CLenFi Credit Card" 
