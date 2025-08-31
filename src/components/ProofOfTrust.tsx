@@ -247,7 +247,7 @@ const ProofOfTrust = () => {
         {/* Enhanced Trust Building Steps */}
         <div className="mt-16 animate-on-scroll" style={{ animationDelay: "0.6s" }}>
           <h3 className="text-2xl font-bold text-center mb-8">
-            {activeTab === 'user' ? 'How to Build Your Proof of Trust' : 'Governance Protection Framework'}
+            {activeTab === 'user' ? 'Powered by Proof of Trust - How to Build Your Credit' : 'Governance Protection Framework'}
           </h3>
           
           {activeTab === 'user' && (

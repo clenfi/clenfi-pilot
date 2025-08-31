@@ -31,7 +31,7 @@ const CreditScoring = () => {
             containerClassName="section-title mb-6"
             textClassName=""
           >
-            Revolutionary On-Chain Credit Scoring System
+          Smart Credit Scores That Work Everywhere
           </ScrollReveal>
           <p className="section-subtitle mx-auto max-w-3xl">
             Build your decentralized credit profile across multiple blockchains. Our AI-powered system analyzes your DeFi behavior to unlock better rates, higher borrowing limits, and exclusive opportunities.
@@ -118,7 +118,7 @@ const CreditScoring = () => {
                 </div>
                 <div className="p-4 bg-blue-50 rounded-xl">
                   <div className="text-2xl font-bold text-blue-600">85%</div>
-                  <div className="text-sm text-blue-700">Max LTV</div>
+                  <div className="text-sm text-blue-700">Max Loan-to-Value ratio</div>
                 </div>
                 <div className="p-4 bg-purple-50 rounded-xl">
                   <div className="text-2xl font-bold text-purple-600">2.5x</div>
@@ -156,9 +156,9 @@ const CreditScoring = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Dynamic Risk Assessment</h3>
+                  <h3 className="text-xl font-semibold mb-2">Smart Risk Evaluation</h3>
                   <p className="text-gray-600">
-                    Real-time risk evaluation adjusts your credit score based on market conditions, portfolio composition, and collateral health across all positions.
+                 Your credit score updates automatically based on how the crypto market is doing and how well you're managing your investments and payments.
                   </p>
                 </div>
               </div>
@@ -173,10 +173,9 @@ const CreditScoring = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Reputation-Based Benefits</h3>
+                  <h3 className="text-xl font-semibold mb-2">Better Scores = Better Deals</h3>
                   <p className="text-gray-600">
-                    Higher credit scores unlock premium benefits: reduced fees, increased borrowing limits, priority liquidation protection, and exclusive yield opportunities.
-                  </p>
+Higher credit scores get you amazing perks: lower fees, higher credit limits, protection during market crashes, and access to exclusive investment opportunities.                  </p>
                 </div>
               </div>
 
@@ -190,10 +189,9 @@ const CreditScoring = () => {
                   </svg>
                 </div>
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Continuous Improvement</h3>
+                  <h3 className="text-xl font-semibold mb-2">Always Getting Better</h3>
                   <p className="text-gray-600">
-                    Your credit score evolves with every transaction. Consistent lending, timely repayments, and diversified DeFi participation boost your rating over time.
-                  </p>
+Your credit score improves with every payment you make on time. Stay consistent with payments and try different crypto activities to boost your rating.                  </p>
                 </div>
               </div>
             </div>

@@ -25,8 +25,8 @@ const ExclusiveForDevs = () => {
           {/* Content Side */}
           <div className="animate-on-scroll" style={{ animationDelay: "0.2s" }}>
             <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
                   </svg>
@@ -39,8 +39,8 @@ const ExclusiveForDevs = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
                   </svg>
@@ -53,8 +53,8 @@ const ExclusiveForDevs = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
                   </svg>
@@ -67,8 +67,8 @@ const ExclusiveForDevs = () => {
                 </div>
               </div>
 
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center flex-shrink-0">
+              <div className="flex items-start gap-3 sm:gap-4">
+                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.5-1.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   </svg>
@@ -85,41 +85,41 @@ const ExclusiveForDevs = () => {
 
           {/* API Showcase Side */}
           <div className="animate-on-scroll" style={{ animationDelay: "0.4s" }}>
-            <div className="relative bg-gray-900 rounded-3xl p-8 shadow-elegant">
+            <div className="relative bg-white rounded-3xl p-8 shadow-elegant border border-gray-200">
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <h4 className="text-lg font-bold text-white mb-2">CLenFi Credit API</h4>
+                <h4 className="text-lg font-bold text-gray-900 mb-2">CLenFi Credit API</h4>
               </div>
               
               <div className="space-y-4 text-sm">
-                <div className="bg-gray-800 rounded-lg p-4">
-                  <div className="text-blue-300 mb-2">// Get user credit score</div>
-                  <div className="text-green-300">
-                    <span className="text-blue-300">const</span> creditData = <span className="text-yellow-300">await</span> clenfi.getScore(
+                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                  <div className="text-blue-600 mb-2">// Get user credit score</div>
+                  <div className="text-green-600">
+                    <span className="text-blue-600">const</span> creditData = <span className="text-yellow-600">await</span> clenfi.getScore(
                   </div>
-                  <div className="text-green-300 ml-4">userAddress: <span className="text-orange-300">"0x..."</span></div>
-                  <div className="text-green-300">);</div>
+                  <div className="text-green-600 ml-4">userAddress: <span className="text-orange-600">"0x..."</span></div>
+                  <div className="text-green-600">);</div>
                 </div>
                 
-                <div className="bg-gray-800 rounded-lg p-4">
-                  <div className="text-blue-300 mb-2">// Response</div>
-                  <div className="text-white">&#123;</div>
-                  <div className="text-white ml-4">score: <span className="text-green-300">850</span>,</div>
-                  <div className="text-white ml-4">trust_level: <span className="text-orange-300">"excellent"</span>,</div>
-                  <div className="text-white ml-4">max_loan: <span className="text-green-300">25000</span>,</div>
-                  <div className="text-white ml-4">apr: <span className="text-green-300">12.5</span></div>
-                  <div className="text-white">&#125;</div>
+                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                  <div className="text-blue-600 mb-2">// Response</div>
+                  <div className="text-gray-900">&#123;</div>
+                  <div className="text-gray-900 ml-4">score: <span className="text-green-600">850</span>,</div>
+                  <div className="text-gray-900 ml-4">trust_level: <span className="text-orange-600">"excellent"</span>,</div>
+                  <div className="text-gray-900 ml-4">max_loan: <span className="text-green-600">25000</span>,</div>
+                  <div className="text-gray-900 ml-4">apr: <span className="text-green-600">12.5</span></div>
+                  <div className="text-gray-900">&#125;</div>
                 </div>
               </div>
               
-              <div className="mt-6 p-4 bg-gradient-to-r from-blue-600/20 to-cyan-600/20 rounded-xl border border-blue-500/20">
+              <div className="mt-6 p-4 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-xl border border-blue-300">
                 <div className="text-center">
-                  <div className="text-2xl font-bold text-blue-300 mb-1">RESTful API</div>
-                  <div className="text-sm text-blue-200">Easy Integration • Real-time Data</div>
+                  <div className="text-2xl font-bold text-blue-700 mb-1">RESTful API</div>
+                  <div className="text-sm text-blue-600">Easy Integration • Real-time Data</div>
                 </div>
               </div>
             </div>
@@ -137,6 +137,72 @@ const ExclusiveForDevs = () => {
             <div className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
               <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
               <span className="text-white font-bold text-xl">OPPORTUNITY OPENS SOON</span>
+            </div>
+          </div>
+        </div>
+
+        {/* Important Disclaimers Section */}
+        <div className="mt-16 animate-on-scroll" style={{ animationDelay: "0.8s" }}>
+          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-200 shadow-lg">
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-bold text-gray-900 mb-2">Important Information & Disclaimers</h3>
+              <p className="text-gray-600">Please read these important notices carefully before using CLenFi</p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+              <div className="bg-white rounded-xl p-6 border border-red-200 hover:border-red-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">⚠️</span>
+                  </div>
+                  <h4 className="font-bold text-red-700">Risk Warning</h4>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Credit involves risk of financial loss if you cannot repay borrowed amounts. Interest rates fluctuate based on market conditions and your creditworthiness. Only borrow what you can comfortably afford to repay within the agreed terms.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 border border-blue-200 hover:border-blue-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">📋</span>
+                  </div>
+                  <h4 className="font-bold text-blue-700">Regulatory Notice</h4>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  CLenFi operates as a decentralized, community-governed protocol through transparent smart contracts. Token holders participate in governance decisions. This platform does not provide financial advice - consult qualified professionals before use.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 border border-purple-200 hover:border-purple-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">🔒</span>
+                  </div>
+                  <h4 className="font-bold text-purple-700">Security & Audits</h4>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Our smart contracts undergo rigorous security audits by leading blockchain security firms. However, DeFi protocols carry inherent risks. Please conduct your own research and understand the technology before participating.
+                </p>
+              </div>
+
+              <div className="bg-white rounded-xl p-6 border border-orange-200 hover:border-orange-300 transition-colors">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
+                    <span className="text-2xl">💼</span>
+                  </div>
+                  <h4 className="font-bold text-orange-700">Credit Responsibility</h4>
+                </div>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  All credit examples and multipliers shown are illustrative. Actual terms depend on individual creditworthiness. Users are solely responsible for their borrowing decisions, repayment obligations, and proper use of credit facilities.
+                </p>
+              </div>
+            </div>
+
+            <div className="mt-8 p-4 bg-gray-100 rounded-xl border border-gray-300">
+              <p className="text-sm text-gray-700 text-center font-medium">
+                By using CLenFi, you acknowledge that you understand these terms, the associated risks of DeFi credit, and that you are using the platform at your own discretion and responsibility.
+              </p>
             </div>
           </div>
         </div>

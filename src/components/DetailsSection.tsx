@@ -49,7 +49,7 @@ const DetailsSection = () => {
                   </div>
                   <div className="flex-1">
                     <div className="p-3 rounded-lg bg-gray-50/80 backdrop-blur-sm border border-gray-100">
-                      <span className="font-semibold text-base">CT Rewards:</span> Daily Airdrops
+                      <span className="font-semibold text-base">CT Rewards:</span>  Airdrops
                     </div>
                   </div>
                 </div>
