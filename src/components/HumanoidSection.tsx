@@ -11,7 +11,7 @@ const HumanoidSection = () => {
   // More responsive timing function with shorter duration
   const cardStyle = {
     height: "60vh",
-    maxHeight: "600px",
+    maxHeight: "500px",
     borderRadius: "20px",
     transition:
       "transform 0.5s cubic-bezier(0.19, 1, 0.22, 1), opacity 0.5s cubic-bezier(0.19, 1, 0.22, 1)",
@@ -86,12 +86,12 @@ const HumanoidSection = () => {
   const isThirdCardVisible = activeCardIndex >= 2;
 
   return (
-    <div ref={sectionRef} className="relative" style={{ height: "300vh" }}>
+    <div ref={sectionRef} className="relative" style={{ minHeight: "300vh" }}>
       <section
-        className="w-full h-screen py-10 md:py-16 sticky top-16 overflow-hidden bg-white"
+        className="w-full min-h-screen py-10 md:py-16 sticky top-16 overflow-hidden bg-white"
         id="why-clenfi"
       >
-        <div className="container px-6 lg:px-8 mx-auto h-full flex flex-col">
+        <div className="container px-6 lg:px-8 mx-auto flex flex-col" style={{ minHeight: "calc(100vh - 8rem)" }}>
           <div className="mb-2 md:mb-3">
             <h2 className="section-title text-3xl sm:text-4xl md:text-5xl font-display font-bold mb-1 md:mb-2">
               How CLenFi Makes Credit Simple
