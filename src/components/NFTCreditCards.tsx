@@ -35,7 +35,7 @@ const NFTCreditCards = () => {
           <div className="opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
             <div className="space-y-8">
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
+                <div className="w-10aszaaaaaaaaaaaaa                          1222222222222 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
                   <svg className="w-6 h-6 text-gray-900" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                     <path d="M9 12l2 2 4-4"/>
                     <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>

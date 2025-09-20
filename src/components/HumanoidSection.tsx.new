@@ -1,0 +1,106 @@
+import React from "react";
+
+const HumanoidSection = () => {
+  const features = [
+    {
+      title: "PAN-Based Zero-Knowledge Verification",
+      description: "Revolutionary identity verification using ZK-proofs of PAN card data, enabling credit assessment without exposing personal information.",
+      icon: (
+        <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      ),
+      badge: "Identity"
+    },
+    {
+      title: "Decentralized Credit Scoring",
+      description: "Transparent and fair credit scoring powered by blockchain technology, giving you full control over your financial data.",
+      icon: (
+        <svg className="w-8 h-8 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+        </svg>
+      ),
+      badge: "Scoring"
+    },
+    {
+      title: "Secure & Private",
+      description: "Your data remains yours. We use advanced encryption and zero-knowledge proofs to ensure your information stays private.",
+      icon: (
+        <svg className="w-8 h-8 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
+        </svg>
+      ),
+      badge: "Security"
+    }
+  ];
+
+  return (
+    <section className="py-16 bg-gray-50" id="why-clenfi">
+      <div className="container mx-auto px-6 lg:px-8">
+        <div className="text-center mb-16">
+          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
+            How CLenFi Makes Credit Simple
+          </h2>
+          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            A new approach to credit that puts you in control of your financial identity
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-3 gap-8">
+          {features.map((feature, index) => (
+            <div key={index} className="bg-white rounded-xl shadow-sm p-6 hover:shadow-md transition-shadow duration-300">
+              <div className="flex items-center justify-between mb-4">
+                <div className="p-2 bg-gray-100 rounded-lg">
+                  {feature.icon}
+                </div>
+                <span className="inline-flex items-center px-3 py-1 rounded-full text-xs font-medium bg-green-100 text-green-800">
+                  {feature.badge}
+                </span>
+              </div>
+              <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                {feature.title}
+              </h3>
+              <p className="text-gray-600">
+                {feature.description}
+              </p>
+              <div className="mt-4">
+                <a href="#" className="text-green-600 hover:text-green-700 text-sm font-medium inline-flex items-center">
+                  Learn more
+                  <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 5l7 7-7 7" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="mt-16 bg-white rounded-xl shadow-sm overflow-hidden">
+          <div className="md:flex">
+            <div className="md:w-1/2 p-8 md:p-12">
+              <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                Ready to take control of your credit?
+              </h3>
+              <p className="text-gray-600 mb-6">
+                Join thousands of users who are already benefiting from decentralized credit solutions.
+              </p>
+              <button className="bg-green-600 hover:bg-green-700 text-white font-medium py-2 px-6 rounded-lg transition-colors duration-300">
+                Get Started
+              </button>
+            </div>
+            <div className="hidden md:block md:w-1/2 bg-gradient-to-br from-green-50 to-green-100">
+              <div className="h-full flex items-center justify-center p-8">
+                <div className="text-center">
+                  <div className="text-5xl font-bold text-green-600 mb-2">100%</div>
+                  <div className="text-gray-600">Secure & Private</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default HumanoidSection;
