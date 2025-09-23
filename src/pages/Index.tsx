@@ -118,6 +118,7 @@ import FoundersCards from "@/components/FoundersCards";
 import ProofOfTrust from "@/components/ProofOfTrust";
 import ExclusiveForDevs from "@/components/ExclusiveForDevs";
 import Footer from "@/components/Footer";
+import Prism from "@/components/Prism";
 
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
@@ -176,6 +177,25 @@ const Index = () => {
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
+      {/* Full-viewport background using ReactBits Prism (non-interactive overlay) */}
+      <div className="fixed inset-0 -z-10 pointer-events-none">
+        <Prism
+          /* Larger scale for full bleed */
+          scale={3.8}
+          /* Transparent canvas to blend with page */
+          transparent
+          /* Slow, subtle motion */
+          animationType="rotate"
+          timeScale={0.4}
+          /* Mild glow and bloom for depth */
+          glow={1}
+          bloom={1}
+          /* Slight hue shift for a cool accent; adjust as desired */
+          hueShift={0.6}
+          /* Keep background non-interactive */
+          suspendWhenOffscreen={false}
+        />
+      </div>
       <Navbar />
       <div className="w-full overflow-hidden">
         <main className="w-full overflow-hidden">

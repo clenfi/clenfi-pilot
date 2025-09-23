@@ -12,36 +12,49 @@ const CreditScoring = () => {
   }, []);
 
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-green-50 to-lime-50 relative" id="credit-scoring" ref={sectionRef}>
-      {/* Background decorative elements */}
-      <div className="absolute top-0 right-1/4 w-96 h-96 bg-green-200/30 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 left-1/4 w-80 h-80 bg-lime-200/40 rounded-full blur-3xl -z-10"></div>
-      
-      <div className="section-container">
-        <div className="text-center mb-12 opacity-0 animate-on-scroll">
-          <div className="pulse-chip mx-auto mb-6">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-600 text-white mr-2">03</span>
-            <span>Credit Scoring</span>
-          </div>
-          <ScrollReveal
-            baseOpacity={0.2}
-            enableBlur={true}
-            baseRotation={3}
-            blurStrength={6}
-            containerClassName="section-title mb-6"
-            textClassName=""
-          >
-          Smart Credit Scores That Work Everywhere
-          </ScrollReveal>
-          <p className="section-subtitle mx-auto max-w-3xl">
-            Build your decentralized credit profile across multiple blockchains. Our AI-powered system analyzes your DeFi behavior to unlock better rates, higher borrowing limits, and exclusive opportunities.
-          </p>
-        </div>
+    <section className="w-full py-10 sm:py-16 bg-transparent" id="credit-scoring" ref={sectionRef}>
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        {/* Liquid glass card */}
+        <div className="relative overflow-hidden rounded-[28px] sm:rounded-[32px] md:rounded-[40px] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.25)]">
+          {/* Soft gradient flares */}
+          <div className="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-green-400/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-lime-300/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-emerald-300/15 blur-3xl"></div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          {/* Animation Side */}
-          <div className="relative opacity-0 animate-on-scroll" style={{ animationDelay: "0.2s" }}>
-            <div className="relative bg-white rounded-3xl p-8 shadow-elegant">
+          {/* Content padding */}
+          <div className="relative p-6 sm:p-10 md:p-14">
+            {/* Header with badge and line */}
+            <div className="flex items-center gap-4 mb-8 sm:mb-12">
+              <div className="flex items-center gap-4">
+                <div className="pulse-chip">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-200 mr-2">5</span>
+                  <span>Credit Scoring</span>
+                </div>
+              </div>
+              <div className="flex-1 h-px bg-white/30"></div>
+            </div>
+
+            {/* Main heading */}
+            <div className="text-center mb-12 sm:mb-16">
+              <ScrollReveal
+                baseOpacity={0.2}
+                enableBlur={true}
+                baseRotation={3}
+                blurStrength={6}
+                containerClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6"
+                textClassName="text-black block font-display"
+              >
+                Smart Credit Scores That Work Everywhere
+              </ScrollReveal>
+              <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
+                Build your decentralized credit profile across multiple blockchains. Our AI-powered system analyzes your DeFi behavior to unlock better rates, higher borrowing limits, and exclusive opportunities.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+              {/* Animation Side */}
+              <div className="relative">
+                <div className="relative bg-white/30 backdrop-blur-xl rounded-[24px] p-8 border border-white/40 shadow-xl">
               <div className="aspect-square max-w-md mx-auto">
                 {hasAnimation ? (
                   <DotLottieReact
@@ -110,218 +123,76 @@ const CreditScoring = () => {
                 )}
               </div>
               
-              {/* Score Metrics */}
-              <div className="mt-8 grid grid-cols-3 gap-4 text-center">
-                <div className="p-4 bg-green-50 rounded-xl">
-                  <div className="text-2xl font-bold text-green-600">A+</div>
-                  <div className="text-sm text-green-700">Rating</div>
-                </div>
-                <div className="p-4 bg-blue-50 rounded-xl">
-                  <div className="text-2xl font-bold text-blue-600">85%</div>
-                  <div className="text-sm text-blue-700">Max Loan-to-Value ratio</div>
-                </div>
-                <div className="p-4 bg-purple-50 rounded-xl">
-                  <div className="text-2xl font-bold text-purple-600">2.5x</div>
-                  <div className="text-sm text-purple-700">Rewards</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Content Side */}
-          <div className="opacity-0 animate-on-scroll" style={{ animationDelay: "0.4s" }}>
-            <div className="space-y-8">
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M9 12l2 2 4-4"/>
-                    <path d="M21 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
-                    <path d="M3 12c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
-                    <path d="M12 21c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
-                    <path d="M12 3c.552 0 1-.448 1-1s-.448-1-1-1-1 .448-1 1 .448 1 1 1z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Payment History Tracking</h3>
-                  <p className="text-gray-600">
-                    We track how well you pay back loans and manage your credit. Every on-time payment improves your score and unlocks better rates.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-blue-600 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Smart Risk Evaluation</h3>
-                  <p className="text-gray-600">
-                 Your credit score updates automatically based on how the crypto market is doing and how well you're managing your investments and payments.
-                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-600 to-green-800 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/>
-                    <circle cx="9" cy="7" r="4"/>
-                    <path d="M22 21v-2a4 4 0 0 0-3-3.87"/>
-                    <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Better Scores = Better Deals</h3>
-                  <p className="text-gray-600">
-Higher credit scores get you amazing perks: lower fees, higher credit limits, protection during market crashes, and access to exclusive investment opportunities.                  </p>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-green-700 rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/>
-                    <line x1="16" y1="2" x2="16" y2="6"/>
-                    <line x1="8" y1="2" x2="8" y2="6"/>
-                    <line x1="3" y1="10" x2="21" y2="10"/>
-                  </svg>
-                </div>
-                <div>
-                  <h3 className="text-xl font-semibold mb-2">Always Getting Better</h3>
-                  <p className="text-gray-600">
-Your credit score improves with every payment you make on time. Stay consistent with payments and try different crypto activities to boost your rating.                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Credit Score Tiers */}
-        <div className="mt-16 opacity-0 animate-on-scroll" style={{ animationDelay: "0.6s" }}>
-          <div className="text-center mb-12">
-            <h3 className="text-3xl font-bold mb-4 text-gray-900">Credit Score Tiers & Benefits</h3>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Your credit score determines your borrowing power and exclusive benefits
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
-            {/* Starter Tier */}
-            <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl p-6 border-2 border-gray-200 hover:border-gray-300 transition-all duration-300 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <div className="bg-gray-500 text-white px-4 py-1 rounded-full text-sm font-semibold">STARTER</div>
-              </div>
-              <div className="text-center pt-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-gray-400 to-gray-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-3xl font-bold text-white">C</span>
-                </div>
-                <h4 className="text-xl font-bold mb-2 text-gray-900">300-579</h4>
-                <div className="space-y-3 mb-6">
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-gray-700">60%</div>
-                    <div className="text-sm text-gray-500">Max Credit</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-gray-700">18%</div>
-                    <div className="text-sm text-gray-500">APR Rate</div>
+                  {/* Score Metrics */}
+                  <div className="mt-8 grid grid-cols-3 gap-4 text-center">
+                    <div className="p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/40">
+                      <div className="text-2xl font-bold text-green-600">A+</div>
+                      <div className="text-sm text-black/70">Rating</div>
+                    </div>
+                    <div className="p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/40">
+                      <div className="text-2xl font-bold text-blue-600">85%</div>
+                      <div className="text-sm text-black/70">Max Loan-to-Value ratio</div>
+                    </div>
+                    <div className="p-4 bg-white/60 backdrop-blur-sm rounded-xl border border-white/40">
+                      <div className="text-2xl font-bold text-purple-600">2.5x</div>
+                      <div className="text-sm text-black/70">Rewards</div>
+                    </div>
                   </div>
                 </div>
-                <div className="text-sm text-gray-600">
-                  <p>✓ Basic credit features</p>
-                  <p>✓ Standard support</p>
+              </div>
+
+              {/* Content Side */}
+              <div>
+                <div className="space-y-8">
+                  <div className="flex items-start gap-4">
+                    
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-black">Payment History Tracking</h3>
+                      <p className="text-black/80">
+                        We track how well you pay back loans and manage your credit. Every on-time payment improves your score and unlocks better rates.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-black">Smart Risk Evaluation</h3>
+                      <p className="text-black/80">
+                        Your credit score updates automatically based on how the crypto market is doing and how well you're managing your investments and payments.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+                    
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-black">Better Scores = Better Deals</h3>
+                      <p className="text-black/80">
+                        Higher credit scores get you amazing perks: lower fees, higher credit limits, protection during market crashes, and access to exclusive investment opportunities.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div className="flex items-start gap-4">
+
+                    <div>
+                      <h3 className="text-xl font-semibold mb-2 text-black">Always Getting Better</h3>
+                      <p className="text-black/80">
+                        Your credit score improves with every payment you make on time. Stay consistent with payments and try different crypto activities to boost your rating.
+                      </p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Good Tier */}
-            <div className="bg-gradient-to-br from-yellow-50 to-orange-100 rounded-2xl p-6 border-2 border-yellow-200 hover:border-yellow-300 transition-all duration-300 relative">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <div className="bg-yellow-500 text-white px-4 py-1 rounded-full text-sm font-semibold">GOOD</div>
+            {/* Call to Action */}
+            <div className="text-center mt-12">
+              <div className="inline-flex items-center gap-2 bg-white/60 backdrop-blur-sm px-6 py-3 rounded-full border border-white/40 shadow-lg">
+                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                <span className="text-green-700 font-semibold">Start building your credit score today</span>
               </div>
-              <div className="text-center pt-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-yellow-400 to-orange-500 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-3xl font-bold text-white">B</span>
-                </div>
-                <h4 className="text-xl font-bold mb-2 text-gray-900">580-669</h4>
-                <div className="space-y-3 mb-6">
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-yellow-600">70%</div>
-                    <div className="text-sm text-gray-500">Max Credit</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-yellow-600">15%</div>
-                    <div className="text-sm text-gray-500">APR Rate</div>
-                  </div>
-                </div>
-                <div className="text-sm text-gray-600">
-                  <p>✓ Lower fees</p>
-                  <p>✓ Priority support</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Excellent Tier */}
-            <div className="bg-gradient-to-br from-green-50 to-emerald-100 rounded-2xl p-6 border-2 border-green-300 hover:border-green-400 transition-all duration-300 relative transform hover:scale-105 shadow-lg">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <div className="bg-green-500 text-white px-4 py-1 rounded-full text-sm font-semibold">EXCELLENT</div>
-              </div>
-              <div className="text-center pt-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-emerald-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-3xl font-bold text-white">A</span>
-                </div>
-                <h4 className="text-xl font-bold mb-2 text-gray-900">670-799</h4>
-                <div className="space-y-3 mb-6">
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-green-600">80%</div>
-                    <div className="text-sm text-gray-500">Max Credit</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-green-600">12%</div>
-                    <div className="text-sm text-gray-500">APR Rate</div>
-                  </div>
-                </div>
-                <div className="text-sm text-gray-600">
-                  <p>✓ Premium rates</p>
-                  <p>✓ Advanced features</p>
-                </div>
-              </div>
-            </div>
-
-            {/* Elite Tier */}
-            <div className="bg-gradient-to-br from-purple-50 to-indigo-100 rounded-2xl p-6 border-2 border-purple-300 hover:border-purple-400 transition-all duration-300 relative transform hover:scale-105 shadow-xl">
-              <div className="absolute -top-3 left-1/2 transform -translate-x-1/2">
-                <div className="bg-gradient-to-r from-purple-500 to-indigo-600 text-white px-4 py-1 rounded-full text-sm font-semibold">ELITE</div>
-              </div>
-              <div className="text-center pt-4">
-                <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-indigo-600 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
-                  <span className="text-3xl font-bold text-white">A+</span>
-                </div>
-                <h4 className="text-xl font-bold mb-2 text-gray-900">800+</h4>
-                <div className="space-y-3 mb-6">
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-purple-600">85%</div>
-                    <div className="text-sm text-gray-500">Max Credit</div>
-                  </div>
-                  <div className="bg-white rounded-lg p-3 shadow-sm">
-                    <div className="text-2xl font-bold text-purple-600">9%</div>
-                    <div className="text-sm text-gray-500">APR Rate</div>
-                  </div>
-                </div>
-                <div className="text-sm text-gray-600">
-                  <p>✓ Exclusive rates</p>
-                  <p>✓ VIP service</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          {/* Call to Action */}
-          <div className="text-center mt-12">
-            <div className="inline-flex items-center gap-2 bg-green-100 px-6 py-3 rounded-full">
-              <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-              <span className="text-green-700 font-semibold">Start building your credit score today</span>
             </div>
           </div>
         </div>

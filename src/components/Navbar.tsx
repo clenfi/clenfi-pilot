@@ -1,11 +1,18 @@
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react";
+import { FloatingDock } from "@/components/ui/floating-dock";
+import {
+  IconHome,
+  IconBulb,
+  IconExchange,
+  IconCreditCard,
+  IconSparkles,
+  IconGauge,
+} from "@tabler/icons-react";
 
 const Navbar = () => {
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -16,32 +23,51 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen);
-    // Prevent background scrolling when menu is open
-    document.body.style.overflow = !isMenuOpen ? 'hidden' : '';
-  };
-
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
     });
-    
-    // Close mobile menu if open
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-      document.body.style.overflow = '';
-    }
   };
+
+  const links = [
+    {
+      title: "Home",
+      icon: <IconHome className="h-full w-full text-neutral-500" />,
+      href: "#hero",
+    },
+    {
+      title: "Why CLenFi",
+      icon: <IconBulb className="h-full w-full text-neutral-500" />,
+      href: "#why-clenfi",
+    },
+    {
+      title: "Credit Scoring",
+      icon: <IconGauge className="h-full w-full text-neutral-500" />,
+      href: "#credit-scoring",
+    },
+    {
+      title: "Cards",
+      icon: <IconCreditCard className="h-full w-full text-neutral-500" />,
+      href: "#nft-cards",
+    },
+    {
+      title: "How It Works",
+      icon: <IconExchange className="h-full w-full text-neutral-500" />,
+      href: "#how-it-works",
+    },
+    {
+      title: "Features",
+      icon: <IconSparkles className="h-full w-full text-neutral-500" />,
+      href: "#features",
+    },
+  ];
 
   return (
     <header
       className={cn(
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
-        isScrolled 
-          ? "bg-white/70 backdrop-blur-xl shadow-lg border-b border-white/20" 
-          : "bg-white/10 backdrop-blur-md border-b border-white/10"
+        "bg-transparent backdrop-blur-0 border-0 shadow-none"
       )}
       style={{ height: '70px' }}
     >
@@ -62,73 +88,16 @@ const Navbar = () => {
             style={{ maxHeight: '160px', width: 'auto' }}
           />
         </a>
-
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex space-x-8">
-          <a 
-            href="#" 
-            className="nav-link"
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-            }}
-          >
-            Home
-          </a>
-          <a href="#features" className="nav-link">Features</a>
-          <a href="#details" className="nav-link">How it Works</a>
-        </nav>
-
-        {/* Mobile menu button - increased touch target */}
-        <button 
-          className="md:hidden text-white p-3 focus:outline-none" 
-          onClick={toggleMenu}
-          aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-        >
-          {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
+        {/* FloatingDock replaces both desktop and mobile menus */}
+        <div className="ml-4">
+          <FloatingDock
+            items={links}
+            desktopClassName="bg-transparent border-0 shadow-none"
+            mobileClassName="translate-y-2 bg-transparent"
+          />
+        </div>
       </div>
-
-      {/* Mobile Navigation - improved for better touch experience */}
-      <div className={cn(
-        "fixed inset-0 z-40 bg-white/90 backdrop-blur-xl flex flex-col pt-20 px-6 md:hidden transition-all duration-300 ease-in-out",
-        isMenuOpen ? "opacity-100 translate-x-0" : "opacity-0 translate-x-full pointer-events-none"
-      )}>
-        <nav className="flex flex-col space-y-8 items-center mt-8">
-          <a 
-            href="#" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={(e) => {
-              e.preventDefault();
-              scrollToTop();
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            Home
-          </a>
-          <a 
-            href="#features" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            Features
-          </a>
-          <a 
-            href="#details" 
-            className="text-xl font-medium py-3 px-6 w-full text-center rounded-lg hover:bg-gray-100" 
-            onClick={() => {
-              setIsMenuOpen(false);
-              document.body.style.overflow = '';
-            }}
-          >
-            How it Works
-          </a>
-        </nav>
-      </div>
+      {/* No separate mobile overlay menu; FloatingDock handles mobile */}
     </header>
   );
 };

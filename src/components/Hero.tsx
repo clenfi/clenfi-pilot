@@ -1,170 +1,231 @@
-import React, { useEffect, useRef, useState } from "react";
-import { cn } from "@/lib/utils";
-import { ArrowRight } from "lucide-react";
-import { DotLottieReact } from "@lottiefiles/dotlottie-react";
-import LottieAnimation from "./LottieAnimation";
-import AnimatedText from "./AnimatedText";
-import Aurora from "./Aurora";
-import { CometCard } from "./ui/comet-card";
-import { ContainerScroll, Card as ScrollCard } from "./ui/container-scroll";
+import React from "react";
+import ScrollReveal from "./ScrollReveal";
 
+// NEW HERO IMPLEMENTATION (based on provided reference)
 const Hero = () => {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const imageRef = useRef<HTMLImageElement>(null);
-  const [lottieData, setLottieData] = useState<object | null>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    // Check if mobile on mount and when window resizes
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
-
-  useEffect(() => {
-    // Set lottieData to null to disable Lottie animation and show heroimage2.jpg instead
-    setLottieData(null);
-  }, []);
-
-  useEffect(() => {
-    // Skip effect on mobile
-    if (isMobile) return;
-
-    const handleMouseMove = (e: MouseEvent) => {
-      if (!containerRef.current || !imageRef.current) return;
-
-      const { left, top, width, height } =
-        containerRef.current.getBoundingClientRect();
-      const x = (e.clientX - left) / width - 0.5;
-      const y = (e.clientY - top) / height - 0.5;
-
-      imageRef.current.style.transform = `perspective(1000px) rotateY(${
-        x * 2.5
-      }deg) rotateX(${-y * 2.5}deg) scale3d(1.02, 1.02, 1.02)`;
-    };
-
-    const handleMouseLeave = () => {
-      if (!imageRef.current) return;
-      imageRef.current.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg) scale3d(1, 1, 1)`;
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener("mousemove", handleMouseMove);
-      container.addEventListener("mouseleave", handleMouseLeave);
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener("mousemove", handleMouseMove);
-        container.removeEventListener("mouseleave", handleMouseLeave);
-      }
-    };
-  }, [isMobile]);
-
-  useEffect(() => {
-    // Skip parallax on mobile
-    if (isMobile) return;
-
-    const handleScroll = () => {
-      const scrollY = window.scrollY;
-      const elements = document.querySelectorAll(".parallax");
-      elements.forEach((el) => {
-        const element = el as HTMLElement;
-        const speed = parseFloat(element.dataset.speed || "0.1");
-        const yPos = -scrollY * speed;
-        element.style.setProperty("--parallax-y", `${yPos}px`);
-      });
-    };
-
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [isMobile]);
-
-  // Content to be placed inside the scroll card
-  const scrollContent = (
-    <div className="relative w-full h-full">
-      <img
-        src="/heroimage2.jpg"
-        alt="CLenFi Crypto Credit Companion"
-        className="w-full h-full object-fit"
-      />
-    </div>
-  );
-
-  // Title component for the scroll container
-  const titleComponent = (
-    <div className="text-center max-w-4xl mx-auto">
-      <div className="pulse-chip mb-3 sm:mb-6">
-        <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-600 text-black mr-2">
-          01
-        </span>
-        <span className="text-black">Innovation</span>
-      </div>
-      <h1 className="text-6xl mb-32 sm:text-5xl lg:text-6xl xl:text-7xl leading-tight font-bold text-black">
-        CREDIT MADE EASY
-        <br />
-        FOR WEB3
-      </h1>
-    </div>
-  );
-  
-  // Description text to be placed outside the card
-  const descriptionText = (
-    <p className="-mt-24 sm:-mt-6 leading-relaxed text-black/80 font-normal text-xl sm:text-2xl max-w-3xl text-center">
-      Get instant credit without putting up collateral. CLenFi builds
-      your trust score based on how you handle money, then gives you
-      better rates and higher limits as you prove yourself reliable.
-      Think of it as building credit history, but for crypto.
-    </p>
-  );
-
   return (
-    <section
-      className="overflow-hidden relative min-h-screen flex items-center"
-      id="hero"
-      style={{
-        padding: isMobile ? "20px 12px" : "40px 20px",
-      }}
-    >
-      {/* Aurora Background - Positioned higher with reduced height */}
-      <div className="absolute inset-x-0 top-[-20%] h-[80%] -z-20">
-        <Aurora
-          colorStops={["#22c55e", "#84cc16", "#15803d"]}
-          blend={0.5}
-          amplitude={1.0}
-          speed={0.5}
-        />
+    <section id="hero" className="relative py-12 md:py-16">
+      <div className="section-container">
+        {/* Title */}
+        <div className="text-center md:text-left max-w-none mx-auto">
+          <h1 className="text-[clamp(56px,18vw,220px)] md:text-[clamp(56px,14vw,220px)] leading-[0.85] font-extrabold text-black tracking-tight uppercase">
+            CREDIT MADE EASY
+            <br />
+            FOR WEB3
+          </h1>
+        </div>
+
+        {/* Showcase */}
+        <div className="mt-10 md:mt-14">
+          {/* Mobile */}
+          <div className="md:hidden flex flex-col gap-5 text-black font-extrabold uppercase">
+            {/* SPEND + card */}
+            <ScrollReveal
+              baseOpacity={0}
+              enableBlur={true}
+              baseRotation={5}
+              blurStrength={10}
+              containerClassName="my-0 w-full text-right"
+              textClassName="text-[clamp(48px,13vw,72px)] leading-[0.9] font-extrabold uppercase tracking-tight"
+            >
+              SPEND
+            </ScrollReveal>
+            <div className="h-[300px] rounded-2xl overflow-hidden shadow-elegant relative">
+              <iframe
+                src="https://my.spline.design/creditcard-WpNvUwK0nuHJb2KvLTIezavz/"
+                className="w-full h-full"
+                frameBorder={0}
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowFullScreen
+              />
+            </div>
+
+            {/* EARN + APY card */}
+            <ScrollReveal
+              baseOpacity={0}
+              enableBlur={true}
+              baseRotation={5}
+              blurStrength={10}
+              containerClassName="my-0 w-full text-left"
+              textClassName="text-[clamp(40px,12vw,64px)] leading-[0.9] font-extrabold uppercase tracking-tight"
+            >
+              EARN
+            </ScrollReveal>
+            <div className="h-[220px] rounded-2xl bg-[#0b1220] text-white p-5 overflow-hidden shadow-elegant border border-white/10 flex items-center justify-center">
+              <div className="relative w-full max-w-[220px] aspect-square mx-auto">
+                <svg viewBox="0 0 100 100" className="w-full h-full">
+                  <defs>
+                    <linearGradient id="grad-m" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#22c55e" />
+                      <stop offset="100%" stopColor="#84cc16" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="42" stroke="#1f2937" strokeWidth="4" fill="none" />
+                  <circle cx="50" cy="50" r="42" stroke="url(#grad-m)" strokeWidth="4" strokeDasharray="264" strokeDashoffset="60" fill="none" strokeLinecap="round" />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-3xl font-bold">$2,56ᴠ</div>
+                  <div className="text-xs text-slate-400 mt-1">11.07% APY</div>
+                </div>
+              </div>
+            </div>
+
+            {/* TRADE + swap card */}
+            <ScrollReveal
+              baseOpacity={0}
+              enableBlur={true}
+              baseRotation={5}
+              blurStrength={10}
+              containerClassName="my-0 w-full text-right"
+              textClassName="text-[clamp(40px,12vw,64px)] leading-[0.9] font-extrabold uppercase tracking-tight"
+            >
+              BUILD
+            </ScrollReveal>
+            <div className="h-[220px] rounded-2xl bg-[#0b1220] text-white p-5 shadow-elegant border border-white/10">
+              <div className="flex items-center gap-3">
+                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-sm">USDC</span>
+                <span className="text-slate-400">→</span>
+                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-sm">ETH</span>
+              </div>
+              <div className="mt-4 rounded-xl bg-slate-900/60 p-4 border border-white/5">
+                <div className="text-sm text-slate-400">Swap preview</div>
+                <div className="text-xl font-semibold">1,000 USDC → 0.31 ETH</div>
+              </div>
+            </div>
+
+            {/* BANK + banknote video */}
+            <ScrollReveal
+              baseOpacity={0}
+              enableBlur={true}
+              baseRotation={5}
+              blurStrength={10}
+              containerClassName="my-0 w-full text-left"
+              textClassName="text-[clamp(40px,12vw,64px)] leading-[0.9] font-extrabold uppercase tracking-tight"
+            >
+              CREDIT
+            </ScrollReveal>
+            <div className="h-[220px] rounded-2xl overflow-hidden shadow-elegant border border-black/10">
+              <video
+                className="h-full w-full object-cover"
+                src="/bankvideo.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+            </div>
+          </div>
+
+          {/* Desktop */}
+          <div className="hidden md:grid grid-cols-2 gap-8 [grid-template-rows:520px_420px_420px_420px]">
+            {/* Row 1: Left card (Spend), Right big word SPEND */}
+            <div className="h-[520px] rounded-[24px] overflow-hidden shadow-elegant relative">
+              <iframe
+                src="https://my.spline.design/creditcard-WpNvUwK0nuHJb2KvLTIezavz/"
+                className="w-full h-full"
+                frameBorder={0}
+                allow="autoplay; fullscreen; xr-spatial-tracking"
+                allowFullScreen
+              />
+            </div>
+            <div className="h-[520px] flex items-center justify-start pl-2">
+              <ScrollReveal
+                baseOpacity={0}
+                enableBlur={true}
+                baseRotation={5}
+                blurStrength={10}
+                containerClassName="my-0 leading-[0.85] font-extrabold uppercase text-black"
+                textClassName="text-[clamp(200px,12vw,320px)] tracking-tight uppercase"
+              >
+                SPEND
+              </ScrollReveal>
+            </div>
+
+            {/* Row 2: Left big word EARN, Right APY circle card */}
+            <div className="h-[420px] flex items-center justify-start pl-2">
+              <ScrollReveal
+                baseOpacity={0}
+                enableBlur={true}
+                baseRotation={5}
+                blurStrength={10}
+                containerClassName="my-0 leading-[0.85] font-extrabold uppercase text-black"
+                textClassName="text-[clamp(160px,12vw,280px)] tracking-tight uppercase"
+              >
+                EARN
+              </ScrollReveal>
+            </div>
+            <div className="h-[420px] rounded-[24px] bg-[#0b1220] text-white p-6 overflow-hidden shadow-elegant border border-white/10 flex items-center justify-center">
+              <div className="relative w-full max-w-[260px] aspect-square mx-auto">
+                <svg viewBox="0 0 100 100" className="w-full h-full">
+                  <defs>
+                    <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" stopColor="#22c55e" />
+                      <stop offset="100%" stopColor="#84cc16" />
+                    </linearGradient>
+                  </defs>
+                  <circle cx="50" cy="50" r="42" stroke="#1f2937" strokeWidth="4" fill="none" />
+                  <circle cx="50" cy="50" r="42" stroke="url(#grad)" strokeWidth="4" strokeDasharray="264" strokeDashoffset="60" fill="none" strokeLinecap="round" />
+                </svg>
+                <div className="absolute inset-0 flex flex-col items-center justify-center">
+                  <div className="text-4xl font-bold">$2,56ᴠ</div>
+                  <div className="text-xs text-slate-400 mt-1">11.07% APY</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Row 3: Left swap card, Right big word TRADE */}
+            <div className="h-[420px] rounded-[24px] bg-[#0b1220] text-white p-6 shadow-elegant border border-white/10 flex items-center">
+              <div className="flex items-center gap-3">
+                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10">USDC</span>
+                <span className="text-slate-400">→</span>
+                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10">ETH</span>
+              </div>
+              <div className="mt-4 rounded-xl bg-slate-900/60 p-4 border border-white/5">
+                <div className="text-sm text-slate-400">Swap preview</div>
+                <div className="text-2xl font-semibold">1,000 USDC → 0.31 ETH</div>
+              </div>
+            </div>
+            <div className="h-[420px] flex items-center justify-start pl-2">
+              <ScrollReveal
+                baseOpacity={0}
+                enableBlur={true}
+                baseRotation={5}
+                blurStrength={10}
+                containerClassName="my-0 leading-[0.85] font-extrabold uppercase text-black"
+                textClassName="text-[clamp(160px,12vw,280px)] tracking-tight uppercase"
+              >
+                BUILD
+              </ScrollReveal>
+            </div>
+
+            {/* Row 4: Left big word BANK, Right banknote video */}
+            <div className="h-[420px] flex items-center justify-start pl-2">
+              <ScrollReveal
+                baseOpacity={0}
+                enableBlur={true}
+                baseRotation={5}
+                blurStrength={10}
+                containerClassName="my-0 leading-[0.85] font-extrabold uppercase text-black"
+                textClassName="text-[clamp(160px,12vw,280px)] tracking-tight uppercase"
+              >
+                LOAN
+              </ScrollReveal>
+            </div>
+            <div className="h-[420px] rounded-[24px] overflow-hidden shadow-elegant border border-black/10">
+              <video
+                className="h-full w-full object-cover"
+                src="/bankvideo.mp4"
+                autoPlay
+                muted
+                loop
+                playsInline
+                preload="metadata"
+              />
+            </div>
+          </div>
+        </div>
       </div>
-
-      {/* Original background as overlay */}
-      <div
-        className="absolute inset-0 -z-10 opacity-30"
-        style={{
-          backgroundImage: 'url("/Header-background.webp")',
-          backgroundPosition: "center 30%",
-          backgroundSize: "cover",
-        }}
-      ></div>
-
-      <div className="absolute -top-[10%] -right-[5%] w-1/2 h-[70%] bg-pulse-gradient opacity-20 blur-3xl rounded-full"></div>
-
-      <div className="w-full flex flex-col items-center" ref={containerRef}>
-        <ContainerScroll titleComponent={titleComponent}>
-          {scrollContent}
-        </ContainerScroll>
-        {descriptionText}
-      </div>
-
-      {/* <div
-        className="hidden lg:block absolute bottom-0 left-1/4 w-64 h-64 bg-green-200/30 rounded-full blur-3xl -z-10 parallax"
-        data-speed="0.05"
-      ></div> */}
     </section>
   );
 };
