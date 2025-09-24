@@ -33,8 +33,8 @@ const IntroSection = () => {
             {/* Header with badge and line */}
             <div className="flex items-center gap-4 mb-8 sm:mb-12">
               <div className="flex items-center gap-4">
-                <div className="pulse-chip">
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-200 mr-2">4</span>
+                <div className="pulse-chip font-bold italic">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  mr-2">4</span>
                   <span>Introduction</span>
                 </div>
               </div>

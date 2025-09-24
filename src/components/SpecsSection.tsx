@@ -16,7 +16,7 @@ const SpecsSection = () => {
             {/* Header with badge and line */}
             <div className="flex items-center gap-4 mb-8 sm:mb-12">
               <div className="flex items-center gap-4">
-                <div className="pulse-chip">
+                <div className="pulse-chip font-bold italic">
                   <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  bg-purple-200 mr-2">3</span>
                   <span>Innovation</span>
                 </div>

@@ -2,37 +2,46 @@ import React from "react";
 
 const ExclusiveForDevs = () => {
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-br from-blue-50 to-cyan-50 relative" id="exclusive-for-devs">
-      {/* Background decorative elements */}
-      <div className="absolute top-1/4 right-1/4 w-96 h-96 bg-blue-200/20 rounded-full blur-3xl -z-10"></div>
-      <div className="absolute bottom-1/4 left-1/4 w-80 h-80 bg-cyan-200/30 rounded-full blur-3xl -z-10"></div>
-      
-      <div className="section-container">
-        <div className="text-center mb-12 animate-on-scroll">
-          <div className="pulse-chip mx-auto mb-6">
-            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-600 text-white mr-2">👨‍💻</span>
-            <span>Exclusive For Devs</span>
-          </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-gray-900">
-            Build the Future of DeFi Credit
-          </h2>
-          <p className="section-subtitle mx-auto max-w-3xl">
-            Integrate CLenFi's revolutionary credit scoring API into your platform and move beyond overcollateralization to a trust-based lending ecosystem.
-          </p>
-        </div>
+    <section className="w-full py-10 sm:py-16 bg-transparent" id="exclusive-for-devs">
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        {/* Liquid glass card */}
+        <div className="relative overflow-hidden rounded-[28px] sm:rounded-[32px] md:rounded-[40px] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.25)]">
+          {/* Soft gradient flares */}
+          <div className="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-blue-400/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-sky-300/15 blur-3xl"></div>
+
+          {/* Content padding */}
+          <div className="relative p-6 sm:p-10 md:p-14">
+            {/* Header with badge and line */}
+            <div className="flex items-center gap-4 mb-8 sm:mb-12">
+              <div className="flex items-center gap-4">
+                <div className="pulse-chip font-bold italic">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  mr-2">14</span>
+                  <span>Exclusive For Devs</span>
+                </div>
+              </div>
+              <div className="flex-1 h-px bg-white/30"></div>
+            </div>
+
+            {/* Main heading */}
+            <div className="text-center mb-12 animate-on-scroll">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6">
+                Build the Future of DeFi Credit
+              </h2>
+              <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
+                Integrate CLenFi's revolutionary credit scoring API into your platform and move beyond overcollateralization to a trust-based lending ecosystem.
+              </p>
+            </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
           <div className="animate-on-scroll" style={{ animationDelay: "0.2s" }}>
             <div className="space-y-8">
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                  </svg>
-                </div>
+                
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Credit Scoring API</h3>
+                  <h3 className="text-xl font-semibold mb-2 underline">Credit Scoring API</h3>
                   <p className="text-gray-600">
                     Access our advanced credit scoring algorithm through a simple API integration. Get real-time trust scores for users based on their on-chain financial behavior and payment history.
                   </p>
@@ -40,13 +49,9 @@ const ExclusiveForDevs = () => {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-cyan-600 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
-                  </svg>
-                </div>
+                
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Undercollateralized Lending</h3>
+                  <h3 className="text-xl font-semibold mb-2 underline">Undercollateralized Lending</h3>
                   <p className="text-gray-600">
                     Enable undercollateralized loans on your platform using our trust-based scoring system. Move away from traditional overcollateralization models and unlock true DeFi potential.
                   </p>
@@ -54,13 +59,9 @@ const ExclusiveForDevs = () => {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-600 to-blue-800 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path>
-                  </svg>
-                </div>
+                
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Multi-Chain Integration</h3>
+                  <h3 className="text-xl font-semibold mb-2 underline">Multi-Chain Integration</h3>
                   <p className="text-gray-600">
                     Our API supports Ethereum, Arbitrum, and Base networks, providing comprehensive credit scoring across multiple blockchain ecosystems for maximum platform coverage.
                   </p>
@@ -68,13 +69,9 @@ const ExclusiveForDevs = () => {
               </div>
 
               <div className="flex items-start gap-3 sm:gap-4">
-                <div className="w-10 h-10 sm:w-12 sm:h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-lg sm:rounded-xl flex items-center justify-center flex-shrink-0">
-                  <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M9 12l2 2 4-4m5.5-1.5a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                  </svg>
-                </div>
+               
                 <div>
-                  <h3 className="text-xl font-semibold mb-2">Trust-Based Architecture</h3>
+                  <h3 className="text-xl font-semibold mb-2 underline">Trust-Based Architecture</h3>
                   <p className="text-gray-600">
                     Build platforms that leverage user reputation and financial behavior rather than excessive collateral requirements, creating a more inclusive and efficient lending ecosystem.
                   </p>
@@ -85,18 +82,18 @@ const ExclusiveForDevs = () => {
 
           {/* API Showcase Side */}
           <div className="animate-on-scroll" style={{ animationDelay: "0.4s" }}>
-            <div className="relative bg-white rounded-3xl p-8 shadow-elegant border border-gray-200">
+            <div className="relative bg-white/30 backdrop-blur-xl rounded-3xl p-8 border border-white/40 shadow-xl">
               <div className="mb-6">
                 <div className="flex items-center gap-2 mb-4">
                   <div className="w-3 h-3 bg-red-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-yellow-500 rounded-full"></div>
                   <div className="w-3 h-3 bg-green-500 rounded-full"></div>
                 </div>
-                <h4 className="text-lg font-bold text-gray-900 mb-2">CLenFi Credit API</h4>
+                <h4 className="text-lg font-bold text-black mb-2">CLenFi Credit API</h4>
               </div>
               
               <div className="space-y-4 text-sm">
-                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                <div className="bg-white/40 backdrop-blur-sm rounded-lg p-4 border border-white/30">
                   <div className="text-blue-600 mb-2">// Get user credit score</div>
                   <div className="text-green-600">
                     <span className="text-blue-600">const</span> creditData = <span className="text-yellow-600">await</span> clenfi.getScore(
@@ -105,18 +102,18 @@ const ExclusiveForDevs = () => {
                   <div className="text-green-600">);</div>
                 </div>
                 
-                <div className="bg-gray-50 rounded-lg p-4 border border-gray-200">
+                <div className="bg-white/40 backdrop-blur-sm rounded-lg p-4 border border-white/30">
                   <div className="text-blue-600 mb-2">// Response</div>
-                  <div className="text-gray-900">&#123;</div>
-                  <div className="text-gray-900 ml-4">score: <span className="text-green-600">850</span>,</div>
-                  <div className="text-gray-900 ml-4">trust_level: <span className="text-orange-600">"excellent"</span>,</div>
-                  <div className="text-gray-900 ml-4">max_loan: <span className="text-green-600">25000</span>,</div>
-                  <div className="text-gray-900 ml-4">apr: <span className="text-green-600">12.5</span></div>
-                  <div className="text-gray-900">&#125;</div>
+                  <div className="text-black">&#123;</div>
+                  <div className="text-black ml-4">score: <span className="text-green-600">850</span>,</div>
+                  <div className="text-black ml-4">trust_level: <span className="text-orange-600">"excellent"</span>,</div>
+                  <div className="text-black ml-4">max_loan: <span className="text-green-600">25000</span>,</div>
+                  <div className="text-black ml-4">apr: <span className="text-green-600">12.5</span></div>
+                  <div className="text-black">&#125;</div>
                 </div>
               </div>
               
-              <div className="mt-6 p-4 bg-gradient-to-r from-blue-100 to-cyan-100 rounded-xl border border-blue-300">
+              <div className="mt-6 p-4 bg-white/40 backdrop-blur-sm rounded-xl border border-white/30">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-700 mb-1">RESTful API</div>
                   <div className="text-sm text-blue-600">Easy Integration • Real-time Data</div>
@@ -126,83 +123,63 @@ const ExclusiveForDevs = () => {
           </div>
         </div>
 
-        {/* Call to Action */}
-        <div className="mt-16 text-center animate-on-scroll" style={{ animationDelay: "0.6s" }}>
-          <div className="bg-gradient-to-r from-blue-600 to-cyan-600 rounded-3xl p-12 shadow-2xl">
-            <h3 className="text-3xl font-bold text-white mb-4">Ready to Revolutionize Lending?</h3>
-            <p className="text-blue-100 mb-8 text-lg max-w-2xl mx-auto">
-              Join the next generation of DeFi platforms that prioritize trust over collateral. Access our API and build the future of decentralized finance.
-            </p>
             
-            <div className="inline-flex items-center justify-center space-x-2 bg-white/10 backdrop-blur-sm rounded-full px-8 py-4 border border-white/20">
-              <div className="w-3 h-3 bg-orange-500 rounded-full animate-pulse"></div>
-              <span className="text-white font-bold text-xl">OPPORTUNITY OPENS SOON</span>
-            </div>
-          </div>
-        </div>
-
-        {/* Important Disclaimers Section */}
-        <div className="mt-16 animate-on-scroll" style={{ animationDelay: "0.8s" }}>
-          <div className="bg-gradient-to-br from-gray-50 to-white rounded-3xl p-8 border border-gray-200 shadow-lg">
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">Important Information & Disclaimers</h3>
-              <p className="text-gray-600">Please read these important notices carefully before using CLenFi</p>
-            </div>
+            {/* Important Disclaimers Section */}
+            <div className="mt-16 animate-on-scroll" style={{ animationDelay: "0.8s" }}>
+              <div className="bg-white/30 backdrop-blur-xl rounded-3xl p-8 border border-white/40 shadow-xl">
+                <div className="text-center mb-8">
+                  <h3 className="text-2xl font-bold text-black mb-2">Important Information & Disclaimers</h3>
+                  <p className="text-black/70">Please read these important notices carefully before using CLenFi</p>
+                </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-white rounded-xl p-6 border border-red-200 hover:border-red-300 transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-red-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">⚠️</span>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                  <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-red-200 hover:border-red-300 transition-colors">
+                    <div className="flex items-center gap-3 mb-4">
+                     
+                      <h4 className="font-bold text-red-700">Risk Warning</h4>
+                    </div>
+                    <p className="text-sm text-black/70 leading-relaxed">
+                      Credit involves risk of financial loss if you cannot repay borrowed amounts. Interest rates fluctuate based on market conditions and your creditworthiness. Only borrow what you can comfortably afford to repay within the agreed terms.
+                    </p>
                   </div>
-                  <h4 className="font-bold text-red-700">Risk Warning</h4>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Credit involves risk of financial loss if you cannot repay borrowed amounts. Interest rates fluctuate based on market conditions and your creditworthiness. Only borrow what you can comfortably afford to repay within the agreed terms.
-                </p>
-              </div>
 
-              <div className="bg-white rounded-xl p-6 border border-blue-200 hover:border-blue-300 transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">📋</span>
+                  <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-blue-200 hover:border-blue-300 transition-colors">
+                    <div className="flex items-center gap-3 mb-4">
+                      
+                      <h4 className="font-bold text-blue-700">Regulatory Notice</h4>
+                    </div>
+                    <p className="text-sm text-black/70 leading-relaxed">
+                      CLenFi operates as a decentralized, community-governed protocol through transparent smart contracts. Token holders participate in governance decisions. This platform does not provide financial advice - consult qualified professionals before use.
+                    </p>
                   </div>
-                  <h4 className="font-bold text-blue-700">Regulatory Notice</h4>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  CLenFi operates as a decentralized, community-governed protocol through transparent smart contracts. Token holders participate in governance decisions. This platform does not provide financial advice - consult qualified professionals before use.
-                </p>
-              </div>
 
-              <div className="bg-white rounded-xl p-6 border border-purple-200 hover:border-purple-300 transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">🔒</span>
+                  <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-purple-200 hover:border-purple-300 transition-colors">
+                    <div className="flex items-center gap-3 mb-4">
+                      
+                      <h4 className="font-bold text-purple-700">Security & Audits</h4>
+                    </div>
+                    <p className="text-sm text-black/70 leading-relaxed">
+                      Our smart contracts undergo rigorous security audits by leading blockchain security firms. However, DeFi protocols carry inherent risks. Please conduct your own research and understand the technology before participating.
+                    </p>
                   </div>
-                  <h4 className="font-bold text-purple-700">Security & Audits</h4>
-                </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  Our smart contracts undergo rigorous security audits by leading blockchain security firms. However, DeFi protocols carry inherent risks. Please conduct your own research and understand the technology before participating.
-                </p>
-              </div>
 
-              <div className="bg-white rounded-xl p-6 border border-orange-200 hover:border-orange-300 transition-colors">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="w-12 h-12 bg-orange-100 rounded-full flex items-center justify-center">
-                    <span className="text-2xl">💼</span>
+                  <div className="bg-white/40 backdrop-blur-sm rounded-xl p-6 border border-orange-200 hover:border-orange-300 transition-colors">
+                    <div className="flex items-center gap-3 mb-4">
+
+                      <h4 className="font-bold text-orange-700">Credit Responsibility</h4>
+                    </div>
+                    <p className="text-sm text-black/70 leading-relaxed">
+                      All credit examples and multipliers shown are illustrative. Actual terms depend on individual creditworthiness. Users are solely responsible for their borrowing decisions, repayment obligations, and proper use of credit facilities.
+                    </p>
                   </div>
-                  <h4 className="font-bold text-orange-700">Credit Responsibility</h4>
                 </div>
-                <p className="text-sm text-gray-600 leading-relaxed">
-                  All credit examples and multipliers shown are illustrative. Actual terms depend on individual creditworthiness. Users are solely responsible for their borrowing decisions, repayment obligations, and proper use of credit facilities.
-                </p>
-              </div>
-            </div>
 
-            <div className="mt-8 p-4 bg-gray-100 rounded-xl border border-gray-300">
-              <p className="text-sm text-gray-700 text-center font-medium">
-                By using CLenFi, you acknowledge that you understand these terms, the associated risks of DeFi credit, and that you are using the platform at your own discretion and responsibility.
-              </p>
+                <div className="mt-8 p-4 bg-white/40 backdrop-blur-sm rounded-xl border border-white/30">
+                  <p className="text-sm text-black/80 text-center font-medium">
+                    By using CLenFi, you acknowledge that you understand these terms, the associated risks of DeFi credit, and that you are using the platform at your own discretion and responsibility.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>

@@ -160,8 +160,8 @@ const Hero = () => {
                 <svg viewBox="0 0 100 100" className="w-full h-full">
                   <defs>
                     <linearGradient id="grad" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#22c55e" />
-                      <stop offset="100%" stopColor="#84cc16" />
+                      <stop offset="0%" stopColor="#000000" />
+                      <stop offset="100%" stopColor="#ffffff" />
                     </linearGradient>
                   </defs>
                   <circle cx="50" cy="50" r="42" stroke="#1f2937" strokeWidth="4" fill="none" />

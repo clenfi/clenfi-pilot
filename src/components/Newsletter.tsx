@@ -28,7 +28,7 @@ const Newsletter = () => {
       <div className="section-container opacity-0 animate-on-scroll">
         <div className="max-w-6xl mx-auto">
           <div className="flex items-center gap-4 mb-6">
-            <div className="pulse-chip">
+            <div className="pulse-chip font-bold italic">
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-500 text-white mr-2">05</span>
               <span>Newsletter</span>
             </div>

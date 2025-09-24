@@ -24,13 +24,13 @@ const founders: Founder[] = [
     creditScore: 890,
     cardNumber: "4521 **** **** 1847",
     tier: "Diamond",
-    joinDate: "01/24",
+    joinDate: "01/25",
     bgGradient: "from-gray-900 via-gray-800 to-black",
     textColor: "text-white",
     socialLinks: {
-      linkedin: "https://linkedin.com/in/punit-clenfi",
-      twitter: "https://twitter.com/punit_clenfi",
-      github: "https://github.com/punit-clenfi"
+      linkedin: "https://www.linkedin.com/in/punitjainfarhom/",
+      twitter: "https://x.com/punit030593",
+      github: ""
     }
   },
   {
@@ -39,12 +39,12 @@ const founders: Founder[] = [
     creditScore: 875,
     cardNumber: "4521 **** **** 2956",
     tier: "Diamond",
-    joinDate: "01/24",
-    bgGradient: "from-purple-900 via-purple-800 to-indigo-900",
+    joinDate: "01/25",
+    bgGradient: "from-gray-900 via-gray-800 to-black",
     textColor: "text-white",
     socialLinks: {
-      linkedin: "https://linkedin.com/in/sai-jadhav-clenfi",
-      twitter: "https://twitter.com/sai_jadhav_dev",
+      linkedin: "https://www.linkedin.com/in/sai-jadhav369/",
+      twitter: "https://x.com/Sai__Jadhav",
       github: "https://github.com/saijadhav369"
     }
   },
@@ -54,13 +54,13 @@ const founders: Founder[] = [
     creditScore: 862,
     cardNumber: "4521 **** **** 3074",
     tier: "Diamond",
-    joinDate: "01/24",
-    bgGradient: "from-blue-900 via-blue-800 to-cyan-900",
+    joinDate: "01/25",
+    bgGradient: "from-gray-900 via-gray-800 to-black",
     textColor: "text-white",
     socialLinks: {
-      linkedin: "https://linkedin.com/in/rahul-jadvani",
-      twitter: "https://twitter.com/rahul_jadvani",
-      github: "https://github.com/rahul-jadvani"
+      linkedin: "https://www.linkedin.com/in/rahul-jadvani/",
+      twitter: "https://x.com/__Ray__47",
+      github: "https://github.com/Rahul-Jadvani"
     }
   },
   {
@@ -69,13 +69,12 @@ const founders: Founder[] = [
     creditScore: 895,
     cardNumber: "4521 **** **** 4183",
     tier: "Diamond", 
-    joinDate: "01/24",
-    bgGradient: "from-emerald-900 via-green-800 to-teal-900",
-    textColor: "text-white",
+    joinDate: "01/25",
+    bgGradient: "from-gray-900 via-gray-800 to-black",textColor: "text-white",
     socialLinks: {
-      linkedin: "https://linkedin.com/in/sachin-baluragi",
-      twitter: "https://twitter.com/sachin_baluragi",
-      github: "https://github.com/sachin-baluragi"
+      linkedin: "https://www.linkedin.com/in/sachinbaluragi",
+      twitter: "https://x.com/sachinProDev",
+      github: "https://github.com/sachin-pro-dev"
     }
   }
 ];
@@ -198,27 +197,49 @@ function CreditCard({ founder, delay }: { founder: Founder; delay: number }) {
 
 export default function FoundersCards() {
   return (
-    <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-gray-100">
-      <div className="container mx-auto max-w-7xl">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-4">
-            Meet Our Founders
-          </h2>
-          <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
-            The visionaries building the future of DeFi credit with their elite Diamond-tier reputation
-          </p>
-        </div>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center max-w-4xl mx-auto">
-          {founders.map((founder, index) => (
-            <CreditCard 
-              key={founder.name} 
-              founder={founder} 
-              delay={index * 0.2} 
-            />
-          ))}
-        </div>
+    <section className="w-full py-10 sm:py-16 bg-transparent" id="founders">
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        {/* Liquid glass card */}
+        <div className="relative overflow-hidden rounded-[28px] sm:rounded-[32px] md:rounded-[40px] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.25)]">
+          {/* Soft gradient flares */}
+          <div className="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-blue-400/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-purple-300/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-indigo-300/15 blur-3xl"></div>
 
+          {/* Content padding */}
+          <div className="relative p-6 sm:p-10 md:p-14">
+            {/* Header with badge and line */}
+            <div className="flex items-center gap-4 mb-8 sm:mb-12">
+              <div className="flex items-center gap-4">
+                <div className="pulse-chip font-bold italic">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  mr-2">12</span>
+                  <span>Founders</span>
+                </div>
+              </div>
+              <div className="flex-1 h-px bg-white/30"></div>
+            </div>
+
+            {/* Main heading */}
+            <div className="text-center mb-12 sm:mb-16">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6">
+                Meet Our Founders
+              </h2>
+              <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
+                The visionaries building the future of DeFi credit with their elite Diamond-tier reputation
+              </p>
+            </div>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12 justify-items-center max-w-4xl mx-auto">
+              {founders.map((founder, index) => (
+                <CreditCard 
+                  key={founder.name} 
+                  founder={founder} 
+                  delay={index * 0.2} 
+                />
+              ))}
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

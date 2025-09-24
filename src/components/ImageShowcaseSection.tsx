@@ -42,93 +42,86 @@ const ImageShowcaseSection = () => {
   }, []);
 
   return (
-    <section className="w-full pt-0 pb-8 sm:pb-12 bg-gradient-to-br from-gray-50 to-green-50/30" id="showcase">
+    <section className="w-full py-10 sm:py-16 bg-transparent" id="showcase">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
-        <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 animate-on-scroll">
-          <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight text-gray-900 mb-3 sm:mb-4">
-            Experience DeFi Credit Today
-          </h2>
-          <p className="text-base sm:text-lg text-gray-600">
-            CLenFi's revolutionary credit system transforms how you access liquidity 
-            in decentralized finance without over-collateralization.
-          </p>
-        </div>
-        
-        <div 
-          ref={cardRef}
-          className="relative mx-auto max-w-4xl animate-on-scroll transition-all duration-300 ease-out"
-          style={{
-            transformStyle: 'preserve-3d',
-            boxShadow: `
-              0 25px 50px -12px rgba(0, 0, 0, 0.25),
-              0 25px 25px -5px rgba(0, 0, 0, 0.1),
-              0 10px 10px -5px rgba(0, 0, 0, 0.04),
-              0 0 0 1px rgba(0, 0, 0, 0.05),
-              20px 20px 60px rgba(34, 197, 94, 0.15),
-              -15px -15px 40px rgba(255, 255, 255, 0.8)
-            `
-          }}
-        >
-          {/* 3D Card Container */}
-          <div 
-            className="rounded-2xl sm:rounded-3xl overflow-hidden bg-white"
-            style={{
-              background: `
-                linear-gradient(145deg, 
-                  rgba(255, 255, 255, 1) 0%, 
-                  rgba(249, 250, 251, 1) 50%,
-                  rgba(243, 244, 246, 1) 100%
-                )
-              `
-            }}
-          >
-            {/* Subtle gradient overlay for enhanced 3D effect */}
-            <div className="absolute inset-0 rounded-2xl sm:rounded-3xl bg-gradient-to-br from-green-500/5 via-transparent to-blue-500/5 pointer-events-none"></div>
-            
-            <div className="relative z-10">
-              <div className="w-full relative overflow-hidden">
-                <img 
-                  src="/card.jpg" 
-                  alt="CLenFi Credit Card showcasing the crypto credit companion" 
-                  className="w-full h-auto object-cover"
-                  style={{
-                    filter: 'brightness(1.05) contrast(1.05) saturate(1.1)'
-                  }}
-                />
-                {/* Image overlay for depth */}
-                <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5"></div>
-              </div>
-              
-              <div 
-                className="bg-white p-4 sm:p-8 relative"
-                style={{
-                  background: `
-                    linear-gradient(145deg, 
-                      rgba(255, 255, 255, 1) 0%, 
-                      rgba(249, 250, 251, 1) 100%
-                    )
-                  `,
-                  boxShadow: 'inset 0 1px 3px rgba(0, 0, 0, 0.1)'
-                }}
-              >
-                {/* Inner glow effect */}
-                <div className="absolute inset-0 bg-gradient-to-t from-green-50/30 to-transparent pointer-events-none"></div>
-                
-                <div className="relative z-10">
-                  <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 sm:mb-4 text-gray-900">
-                    Next Generation Credit
-                  </h3>
-                  <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                    Credit cards on Web3 made easy. Get uncollateralized loans based on trust, just like 
-                    traditional credit cards, but powered by blockchain technology for instant access and global reach.
-                  </p>
+        {/* Liquid glass card */}
+        <div className="relative overflow-hidden rounded-[28px] sm:rounded-[32px] md:rounded-[40px] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.25)]">
+          {/* Soft gradient flares */}
+          <div className="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-orange-400/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-yellow-300/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-amber-300/15 blur-3xl"></div>
+
+          {/* Content padding */}
+          <div className="relative p-6 sm:p-10 md:p-14">
+            {/* Header with badge and line */}
+            <div className="flex items-center gap-4 mb-8 sm:mb-12">
+              <div className="flex items-center gap-4">
+                <div className="pulse-chip font-bold italic">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  mr-2">8</span>
+                  <span>Showcase</span>
                 </div>
               </div>
+              <div className="flex-1 h-px bg-white/30"></div>
+            </div>
+
+            {/* Main heading */}
+            <div className="max-w-3xl mx-auto text-center mb-8 sm:mb-12 animate-on-scroll">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6">
+                Experience DeFi Credit Today
+              </h2>
+              <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
+                CLenFi's revolutionary credit system transforms how you access liquidity 
+                in decentralized finance without over-collateralization.
+              </p>
+            </div>
+        
+            <div 
+              ref={cardRef}
+              className="relative mx-auto max-w-4xl animate-on-scroll transition-all duration-300 ease-out"
+              style={{
+                transformStyle: 'preserve-3d'
+              }}
+            >
+              {/* Glass morphism 3D Card Container */}
+              <div className="relative bg-white/30 backdrop-blur-xl rounded-[24px] overflow-hidden shadow-xl border border-white/40">
+                {/* Subtle gradient overlay for enhanced effect */}
+                <div className="absolute inset-0 rounded-[24px] bg-gradient-to-br from-orange-500/5 via-transparent to-amber-500/5 pointer-events-none"></div>
+                
+                <div className="relative z-10">
+                  <div className="w-full relative overflow-hidden">
+                    <img 
+                      src="/card.jpg" 
+                      alt="CLenFi Credit Card showcasing the crypto credit companion" 
+                      className="w-full h-auto object-cover rounded-t-[24px]"
+                      style={{
+                        filter: 'brightness(1.05) contrast(1.05) saturate(1.1)'
+                      }}
+                    />
+                    {/* Image overlay for depth */}
+                    <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/5 rounded-t-[24px]"></div>
+                  </div>
+                  
+                  <div className="bg-white/40 backdrop-blur-sm p-4 sm:p-8 relative border-t border-white/30">
+                    {/* Inner glow effect */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-orange-50/20 to-transparent pointer-events-none"></div>
+                    
+                    <div className="relative z-10">
+                      <h3 className="text-xl sm:text-2xl font-display font-semibold mb-3 sm:mb-4 text-black">
+                        Next Generation Credit
+                      </h3>
+                      <p className="text-black/80 text-sm sm:text-base leading-relaxed">
+                        Credit cards on Web3 made easy. Get uncollateralized loans based on trust, just like 
+                        traditional credit cards, but powered by blockchain technology for instant access and global reach.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              
+              {/* Glass morphism shadow element */}
+              <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-3/4 h-6 bg-black/5 rounded-full blur-xl -z-10"></div>
             </div>
           </div>
-          
-          {/* Additional 3D shadow elements */}
-          <div className="absolute -bottom-6 left-1/2 transform -translate-x-1/2 w-3/4 h-6 bg-black/10 rounded-full blur-xl -z-10"></div>
         </div>
       </div>
     </section>

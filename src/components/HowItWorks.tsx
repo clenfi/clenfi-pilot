@@ -10,7 +10,7 @@ interface StepCardProps {
 }
 
 const StepCard = ({
-  number,
+  
   title,
   description,
   isActive,
@@ -19,32 +19,25 @@ const StepCard = ({
   return (
     <div
       className={cn(
-        "rounded-xl p-4 sm:p-5 lg:p-6 cursor-pointer transition-all duration-500 border",
+        "rounded-2xl p-4 sm:p-5 lg:p-6 cursor-pointer transition-all duration-500 border backdrop-blur-xl shadow-lg",
         isActive
-          ? "bg-white shadow-elegant border-green-200"
-          : "bg-white/50 hover:bg-white/80 border-transparent"
+          ? "bg-white/60 border-white/50 shadow-xl"
+          : "bg-white/40 hover:bg-white/50 border-white/30"
       )}
       onClick={onClick}
     >
       <div className="flex items-start">
-        <div
-          className={cn(
-            "flex items-center justify-center rounded-full w-8 h-8 sm:w-10 sm:h-10 mr-3 sm:mr-4 flex-shrink-0 transition-colors duration-300 text-sm sm:text-base",
-            isActive ? "bg-green-500 text-white" : "bg-gray-100 text-gray-500"
-          )}
-        >
-          {number}
-        </div>
+      
         <div>
           <h3
             className={cn(
-              "text-base sm:text-lg font-semibold mb-1 sm:mb-2 transition-colors duration-300",
-              isActive ? "text-green-600" : "text-gray-800"
+              "text-base underline sm:text-lg font-semibold mb-1 sm:mb-2 transition-colors duration-300",
+              isActive ? "text-black" : "text-black/80"
             )}
           >
             {title}
           </h3>
-          <p className="text-gray-600 text-xs sm:text-sm leading-relaxed">
+          <p className="text-black/70 text-xs sm:text-sm leading-relaxed">
             {description}
           </p>
         </div>
@@ -161,128 +154,153 @@ const HowItWorks = () => {
 
   return (
     <section
-      className="py-12 sm:py-16 lg:py-20 bg-white relative"
+      className="w-full py-10 sm:py-16 bg-transparent"
       id="how-it-works"
       ref={sectionRef}
     >
-      {/* Background decorative elements */}
-      <div className="absolute -top-10 sm:-top-20 right-0 w-48 h-48 sm:w-64 sm:h-64 lg:w-72 lg:h-72 bg-green-50 rounded-full opacity-60 blur-3xl -z-10"></div>
-      <div className="absolute bottom-0 left-4 sm:left-10 w-32 h-32 sm:w-48 sm:h-48 lg:w-64 lg:h-64 bg-gray-50 rounded-full opacity-70 blur-3xl -z-10"></div>
+      <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
+        {/* Liquid glass card */}
+        <div className="relative overflow-hidden rounded-[28px] sm:rounded-[32px] md:rounded-[40px] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.25)]">
+          {/* Soft gradient flares */}
+          <div className="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-blue-400/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-cyan-300/20 blur-3xl"></div>
+          <div className="pointer-events-none absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 h-96 w-96 rounded-full bg-teal-300/15 blur-3xl"></div>
 
-      <div className="section-container">
-        <div className="text-center mb-8 sm:mb-12 lg:mb-16 opacity-0 fade-in-stagger">
-          <h2 className="section-title mb-3 sm:mb-4">
-            How CLenFi Makes Credit Simple
-          </h2>
-          <p className="section-subtitle mx-auto px-4 sm:px-6">
-            Forget putting up 150% collateral to borrow 100%. CLenFi gives you
-            credit based on trust, not locked assets. Pay on time, build your
-            reputation, unlock better deals. Start small, grow big - all based
-            on how reliable you are with money.
-          </p>
-        </div>
+          {/* Content padding */}
+          <div className="relative p-6 sm:p-10 md:p-14">
+            {/* Header with badge and line */}
+            <div className="flex items-center gap-4 mb-8 sm:mb-12">
+              <div className="flex items-center gap-4">
+                <div className="pulse-chip font-bold italic">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  mr-2">7</span>
+                  <span>How It Works</span>
+                </div>
+              </div>
+              <div className="flex-1 h-px bg-white/30"></div>
+            </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-center">
-          <div className="space-y-3 sm:space-y-4 order-2 lg:order-1 opacity-0 fade-in-stagger px-4 sm:px-0">
-            {stepsData.map((step, index) => (
-              <StepCard
-                key={step.number}
-                number={step.number}
-                title={step.title}
-                description={step.description}
-                isActive={activeStep === index}
-                onClick={() => setActiveStep(index)}
-              />
-            ))}
-          </div>
+            {/* Main heading */}
+            <div className="text-center mb-8 sm:mb-12 lg:mb-16 opacity-0 fade-in-stagger">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6">
+                How CLenFi Makes Credit Simple
+              </h2>
+              <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
+                Forget putting up 150% collateral to borrow 100%. CLenFi gives you
+                credit based on trust, not locked assets. Pay on time, build your
+                reputation, unlock better deals. Start small, grow big - all based
+                on how reliable you are with money.
+              </p>
+            </div>
 
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden h-[250px] sm:h-[350px] lg:h-[400px] shadow-elegant order-1 lg:order-2 opacity-0 fade-in-stagger mx-4 sm:mx-0">
-            {stepsData.map((step, index) => (
-              <div
-                key={index}
-                className={cn(
-                  "absolute inset-0 transition-opacity duration-1000",
-                  activeStep === index
-                    ? "opacity-100"
-                    : "opacity-0 pointer-events-none"
-                )}
-              >
-                <img
-                  src={step.image}
-                  alt={step.title}
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-dark-900/70 to-transparent">
-                  <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 lg:p-6 text-white">
-                    <span className="text-green-400 font-medium mb-2 block">
-                      {step.number}
-                    </span>
-                    <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2">
-                      {step.title}
-                    </h3>
-                    <p className="text-white/80 text-sm sm:text-base">
-                      {step.description}
-                    </p>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start mb-16">
+              {/* Left Column - Step Cards */}
+              <div className="space-y-4 opacity-0 fade-in-stagger px-4 sm:px-0">
+                {stepsData.map((step, index) => (
+                  <StepCard
+                    key={step.number}
+                    number={step.number}
+                    title={step.title}
+                    description={step.description}
+                    isActive={activeStep === index}
+                    onClick={() => setActiveStep(index)}
+                  />
+                ))}
+              </div>
+
+              {/* Right Column - Content */}
+              <div className="relative h-full">
+                <div className="relative bg-white/30 backdrop-blur-xl rounded-[24px] overflow-hidden shadow-xl h-full min-h-[400px] opacity-0 fade-in-stagger">
+                  <div className="h-full">
+                    {stepsData.map((step, index) => (
+                      <div
+                        key={index}
+                        className={cn(
+                          "absolute inset-0 transition-opacity duration-1000",
+                          activeStep === index
+                            ? "opacity-100"
+                            : "opacity-0 pointer-events-none"
+                        )}
+                      >
+                        <img
+                          src={step.image}
+                          alt={step.title}
+                          className="w-full h-full object-cover rounded-[24px]"
+                        />
+                        <div className="absolute inset-0 bg-gradient-to-t from-dark-900/70 to-transparent rounded-[24px]">
+                          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 lg:p-6 text-white">
+                            <span className="text-green-400 font-medium mb-2 block">
+                              {step.number}
+                            </span>
+                            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2">
+                              {step.title}
+                            </h3>
+                            <p className="text-white/80 text-sm sm:text-base">
+                              {step.description}
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-            ))}
-          </div>
-        </div>
+            </div>
 
-        {/* Video Section */}
-        <div className="mt-12 sm:mt-16 lg:mt-20 opacity-0 fade-in-stagger px-4 sm:px-0">
-          <div className="text-center mb-6 sm:mb-8">
-            <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
-              Understanding Clenfi{" "}
-            </h3>
-            <p className="text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-4 sm:px-0">
-              Watch how CLenFi revolutionizes DeFi credit with our trust-based
-              lending system
-            </p>
-          </div>
+            {/* Video Section */}
+            <div className="mt-16 opacity-0 fade-in-stagger">
+              <div className="text-center mb-6 sm:mb-8">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-3 sm:mb-4">
+                  Understanding Clenfi{" "}
+                </h3>
+                <p className="text-black/70 max-w-2xl mx-auto text-sm sm:text-base">
+                  Watch how CLenFi revolutionizes DeFi credit with our trust-based
+                  lending system
+                </p>
+              </div>
 
-          <div className="relative rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl max-w-4xl mx-auto group cursor-pointer">
-            <video
-              ref={videoRef}
-              className="w-full h-auto"
-              preload="metadata"
-              onClick={handleVideoClick}
-            >
-              <source src="/Clenfi.mp4" type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
+              <div className="relative bg-white/30 backdrop-blur-xl rounded-[24px] overflow-hidden shadow-xl max-w-4xl mx-auto group cursor-pointer border border-white/40">
+                <video
+                  ref={videoRef}
+                  className="w-full h-auto"
+                  preload="metadata"
+                  onClick={handleVideoClick}
+                >
+                  <source src="/Clenfi.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
 
-            {/* Custom Thumbnail Overlay */}
-            {!isVideoPlaying && (
-              <div
-                className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-black/90 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-90"
-                onClick={handleVideoClick}
-              >
-                {/* Play Button */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300 shadow-2xl">
-                  <svg
-                    className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1"
-                    fill="currentColor"
-                    viewBox="0 0 24 24"
+                {/* Custom Thumbnail Overlay */}
+                {!isVideoPlaying && (
+                  <div
+                    className="absolute inset-0 bg-gradient-to-br from-gray-900/90 via-gray-800/80 to-black/90 flex items-center justify-center transition-opacity duration-300 group-hover:opacity-90 rounded-[24px]"
+                    onClick={handleVideoClick}
                   >
-                    <path d="M8 5v14l11-7z" />
-                  </svg>
-                </div>
+                    {/* Play Button */}
+                    <div className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/20 backdrop-blur-sm border border-white/30 flex items-center justify-center hover:bg-white/30 hover:scale-110 transition-all duration-300 shadow-2xl">
+                      <svg
+                        className="w-6 h-6 sm:w-8 sm:h-8 text-white ml-1"
+                        fill="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path d="M8 5v14l11-7z" />
+                      </svg>
+                    </div>
 
-                {/* Minimalistic Text Overlay */}
-                <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8">
-                  <div className="text-white">
-                    <h4 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">
-                      CLenFi Demo
-                    </h4>
-                    <p className="text-white/80 text-xs sm:text-sm">
-                      Trust-based DeFi Credit Platform
-                    </p>
+                    {/* Minimalistic Text Overlay */}
+                    <div className="absolute bottom-4 sm:bottom-6 lg:bottom-8 left-4 sm:left-6 lg:left-8 right-4 sm:right-6 lg:right-8">
+                      <div className="text-white">
+                        <h4 className="text-lg sm:text-xl font-semibold mb-1 sm:mb-2">
+                          CLenFi Demo
+                        </h4>
+                        <p className="text-white/80 text-xs sm:text-sm">
+                          Trust-based DeFi Credit Platform
+                        </p>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                )}
               </div>
-            )}
+            </div>
           </div>
         </div>
       </div>
