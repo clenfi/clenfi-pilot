@@ -75,7 +75,7 @@ const FloatingDockMobile = ({
       </AnimatePresence>
       <button
         onClick={() => setOpen(!open)}
-  className="flex h-10 w-10 items-center justify-center rounded-full bg-transparent"
+        className="flex h-10 w-10 items-center justify-center rounded-full bg-transparent"
       >
         <IconLayoutNavbarCollapse className="h-5 w-5 text-neutral-500 dark:text-neutral-400" />
       </button>
@@ -97,7 +97,7 @@ const FloatingDockDesktop = ({
       onMouseLeave={() => mouseX.set(Infinity)}
       className={cn(
         "mx-auto hidden h-16 items-end gap-4 rounded-2xl bg-transparent px-4 pb-3 md:flex",
-        className,
+        className
       )}
     >
       {items.map((item) => (
@@ -129,11 +129,15 @@ function IconContainer({
   const widthTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
   const heightTransform = useTransform(distance, [-150, 0, 150], [40, 80, 40]);
 
-  const widthTransformIcon = useTransform(distance, [-150, 0, 150], [20, 40, 20]);
+  const widthTransformIcon = useTransform(
+    distance,
+    [-150, 0, 150],
+    [20, 40, 20]
+  );
   const heightTransformIcon = useTransform(
     distance,
     [-150, 0, 150],
-    [20, 40, 20],
+    [20, 40, 20]
   );
 
   const width = useSpring(widthTransform, {
@@ -167,7 +171,7 @@ function IconContainer({
         style={{ width, height }}
         onMouseEnter={() => setHovered(true)}
         onMouseLeave={() => setHovered(false)}
-  className="relative flex aspect-square items-center justify-center rounded-full bg-transparent"
+        className="relative flex aspect-square items-center justify-center rounded-full bg-transparent"
       >
         <AnimatePresence>
           {hovered && (
