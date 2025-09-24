@@ -42,7 +42,7 @@ const CreditScoring = () => {
                 baseRotation={3}
                 blurStrength={6}
                 containerClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6"
-                textClassName="text-black block font-display"
+                textClassName="text-black block font-display  lg:text-[60px]  sm:text-[40px] md:text-[20px]"
               >
                 Smart Credit Scores That Work Everywhere
               </ScrollReveal>

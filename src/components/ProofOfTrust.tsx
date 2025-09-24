@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Marquee from "react-fast-marquee";
 
 const ProofOfTrust = () => {
   const [activeTab, setActiveTab] = useState("user");
@@ -7,37 +8,43 @@ const ProofOfTrust = () => {
     {
       role: "Founders/Core",
       count: 3,
-      color: "bg-green-500",
+      color: "bg-gradient-to-r from-green-100 via-pink-100 to-blue-100",
+      textColor: "text-black",
       description: "Protocol founders with deep technical knowledge",
     },
     {
       role: "Risk Experts",
       count: 2,
-      color: "bg-blue-500",
+      color: "bg-gradient-to-r from-blue-100 via-green-100 to-purple-100",
+      textColor: "text-black",
       description: "Financial risk assessment specialists",
     },
     {
       role: "Technical Experts",
       count: 2,
-      color: "bg-purple-500",
+      color: "bg-gradient-to-r from-purple-100 via-pink-100 to-blue-100",
+      textColor: "text-black",
       description: "Blockchain and smart contract auditors",
     },
     {
       role: "Community Leaders",
       count: 2,
-      color: "bg-orange-500",
+      color: "bg-gradient-to-r from-orange-100 via-pink-100 to-green-100",
+      textColor: "text-black",
       description: "DeFi community representatives",
     },
     {
       role: "Legal Advisor",
       count: 1,
-      color: "bg-red-500",
+      color: "bg-gradient-to-r from-pink-100 via-red-100 to-purple-100",
+      textColor: "text-black",
       description: "Regulatory compliance specialist",
     },
     {
       role: "Financial Advisor",
       count: 1,
-      color: "bg-indigo-500",
+      color: "bg-gradient-to-r from-indigo-100 via-blue-100 to-green-100",
+      textColor: "text-black",
       description: "Traditional finance expert",
     },
   ];
@@ -72,7 +79,7 @@ const ProofOfTrust = () => {
 
             {/* Main heading */}
             <div className="text-center mb-12 opacity-0 animate-on-scroll">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6 lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold">
                 Revolutionary Credit System Built on Trust
               </h2>
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
@@ -85,24 +92,38 @@ const ProofOfTrust = () => {
 
             {/* Tab Navigation */}
             <div className="flex justify-center mb-12 animate-on-scroll">
-              <div className="bg-white/40 backdrop-blur-xl rounded-full p-2 border border-white/30 shadow-lg">
+              <div className="bg-white/40 backdrop-blur-xl rounded-full p-2 border border-white/30 shadow-lg flex gap-2">
                 <button
                   onClick={() => setActiveTab("user")}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-md border border-white/20 bg-gradient-to-r from-pink-200 via-green-100 to-blue-200 text-black`}
+                  style={
                     activeTab === "user"
-                      ? "bg-green-500 text-white shadow-md"
-                      : "text-black/70 hover:text-green-600"
-                  }`}
+                      ? {
+                          boxShadow: "0 2px 12px rgba(120, 220, 180, 0.15)",
+                          border: "1.5px solid #e1ffe7",
+                        }
+                      : {
+                          boxShadow: "none",
+                          border: "1.5px solid #e1ffe7",
+                        }
+                  }
                 >
                   Your Trust Score
                 </button>
                 <button
                   onClick={() => setActiveTab("governance")}
-                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 ${
+                  className={`px-6 py-3 rounded-full font-semibold transition-all duration-300 shadow-md border border-white/20 bg-gradient-to-r from-blue-200 via-purple-100 to-pink-200 text-black`}
+                  style={
                     activeTab === "governance"
-                      ? "bg-green-500 text-white shadow-md"
-                      : "text-black/70 hover:text-green-600"
-                  }`}
+                      ? {
+                          boxShadow: "0 2px 12px rgba(180, 120, 220, 0.15)",
+                          border: "1.5px solid #f8e1ff",
+                        }
+                      : {
+                          boxShadow: "none",
+                          border: "1.5px solid #f8e1ff",
+                        }
+                  }
                 >
                   Governance System
                 </button>
@@ -407,7 +428,7 @@ const ProofOfTrust = () => {
                             <div
                               className={`w-10 h-10 ${role.color} rounded-full flex items-center justify-center`}
                             >
-                              <span className="text-white font-bold">
+                              <span className={`${role.textColor} font-bold`}>
                                 {role.count}
                               </span>
                             </div>
@@ -504,83 +525,44 @@ const ProofOfTrust = () => {
               )}
 
               {activeTab === "governance" && (
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-green-500 to-green-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg
-                        className="w-10 h-10 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M9 12l2 2 4-4m5.5-1.5a3 3 0 11-6 0 3 3 0 016 0z"
-                        ></path>
-                      </svg>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                  <div className="bg-white/20 backdrop-blur-xl rounded-[24px] p-6 border border-white/30 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:bg-white/30 transition-all duration-300">
+                    <div className="text-center">
+                      <h4 className="text-xl font-semibold mb-3 text-black">
+                        Expert Validation
+                      </h4>
+                      <p className="text-black/70 text-sm leading-relaxed">
+                        All protocol decisions are validated by industry experts
+                        across risk management, technical, legal, and community
+                        domains
+                      </p>
                     </div>
-                    <h4 className="font-semibold mb-3 text-lg text-black">
-                      Expert Validation
-                    </h4>
-                    <p className="text-black/70">
-                      All protocol decisions are validated by industry experts
-                      across risk management, technical, legal, and community
-                      domains
-                    </p>
                   </div>
 
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg
-                        className="w-10 h-10 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"
-                        ></path>
-                      </svg>
+                  <div className="bg-white/20 backdrop-blur-xl rounded-[24px] p-6 border border-white/30 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:bg-white/30 transition-all duration-300">
+                    <div className="text-center">
+                      <h4 className="text-xl font-semibold mb-3 text-black">
+                        Transparent Decisions
+                      </h4>
+                      <p className="text-black/70 text-sm leading-relaxed">
+                        Every governance decision is recorded on-chain with
+                        clear thresholds: 7/11 normal, 9/11 emergency, 11/11
+                        critical changes
+                      </p>
                     </div>
-                    <h4 className="font-semibold mb-3 text-lg text-black">
-                      Transparent Decisions
-                    </h4>
-                    <p className="text-black/70">
-                      Every governance decision is recorded on-chain with clear
-                      thresholds: 7/11 normal, 9/11 emergency, 11/11 critical
-                      changes
-                    </p>
                   </div>
 
-                  <div className="text-center">
-                    <div className="w-20 h-20 bg-gradient-to-br from-purple-500 to-purple-600 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg
-                        className="w-10 h-10 text-white"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth="2"
-                          d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"
-                        ></path>
-                      </svg>
+                  <div className="bg-white/20 backdrop-blur-xl rounded-[24px] p-6 border border-white/30 shadow-[0_8px_32px_rgba(31,38,135,0.37)] hover:bg-white/30 transition-all duration-300">
+                    <div className="text-center">
+                      <h4 className="text-xl font-semibold mb-3 text-black">
+                        Community Incentives
+                      </h4>
+                      <p className="text-black/70 text-sm leading-relaxed">
+                        Governance council members receive fair compensation
+                        ($2,000-$5,000/month) ensuring dedicated oversight of
+                        protocol security
+                      </p>
                     </div>
-                    <h4 className="font-semibold mb-3 text-lg text-black">
-                      Community Incentives
-                    </h4>
-                    <p className="text-black/70">
-                      Governance council members receive fair compensation
-                      ($2,000-$5,000/month) ensuring dedicated oversight of
-                      protocol security
-                    </p>
                   </div>
                 </div>
               )}

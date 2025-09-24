@@ -181,7 +181,7 @@ const HowItWorks = () => {
 
             {/* Main heading */}
             <div className="text-center mb-8 sm:mb-12 lg:mb-16 opacity-0 fade-in-stagger">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6  lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold">
                 How CLenFi Makes Credit Simple
               </h2>
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">

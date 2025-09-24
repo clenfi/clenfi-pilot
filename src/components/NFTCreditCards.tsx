@@ -1,13 +1,8 @@
 import React from "react";
-import CardSwap, { Card } from "./CardSwap";
 import Marquee from "react-fast-marquee";
 import ScrollReveal from "./ScrollReveal";
 
 const NFTCreditCards = () => {
-  const handleCardClick = (index: number) => {
-    console.log(`Card ${index} clicked`);
-  };
-
   return (
     <section className="w-full py-10 sm:py-16 bg-transparent" id="nft-cards">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
@@ -41,7 +36,7 @@ const NFTCreditCards = () => {
                 baseRotation={3}
                 blurStrength={6}
                 containerClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6"
-                textClassName="text-black block font-display"
+                textClassName="text-black block font-display lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold"
               >
                 Smart Credit Cards That Improve
               </ScrollReveal>
@@ -116,61 +111,56 @@ const NFTCreditCards = () => {
                 </div>
               </div>
 
-              {/* CardSwap Animation */}
-              <div className="relative">
+              {/* Simple Cards Grid */}
+              <div className="flex flex-col gap-6">
                 <div
-                  className="relative bg-white/30 backdrop-blur-xl rounded-[24px] p-8 border border-white/40 shadow-xl opacity-0 animate-on-scroll"
+                  className="bg-white/30 backdrop-blur-xl rounded-[24px] p-6 border border-white/40 shadow-xl opacity-0 animate-on-scroll"
                   style={{ animationDelay: "0.4s" }}
                 >
-                  <CardSwap
-                    width={280}
-                    height={200}
-                    cardDistance={50}
-                    verticalDistance={60}
-                    delay={4000}
-                    pauseOnHover={true}
-                    onCardClick={handleCardClick}
-                    skewAmount={4}
-                    easing="elastic"
-                  >
-                    <Card customClass="identity-card">
-                      <div className="card-content">
-                        <div className="card-badge">Verified</div>
-                        <div className="card-icon">ID</div>
-                        <h3 className="card-title">Identity Verification</h3>
-                        <p className="card-description">
-                          Prove you're a real person using your government ID.
-                          Secure, private, and instantly verified.
-                        </p>
-                      </div>
-                    </Card>
+                  <div className="card-content">
+                    
+                    <h3 className="text-xl font-semibold text-black mb-3">
+                      Identity Verification
+                    </h3>
+                    <p className="text-black/80 text-sm">
+                      Prove you're a real person using your government ID.
+                      Secure, private, and instantly verified.
+                    </p>
+                  </div>
+                </div>
 
-                    <Card customClass="credit-card">
-                      <div className="card-content">
-                        <div className="card-badge">Upgradable</div>
-                        <div className="card-icon">💳</div>
-                        <h3 className="card-title">Credit NFT (cNFT)</h3>
-                        <p className="card-description">
-                          Your digital credit card that gets better over time.
-                          Artwork, rewards, and benefits automatically improve
-                          as you build trust.
-                        </p>
-                      </div>
-                    </Card>
+                <div
+                  className="bg-white/30 backdrop-blur-xl rounded-[24px] p-6 border border-white/40 shadow-xl opacity-0 animate-on-scroll"
+                  style={{ animationDelay: "0.5s" }}
+                >
+                  <div className="card-content">
+                    
+                    <h3 className="text-xl font-semibold text-black mb-3">
+                      Credit NFT (cNFT)
+                    </h3>
+                    <p className="text-black/80 text-sm">
+                      Your digital credit card that gets better over time.
+                      Artwork, rewards, and benefits automatically improve as
+                      you build trust.
+                    </p>
+                  </div>
+                </div>
 
-                    <Card customClass="debt-card">
-                      <div className="card-content">
-                        <div className="card-badge">Flexible</div>
-                        <div className="card-icon">💰</div>
-                        <h3 className="card-title">Debt NFT (dNFT)</h3>
-                        <p className="card-description">
-                          Manage your credit flexibly - transfer to others, set
-                          up auto-pay, or get creative with payments while
-                          staying protected.
-                        </p>
-                      </div>
-                    </Card>
-                  </CardSwap>
+                <div
+                  className="bg-white/30 backdrop-blur-xl rounded-[24px] p-6 border border-white/40 shadow-xl opacity-0 animate-on-scroll"
+                  style={{ animationDelay: "0.6s" }}
+                >
+                  <div className="card-content">
+                    
+                    <h3 className="text-xl font-semibold text-black mb-3">
+                      Debt NFT (dNFT)
+                    </h3>
+                    <p className="text-black/80 text-sm">
+                      Manage your credit flexibly - transfer to others, set up
+                      auto-pay, or get creative with payments while staying
+                      protected.
+                    </p>
+                  </div>
                 </div>
               </div>
             </div>
