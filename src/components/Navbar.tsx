@@ -33,32 +33,32 @@ const Navbar = () => {
   const links = [
     {
       title: "Home",
-      icon: <IconHome className="h-full w-full text-neutral-500" />,
+      icon: <IconHome className="h-full w-full text-black" />,
       href: "#hero",
     },
     {
       title: "Why CLenFi",
-      icon: <IconBulb className="h-full w-full text-neutral-500" />,
+      icon: <IconBulb className="h-full w-full text-black" />,
       href: "#why-clenfi",
     },
     {
       title: "Credit Scoring",
-      icon: <IconGauge className="h-full w-full text-neutral-500" />,
+      icon: <IconGauge className="h-full w-full text-black" />,
       href: "#credit-scoring",
     },
     {
       title: "Cards",
-      icon: <IconCreditCard className="h-full w-full text-neutral-500" />,
+      icon: <IconCreditCard className="h-full w-full text-black" />,
       href: "#nft-cards",
     },
     {
       title: "How It Works",
-      icon: <IconExchange className="h-full w-full text-neutral-500" />,
+      icon: <IconExchange className="h-full w-full text-black" />,
       href: "#how-it-works",
     },
     {
       title: "Features",
-      icon: <IconSparkles className="h-full w-full text-neutral-500" />,
+      icon: <IconSparkles className="h-full w-full text-black" />,
       href: "#features",
     },
   ];

@@ -119,6 +119,7 @@ import ProofOfTrust from "@/components/ProofOfTrust";
 import ExclusiveForDevs from "@/components/ExclusiveForDevs";
 import Footer from "@/components/Footer";
 import Prism from "@/components/Prism";
+import SplashCursor from "@/components/SplashCursor";
 
 const Index = () => {
   // Initialize intersection observer to detect when elements enter viewport
@@ -177,6 +178,9 @@ const Index = () => {
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
+      {/* SplashCursor effect for the entire website */}
+      <SplashCursor />
+
       {/* Full-viewport background using ReactBits Prism (non-interactive overlay) */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
         <Prism

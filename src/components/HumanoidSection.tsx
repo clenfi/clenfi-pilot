@@ -41,7 +41,7 @@ const HumanoidSection = () => {
                 baseRotation={5}
                 blurStrength={8}
                 containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black leading-tight mb-6"
-                textClassName="text-black font-bold block font-display lg:text-[60px]  sm:text-[40px] md:text-[20px] "
+                textClassName="text-black font-bold block font-display lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold"
               >
                 How CLenFi Makes Credit Simple
               </ScrollReveal>
