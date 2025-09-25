@@ -8,11 +8,17 @@ const Hero = () => {
       <div className="section-container">
         {/* Title */}
         <div className="text-center md:text-left max-w-none mx-auto">
-          <h1 className="text-[clamp(56px,18vw,220px)] md:text-[clamp(56px,14vw,220px)] leading-[0.85] font-extrabold text-black tracking-tight uppercase">
-            CREDIT MADE EASY
+          <h1 className="text-[clamp(56px,18vw,220px)] md:text-[clamp(56px,14vw,170px)] leading-[0.85] font-extrabold text-black tracking-tight uppercase">
+            CREDIT
+            <br />
+            MADE
+            <br /> EASY
             <br />
             FOR WEB3
           </h1>
+          <blockquote className="mt-6 text-xl md:text-2xl text-gray-600 max-w-2xl mx-auto text-center italic">
+            "Spend today, repay tomorrow, and build your on-chain credit profile."
+          </blockquote>
         </div>
 
         {/* Showcase */}
@@ -55,13 +61,36 @@ const Hero = () => {
               <div className="relative w-full max-w-[220px] aspect-square mx-auto">
                 <svg viewBox="0 0 100 100" className="w-full h-full">
                   <defs>
-                    <linearGradient id="grad-m" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" stopColor="#22c55e" />
-                      <stop offset="100%" stopColor="#84cc16" />
+                    <linearGradient
+                      id="grad-m"
+                      x1="0%"
+                      y1="0%"
+                      x2="100%"
+                      y2="0%"
+                    >
+                      <stop offset="0%" stopColor="#000000" />
+                      <stop offset="100%" stopColor="#ffffff" />
                     </linearGradient>
                   </defs>
-                  <circle cx="50" cy="50" r="42" stroke="#1f2937" strokeWidth="4" fill="none" />
-                  <circle cx="50" cy="50" r="42" stroke="url(#grad-m)" strokeWidth="4" strokeDasharray="264" strokeDashoffset="60" fill="none" strokeLinecap="round" />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    stroke="#1f2937"
+                    strokeWidth="4"
+                    fill="none"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    stroke="url(#grad-m)"
+                    strokeWidth="4"
+                    strokeDasharray="264"
+                    strokeDashoffset="60"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="text-3xl font-bold">$2,56ᴠ</div>
@@ -83,13 +112,19 @@ const Hero = () => {
             </ScrollReveal>
             <div className="h-[220px] rounded-2xl bg-[#0b1220] text-white p-5 shadow-elegant border border-white/10">
               <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-sm">USDC</span>
+                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-sm">
+                  USDC
+                </span>
                 <span className="text-slate-400">→</span>
-                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-sm">ETH</span>
+                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10 text-sm">
+                  ETH
+                </span>
               </div>
               <div className="mt-4 rounded-xl bg-slate-900/60 p-4 border border-white/5">
                 <div className="text-sm text-slate-400">Swap preview</div>
-                <div className="text-xl font-semibold">1,000 USDC → 0.31 ETH</div>
+                <div className="text-xl font-semibold">
+                  1,000 USDC → 0.31 ETH
+                </div>
               </div>
             </div>
 
@@ -164,8 +199,25 @@ const Hero = () => {
                       <stop offset="100%" stopColor="#ffffff" />
                     </linearGradient>
                   </defs>
-                  <circle cx="50" cy="50" r="42" stroke="#1f2937" strokeWidth="4" fill="none" />
-                  <circle cx="50" cy="50" r="42" stroke="url(#grad)" strokeWidth="4" strokeDasharray="264" strokeDashoffset="60" fill="none" strokeLinecap="round" />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    stroke="#1f2937"
+                    strokeWidth="4"
+                    fill="none"
+                  />
+                  <circle
+                    cx="50"
+                    cy="50"
+                    r="42"
+                    stroke="url(#grad)"
+                    strokeWidth="4"
+                    strokeDasharray="264"
+                    strokeDashoffset="60"
+                    fill="none"
+                    strokeLinecap="round"
+                  />
                 </svg>
                 <div className="absolute inset-0 flex flex-col items-center justify-center">
                   <div className="text-4xl font-bold">$2,56ᴠ</div>
@@ -177,13 +229,19 @@ const Hero = () => {
             {/* Row 3: Left swap card, Right big word TRADE */}
             <div className="h-[420px] rounded-[24px] bg-[#0b1220] text-white p-6 shadow-elegant border border-white/10 flex items-center">
               <div className="flex items-center gap-3">
-                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10">USDC</span>
+                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10">
+                  USDC
+                </span>
                 <span className="text-slate-400">→</span>
-                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10">ETH</span>
+                <span className="px-3 py-1 rounded-full bg-slate-800 border border-white/10">
+                  ETH
+                </span>
               </div>
               <div className="mt-4 rounded-xl bg-slate-900/60 p-4 border border-white/5">
                 <div className="text-sm text-slate-400">Swap preview</div>
-                <div className="text-2xl font-semibold">1,000 USDC → 0.31 ETH</div>
+                <div className="text-2xl font-semibold">
+                  1,000 USDC → 0.31 ETH
+                </div>
               </div>
             </div>
             <div className="h-[420px] flex items-center justify-start pl-2">

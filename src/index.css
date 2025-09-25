@@ -110,6 +110,22 @@
     scroll-behavior: smooth;
   }
 
+  /* Enhanced smooth scrolling for better performance */
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 80px; /* Account for fixed navbar */
+    }
+  }
+
+  /* Respect user's motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+      scroll-padding-top: 80px; /* Account for fixed navbar */
+    }
+  }
+
   /* Custom scrollbar */
   ::-webkit-scrollbar {
     width: 8px;

@@ -81,10 +81,10 @@ const Navbar = () => {
           }}
           aria-label="CLenFi"
         >
-          <img 
-            src="/CLENFI.svg" 
-            alt="CLenFi Logo" 
-            className="h-28 sm:h-32 md:h-36 lg:h-40" 
+          <img
+            src="/CLENFI (7).png"
+            alt="CLenFi Logo"
+            className="h-28 sm:h-32 md:h-36 lg:h-40"
             style={{ maxHeight: '160px', width: 'auto' }}
           />
         </a>
