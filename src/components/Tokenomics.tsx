@@ -8,7 +8,7 @@ export default function Tokenomics() {
     <section className="py-20 px-4 sm:px-6 lg:px-8" id="tokenomics">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center mb-12">
-          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black">
             Tokenomics
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">

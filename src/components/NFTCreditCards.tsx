@@ -30,18 +30,10 @@ const NFTCreditCards = () => {
             </div>
 
             {/* Main heading */}
-            <div className="text-center mb-12 sm:mb-16">
-              <ScrollReveal
-                baseOpacity={0.2}
-                enableBlur={true}
-                baseRotation={3}
-                blurStrength={6}
-                containerClassName="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black"
-                textClassName="text-black block font-black"
-              >
+            <div className="text-center  sm:mb-16 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black">
+             
                 Smart Credit Cards That Improve
-              </ScrollReveal>
-              <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
+              <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto font-normal ">
                 Get a smart credit card that gets better as you do. Your digital
                 card automatically upgrades when you pay on time, unlocking
                 higher limits and better rates - just like building credit

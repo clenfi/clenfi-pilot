@@ -183,8 +183,8 @@ const HowItWorks = () => {
             {/* Video Section */}
             <div className="mt-16 opacity-0 fade-in-stagger">
               <div className="text-center mb-6 sm:mb-8">
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-3 sm:mb-4 lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold">
-                  Understanding Clenfi{" "}
+                <h3 className="text-xl sm:text-2xl lg:text-3xl  text-black mb-3 sm:mb-4 lg:text-[60px]  sm:text-[90px] md:text-[20px] font-extrabold">
+                  Understanding Clenfi
                 </h3>
                 <p className="text-black/70 max-w-2xl mx-auto text-sm sm:text-base">
                   Watch how CLenFi revolutionizes DeFi credit with our trust-based

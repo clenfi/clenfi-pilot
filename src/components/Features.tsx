@@ -46,10 +46,10 @@ const FeatureCard = ({ icon, title, description, index }: FeatureCardProps) => {
       )}
       style={{ animationDelay: `${0.1 * index}s` }}
     >
-      <h3 className="text-lg sm:text-xl font-semibold mb-2 sm:mb-3 text-black underline text-center">
+      <h3 className="text-sm sm:text-base font-semibold mb-1 sm:mb-2 text-black underline text-center">
         {title}
       </h3>
-      <p className="text-black/80 text-xl sm:text-base text-center">
+      <p className="text-black/80 text-xs sm:text-sm text-center">
         {description}
       </p>
     </div>
@@ -119,7 +119,7 @@ const Features = () => {
 
             {/* Main heading */}
             <div className="text-center mb-10 sm:mb-16">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black opacity-0 fade-in-element">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black opacity-0 fade-in-element">
                 Why Choose CLenFi?
               </h2>
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto opacity-0 fade-in-element">

@@ -26,7 +26,9 @@ const ExclusiveForDevs = () => {
 
             {/* Main heading */}
             <div className="text-center mb-12 animate-on-scroll">
-             
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black">
+                Build the Future of DeFi Credit
+              </h2>
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
                 Integrate CLenFi's revolutionary credit scoring API into your platform and move beyond overcollateralization to a trust-based lending ecosystem.
               </p>
@@ -146,7 +148,7 @@ const ExclusiveForDevs = () => {
                   </div>
 
                   {/* Modern Grid Layout */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-10">
+                  <div className="grid grid-cols-1 xl:grid-cols-2 gap-8 mb-10 max-w-none">
                     {/* Risk Warning Card */}
                     <div className="group relative overflow-hidden bg-gradient-to-br from-white/30 via-white/20 to-white/10 backdrop-blur-xl rounded-[24px] p-8 border border-white/30 shadow-[0_15px_35px_-5px_rgba(0,0,0,0.1)] hover:shadow-[0_20px_45px_-5px_rgba(0,0,0,0.15)] transition-all duration-500 hover:scale-[1.02]">
                       <div className="absolute inset-0 bg-gradient-to-br from-red-500/5 via-transparent to-orange-500/5 pointer-events-none"></div>

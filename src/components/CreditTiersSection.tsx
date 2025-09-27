@@ -74,7 +74,7 @@ const CreditTiersSection = () => {
 
             {/* Main Headline */}
             <div className="text-center mb-8 sm:mb-12">
-              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
+              <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black">
                 Choose Your Credit Tier
               </h2>
               <p className="text-lg sm:text-xl text-gray-600">

@@ -39,7 +39,7 @@ const RobotShowcaseSection = () => {
               <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-500 text-white mr-2">03</span>
               <span>DeFi Innovation</span>
             </div>
-            <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
+            <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black">
               Traditional Finance Meets <span className="text-green-500">DeFi Intelligence</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">

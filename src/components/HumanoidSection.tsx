@@ -38,7 +38,9 @@ const HumanoidSection = () => {
             <div className="flex items-center gap-4 mb-8 sm:mb-12">
               <div className="flex items-center gap-4">
                 <div className="pulse-chip font-bold italic">
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-200 mr-2">2</span>
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-200 mr-2">
+                    2
+                  </span>
                   <span>How It Works</span>
                 </div>
               </div>
@@ -47,12 +49,10 @@ const HumanoidSection = () => {
 
             {/* Main heading */}
             <div className="text-center mb-12 sm:mb-16 ">
-             
-              
-              <p className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
-                    How CLenFi Makes Credit Simple
-                </p>
-                
+              <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black">
+                How CLenFi Makes Credit Simple
+              </p>
+
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
                 A new approach to credit that puts you in control of your
                 financial identity

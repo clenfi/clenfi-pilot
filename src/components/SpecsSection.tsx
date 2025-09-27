@@ -31,7 +31,7 @@ const SpecsSection = () => {
                 enableBlur={true}
                 baseRotation={5}
                 blurStrength={8}
-                containerClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight mb-2 sm:mb-4"
+                containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display leading-tight mb-2 sm:mb-4"
                 textClassName="text-black block font-display"
               >
                 Forget putting up 150% collateral to borrow 100%. CLenFi gives you credit based on trust, not locked assets. Pay on time, build your reputation, unlock better deals. Start small, grow big - all based on how reliable you are with money.

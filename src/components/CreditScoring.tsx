@@ -37,7 +37,7 @@ const CreditScoring = () => {
             {/* Main heading */}
             <div className="text-center mb-12 sm:mb-16 ">
               
-               <p className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
+               <p className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black">
                  Smart Credit Scores That Work Everywhere
                 </p>
             

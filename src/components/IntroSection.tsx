@@ -60,7 +60,7 @@ const IntroSection = () => {
 
                 <div className="relative z-10 text-center">
                   {/* Main heading with enhanced styling */}
-                  <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9]">
+                  <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9]">
                     <span className="text-black">Your </span>
                     <div className="relative inline-block">
                       <RotatingText
@@ -137,7 +137,7 @@ const IntroSection = () => {
                   <div className="text-center mb-12">
                     {/* Apple-style indicator */}
 
-                    <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
+                    <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-black mb-12 leading-[0.9] text-black">
                       TrustScore: Credit Built on Trust
                     </h2>
 
