@@ -43,7 +43,7 @@ const CTA = () => {
             <span>Start Building Credit</span>
           </div>
           
-          <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold mb-4 sm:mb-6">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
             Ready to Get Credit <br className="hidden sm:inline" />
             <span className="text-green-500">Without Collateral?</span>
           </h2>

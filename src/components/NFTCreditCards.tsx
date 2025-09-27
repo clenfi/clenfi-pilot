@@ -1,6 +1,7 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import ScrollReveal from "./ScrollReveal";
+import Folder from "./Folder";
 
 const NFTCreditCards = () => {
   return (
@@ -35,8 +36,8 @@ const NFTCreditCards = () => {
                 enableBlur={true}
                 baseRotation={3}
                 blurStrength={6}
-                containerClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6 "
-                textClassName="text-black block font-display lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold"
+                containerClassName="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black"
+                textClassName="text-black block font-black"
               >
                 Smart Credit Cards That Improve
               </ScrollReveal>
@@ -111,56 +112,28 @@ const NFTCreditCards = () => {
                 </div>
               </div>
 
-              {/* Simple Cards Grid */}
-              <div className="flex flex-col gap-6">
-                <div
-                  className="bg-white/30 backdrop-blur-xl rounded-[24px] p-6 border border-white/40 shadow-xl opacity-0 animate-on-scroll"
-                  style={{ animationDelay: "0.4s" }}
-                >
-                  <div className="card-content">
-                    
-                    <h3 className="text-xl font-semibold text-black mb-3">
-                      Identity Verification
-                    </h3>
-                    <p className="text-black/80 text-sm">
-                      Prove you're a real person using your government ID.
-                      Secure, private, and instantly verified.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  className="bg-white/30 backdrop-blur-xl rounded-[24px] p-6 border border-white/40 shadow-xl opacity-0 animate-on-scroll"
-                  style={{ animationDelay: "0.5s" }}
-                >
-                  <div className="card-content">
-                    
-                    <h3 className="text-xl font-semibold text-black mb-3">
-                      Credit NFT (cNFT)
-                    </h3>
-                    <p className="text-black/80 text-sm">
-                      Your digital credit card that gets better over time.
-                      Artwork, rewards, and benefits automatically improve as
-                      you build trust.
-                    </p>
-                  </div>
-                </div>
-
-                <div
-                  className="bg-white/30 backdrop-blur-xl rounded-[24px] p-6 border border-white/40 shadow-xl opacity-0 animate-on-scroll"
-                  style={{ animationDelay: "0.6s" }}
-                >
-                  <div className="card-content">
-                    
-                    <h3 className="text-xl font-semibold text-black mb-3">
-                      Debt NFT (dNFT)
-                    </h3>
-                    <p className="text-black/80 text-sm">
-                      Manage your credit flexibly - transfer to others, set up
-                      auto-pay, or get creative with payments while staying
-                      protected.
-                    </p>
-                  </div>
+              {/* Folder Component on the right */}
+              <div className="flex justify-center items-center h-full mt-8 lg:mt-0">
+                <div className="scale-75 sm:scale-90 lg:scale-100">
+                  <Folder
+                    size={3}
+                    color="#AD98FFFF"
+                    className="custom-folder"
+                    items={[
+                     
+                      
+                      <div key="debt" className="p-1">
+                        <h4 className="text-[8px] font-semibold text-gray-800">Debt NFT</h4>
+                        <p className="text-[6px] text-gray-600 leading-none">Manage your credit flexibly - transfer to others, set up auto-pay, or get creative with payments while staying protected.</p>
+                      </div>, <div key="identity" className="p-1">
+                        <h4 className="text-[8px] font-semibold text-gray-800">ID Verify</h4>
+                        <p className="text-[6px] text-gray-600 leading-none">Prove you're a real person using your government ID. Secure, private, and instantly verified.</p>
+                      </div>,<div key="credit" className="p-1">
+                        <h4 className="text-[8px] font-semibold text-gray-800">Credit NFT</h4>
+                        <p className="text-[6px] text-gray-600 leading-none">Your digital credit card that gets better over time. Artwork, rewards, and benefits automatically improve as you build trust.</p>
+                      </div>,
+                    ]}
+                  />
                 </div>
               </div>
             </div>

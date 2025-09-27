@@ -35,17 +35,12 @@ const CreditScoring = () => {
             </div>
 
             {/* Main heading */}
-            <div className="text-center mb-12 sm:mb-16">
-              <ScrollReveal
-                baseOpacity={0.2}
-                enableBlur={true}
-                baseRotation={3}
-                blurStrength={6}
-                containerClassName="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6"
-                textClassName="text-black block font-display  lg:text-[60px]  sm:text-[40px] md:text-[20px]"
-              >
-                Smart Credit Scores That Work Everywhere
-              </ScrollReveal>
+            <div className="text-center mb-12 sm:mb-16 ">
+              
+               <p className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
+                 Smart Credit Scores That Work Everywhere
+                </p>
+            
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
                 Build your decentralized credit profile across multiple blockchains. Our AI-powered system analyzes your DeFi behavior to unlock better rates, higher borrowing limits, and exclusive opportunities.
               </p>

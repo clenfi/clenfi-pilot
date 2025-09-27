@@ -15,15 +15,15 @@ const MadeByHumans = () => {
           {/* Content padding */}
           <div className="relative p-6 sm:p-10 md:p-14">
             {/* Header with badge and line */}
-            <div className="flex items-center gap-4 mb-8 sm:mb-12">
+            {/* <div className="flex items-center gap-4 mb-8 sm:mb-12">
               <div className="flex items-center gap-4 ">
                 <div className="pulse-chip font-bold italic">
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  mr-2">15</span>
-                  <span>Trust</span>
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-200 mr-2">13</span>
+                  <span>Made By Humans</span>
                 </div>
               </div>
               <div className="flex-1 h-px bg-white/30"></div>
-            </div>
+            </div> */}
 
             {/* Main content container with background image overlay */}
             <div className="relative rounded-[20px] sm:rounded-[24px] md:rounded-[28px] overflow-hidden min-h-[250px] sm:min-h-[350px] border border-white/30 bg-white/20 backdrop-blur-xl">

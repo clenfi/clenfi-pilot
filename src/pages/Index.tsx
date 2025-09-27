@@ -111,9 +111,10 @@ import HowItWorks from "@/components/HowItWorks";
 
 import DetailsSection from "@/components/DetailsSection";
 import ImageShowcaseSection from "@/components/ImageShowcaseSection";
+import CreditTiersSection from "@/components/CreditTiersSection";
+import BNPLHighlightSection from "@/components/BNPLHighlightSection";
 import Features from "@/components/Features";
 import MadeByHumans from "@/components/MadeByHumans";
-import CreditScoringSystem from "@/components/CreditScoringSystem";
 import FoundersCards from "@/components/FoundersCards";
 import ProofOfTrust from "@/components/ProofOfTrust";
 import ExclusiveForDevs from "@/components/ExclusiveForDevs";
@@ -179,7 +180,7 @@ const Index = () => {
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
       {/* SplashCursor effect for the entire website */}
-      <SplashCursor />
+      {/* <SplashCursor /> */}
 
       {/* Full-viewport background using ReactBits Prism (non-interactive overlay) */}
       <div className="fixed inset-0 -z-10 pointer-events-none">
@@ -212,10 +213,10 @@ const Index = () => {
               <CreditScoring />
               <NFTCreditCards />
               <HowItWorks />
-              <ImageShowcaseSection />
+              <CreditTiersSection />
               <DetailsSection />
               <Features />
-              <CreditScoringSystem />
+              <ImageShowcaseSection />
               <FoundersCards />
               <ProofOfTrust />
               <ExclusiveForDevs />

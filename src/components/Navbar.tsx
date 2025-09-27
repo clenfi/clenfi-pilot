@@ -1,4 +1,3 @@
-
 import React, { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
 import { FloatingDock } from "@/components/ui/floating-dock";
@@ -18,7 +17,7 @@ const Navbar = () => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 10);
     };
-    
+
     window.addEventListener("scroll", handleScroll, { passive: true });
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
@@ -26,7 +25,7 @@ const Navbar = () => {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth'
+      behavior: "smooth",
     });
   };
 
@@ -69,11 +68,11 @@ const Navbar = () => {
         "fixed top-0 left-0 right-0 z-50 transition-all duration-300",
         "bg-transparent backdrop-blur-0 border-0 shadow-none"
       )}
-      style={{ height: '70px' }}
+      style={{ height: "70px" }}
     >
       <div className="container flex items-center justify-between px-4 sm:px-6 lg:px-8 h-full">
-        <a 
-          href="#" 
+        <a
+          href="#"
           className="flex items-center space-x-2 py-1"
           onClick={(e) => {
             e.preventDefault();
@@ -85,7 +84,7 @@ const Navbar = () => {
             src="/CLENFI (7).png"
             alt="CLenFi Logo"
             className="h-28 sm:h-32 md:h-36 lg:h-40"
-            style={{ maxHeight: '160px', width: 'auto' }}
+            style={{ maxHeight: "160px", width: "auto" }}
           />
         </a>
         {/* FloatingDock replaces both desktop and mobile menus */}

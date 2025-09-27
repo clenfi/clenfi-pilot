@@ -28,7 +28,7 @@ const NextGenCredit = () => {
             <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-green-500/5 to-transparent pointer-events-none"></div>
             
             <div className="relative z-10 text-center">
-              <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6 leading-tight">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
                 Next Generation Credit
               </h2>
               

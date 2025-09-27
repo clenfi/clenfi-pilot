@@ -5,19 +5,20 @@ import ScrollReveal from "./ScrollReveal";
 const HumanoidSection = () => {
   const features = [
     {
-      title: "PAN-Based Zero-Knowledge Verification",
-      description:
-        "Revolutionary identity verification using ZK-proofs of PAN card data, enabling credit assessment without exposing personal information.",
+      title: "Register",
+      description: " Verify once with ZK-PAN, privately and securely.",
     },
     {
-      title: "Decentralized Credit Scoring",
-      description:
-        "Transparent and fair credit scoring powered by blockchain technology, giving you full control over your financial data.",
+      title: "Credit NFT",
+      description: "Receive a Credit NFT showing your borrowing power.",
     },
     {
-      title: "Secure & Private",
-      description:
-        "Your data remains yours. We use advanced encryption and zero-knowledge proofs to ensure your information stays private.",
+      title: "Spend",
+      description: " Use your credit line with stablecoins or BNPL.",
+    },
+    {
+      title: "Repay & Earn",
+      description: " Repay on time, grow your TrustScore, and earn rewards.",
     },
   ];
 
@@ -33,18 +34,25 @@ const HumanoidSection = () => {
 
           {/* Content padding */}
           <div className="relative p-6 sm:p-10 md:p-14">
+            {/* Header with badge and line */}
+            <div className="flex items-center gap-4 mb-8 sm:mb-12">
+              <div className="flex items-center gap-4">
+                <div className="pulse-chip font-bold italic">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-200 mr-2">2</span>
+                  <span>How It Works</span>
+                </div>
+              </div>
+              <div className="flex-1 h-px bg-white/30"></div>
+            </div>
+
             {/* Main heading */}
-            <div className="text-center mb-12 sm:mb-16">
-              <ScrollReveal
-                baseOpacity={0.1}
-                enableBlur={true}
-                baseRotation={5}
-                blurStrength={8}
-                containerClassName="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-display font-black leading-tight mb-6"
-                textClassName="text-black font-bold block font-display lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold"
-              >
-                How CLenFi Makes Credit Simple
-              </ScrollReveal>
+            <div className="text-center mb-12 sm:mb-16 ">
+             
+              
+              <p className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
+                    How CLenFi Makes Credit Simple
+                </p>
+                
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
                 A new approach to credit that puts you in control of your
                 financial identity
@@ -60,11 +68,11 @@ const HumanoidSection = () => {
                     <div className="absolute inset-0 bg-gradient-to-br from-white/5 via-white/2 to-white/2 rounded-[24px] backdrop-blur-2xl border-2 border-white/10 shadow-2xl"></div>
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-400/10 via-purple-400/5 to-emerald-400/10 rounded-[24px] blur-sm"></div>
 
-                    <div className="relative bg-white/10 backdrop-blur-2xl rounded-[24px] p-6 sm:p-8 border-2 border-white/10 hover:bg-white/20 hover:border-white/20 transition-all duration-700 shadow-xl hover:shadow-2xl group-hover:scale-[1.03] group-hover:-translate-y-1">
-                      <h3 className="text-xl sm:text-2xl font-bold text-black/90 mb-4 group-hover:text-black transition-colors duration-300">
+                    <div className="relative bg-white/10 backdrop-blur-2xl rounded-[24px] p-6 sm:p-8 border-2 border-white/10 hover:bg-white/20 hover:border-white/20 transition-all duration-700 shadow-xl hover:shadow-2xl group-hover:scale-[1.03] group-hover:-translate-y-1 ">
+                      <h3 className="text-xl sm:text-2xl font-bold text-black/90 mb-4 group-hover:text-black transition-colors duration-300 underline ">
                         {feature.title}
                       </h3>
-                      <p className="text-black/80 text-base sm:text-lg leading-relaxed">
+                      <p className="text-black/80 text-base sm:text-lg lg:text-2xl  leading-relaxed">
                         {feature.description}
                       </p>
 

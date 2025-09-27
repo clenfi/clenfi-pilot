@@ -6,9 +6,13 @@ const Hero = () => {
   return (
     <section id="hero" className="relative py-12 md:py-16">
       <div className="section-container">
+        {/* Header with badge and line */}
+        
+
         {/* Title */}
         <div className="text-center md:text-left max-w-none mx-auto">
-          <h1 className="text-[clamp(56px,18vw,220px)] md:text-[clamp(56px,14vw,170px)] leading-[0.85] font-extrabold text-black tracking-tight uppercase">
+          <h1 className="text-[clamp(56px,18vw,220px)] md:text-[clamp(56px,14vw,170px)] leading-[0.90] font-extrabold text-black tracking-tight uppercase">
+              {/* <h1 className="text-[clamp(80px,22vw,280px)] md:text-[clamp(80px,18vw,240px)] leading-[0.85] font-extrabold text-black tracking-tight uppercase"></h1> */}
             CREDIT
             <br />
             MADE
@@ -253,7 +257,7 @@ const Hero = () => {
                 containerClassName="my-0 leading-[0.85] font-extrabold uppercase text-black"
                 textClassName="text-[clamp(160px,12vw,280px)] tracking-tight uppercase"
               >
-                BUILD
+                CREDIT
               </ScrollReveal>
             </div>
 
@@ -267,7 +271,7 @@ const Hero = () => {
                 containerClassName="my-0 leading-[0.85] font-extrabold uppercase text-black"
                 textClassName="text-[clamp(160px,12vw,280px)] tracking-tight uppercase"
               >
-                LOAN
+BNPL
               </ScrollReveal>
             </div>
             <div className="h-[420px] rounded-[24px] overflow-hidden shadow-elegant border border-black/10">

@@ -50,7 +50,7 @@ const Rewards = () => {
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-600 text-white mr-2">🎁</span>
             <span>Token Rewards</span>
           </div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold leading-tight mb-6 text-gray-900">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
             Dual-Token Rewards System
           </h2>
           <p className="section-subtitle mx-auto max-w-3xl">

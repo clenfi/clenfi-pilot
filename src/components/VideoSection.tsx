@@ -19,7 +19,7 @@ const VideoSection = () => {
             <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-green-600 text-white mr-2">▶</span>
             <span>Learn About CLenFi</span>
           </div>
-          <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
             Discover the Future of <span className="text-green-500">DeFi Lending</span>
           </h2>
           <p className="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">

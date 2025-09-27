@@ -28,7 +28,7 @@ export default function CreditScoringSystem() {
 
             {/* Main heading */}
             <div className="text-center mb-12">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6  lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
                 Smart Credit Assessment
               </h2>
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">

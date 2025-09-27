@@ -179,77 +179,11 @@ const HowItWorks = () => {
               <div className="flex-1 h-px bg-white/30"></div>
             </div>
 
-            {/* Main heading */}
-            <div className="text-center mb-8 sm:mb-12 lg:mb-16 opacity-0 fade-in-stagger">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6  lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold">
-                How CLenFi Makes Credit Simple
-              </h2>
-              <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
-                Forget putting up 150% collateral to borrow 100%. CLenFi gives you
-                credit based on trust, not locked assets. Pay on time, build your
-                reputation, unlock better deals. Start small, grow big - all based
-                on how reliable you are with money.
-              </p>
-            </div>
-
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 xl:gap-16 items-start mb-16">
-              {/* Left Column - Step Cards */}
-              <div className="space-y-4 opacity-0 fade-in-stagger px-4 sm:px-0">
-                {stepsData.map((step, index) => (
-                  <StepCard
-                    key={step.number}
-                    number={step.number}
-                    title={step.title}
-                    description={step.description}
-                    isActive={activeStep === index}
-                    onClick={() => setActiveStep(index)}
-                  />
-                ))}
-              </div>
-
-              {/* Right Column - Content */}
-              <div className="relative h-full">
-                <div className="relative bg-white/30 backdrop-blur-xl rounded-[24px] overflow-hidden shadow-xl h-full min-h-[400px] opacity-0 fade-in-stagger">
-                  <div className="h-full">
-                    {stepsData.map((step, index) => (
-                      <div
-                        key={index}
-                        className={cn(
-                          "absolute inset-0 transition-opacity duration-1000",
-                          activeStep === index
-                            ? "opacity-100"
-                            : "opacity-0 pointer-events-none"
-                        )}
-                      >
-                        <img
-                          src={step.image}
-                          alt={step.title}
-                          className="w-full h-full object-cover rounded-[24px]"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-dark-900/70 to-transparent rounded-[24px]">
-                          <div className="absolute bottom-0 left-0 right-0 p-3 sm:p-4 lg:p-6 text-white">
-                            <span className="text-green-400 font-medium mb-2 block">
-                              {step.number}
-                            </span>
-                            <h3 className="text-lg sm:text-xl lg:text-2xl font-semibold mb-1 sm:mb-2">
-                              {step.title}
-                            </h3>
-                            <p className="text-white/80 text-sm sm:text-base">
-                              {step.description}
-                            </p>
-                          </div>
-                        </div>
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </div>
-
+            
             {/* Video Section */}
             <div className="mt-16 opacity-0 fade-in-stagger">
               <div className="text-center mb-6 sm:mb-8">
-                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-3 sm:mb-4">
+                <h3 className="text-xl sm:text-2xl lg:text-3xl font-bold text-black mb-3 sm:mb-4 lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold">
                   Understanding Clenfi{" "}
                 </h3>
                 <p className="text-black/70 max-w-2xl mx-auto text-sm sm:text-base">

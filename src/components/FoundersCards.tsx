@@ -231,7 +231,7 @@ export default function FoundersCards() {
             <div className="flex items-center gap-4 mb-8 sm:mb-12">
               <div className="flex items-center gap-4">
                 <div className="pulse-chip font-bold italic">
-                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  mr-2">
+                  <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-200 mr-2">
                     12
                   </span>
                   <span>Founders</span>
@@ -242,7 +242,7 @@ export default function FoundersCards() {
 
             {/* Main heading */}
             <div className="text-center mb-12 sm:mb-16">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-display leading-tight text-black mb-6  lg:text-[60px]  sm:text-[40px] md:text-[20px] font-extrabold">
+              <h2 className="text-5xl sm:text-6xl md:text-7xl lg:text-7xl font-black mb-12 leading-[0.9] text-black">
                 Meet Our Founders
               </h2>
               <p className="text-lg sm:text-xl text-black/70 max-w-3xl mx-auto">
