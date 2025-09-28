@@ -217,8 +217,8 @@ const Index = () => {
               <DetailsSection />
               <Features />
               <ImageShowcaseSection />
-              <FoundersCards />
               <ProofOfTrust />
+              <FoundersCards />
               <ExclusiveForDevs />
               <MadeByHumans />
             </div>

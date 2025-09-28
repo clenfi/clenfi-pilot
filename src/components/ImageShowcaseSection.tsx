@@ -99,7 +99,7 @@ const ImageShowcaseSection = () => {
                 <div className="relative z-10">
                   <div className="w-full relative overflow-hidden">
                     <img
-                      src="/card.jpg"
+                      src="/Gemini_Generated_Image_lstae3lstae3lsta.png"
                       alt="CLenFi Credit Card showcasing the crypto credit companion"
                       className="w-full h-auto object-cover rounded-t-[24px]"
                       style={{

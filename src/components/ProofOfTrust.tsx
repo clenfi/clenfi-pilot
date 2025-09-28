@@ -67,7 +67,7 @@ const ProofOfTrust = () => {
               <div className="flex items-center gap-4">
                 <div className="pulse-chip font-bold italic">
                   <span className="inline-flex items-center justify-center w-5 h-5 rounded-full  mr-2">
-                    13
+                    12
                   </span>
                   <span>Proof Of Trust</span>
                 </div>

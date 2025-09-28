@@ -31,7 +31,7 @@ const MadeByHumans = () => {
               <div
                 className="absolute inset-0 bg-no-repeat bg-cover bg-center"
                 style={{
-                  backgroundImage: "url('/background-section3.png')",
+                  backgroundImage: "url('/Gemini_Generated_Image_woke52woke52woke.png')",
                 }}
               >
                 <div className="absolute inset-0 bg-black/20 backdrop-blur-[2px]"></div>
@@ -41,7 +41,7 @@ const MadeByHumans = () => {
               <div className="relative z-10 p-4 sm:p-5 h-full flex flex-col justify-between">
                 <div className="section-container opacity-0 animate-on-scroll">
                   <img
-                    src="/CLENFI.svg"
+                    src="/CLENFI (7).png"
                     alt="CLenFi Logo"
                     className="h-[200px] contrast-150 drop-shadow-lg"
                   />

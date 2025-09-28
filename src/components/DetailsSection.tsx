@@ -39,7 +39,7 @@ const DetailsSection = () => {
               <div className="bg-white/30 backdrop-blur-xl rounded-[24px] overflow-hidden shadow-xl border border-white/40">
                 {/* Card Header with background image */}
                 <div className="relative h-48 sm:h-64 p-6 sm:p-8 flex items-end rounded-t-[24px]" style={{
-                  backgroundImage: "url('/background-section3.png')",
+                  backgroundImage: "url('/Gemini_Generated_Image_woke52woke52woke.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center"
                 }}>
@@ -102,7 +102,7 @@ const DetailsSection = () => {
               <div className="bg-white/30 backdrop-blur-xl rounded-[24px] overflow-hidden shadow-xl border border-white/40 ">
                 {/* Card Header with background image */}
                 <div className="relative h-48 sm:h-64 p-6 sm:p-8 flex flex-col items-start rounded-t-[24px]" style={{
-                  backgroundImage: "url('/background-section1.png')",
+                  backgroundImage: "url('/Gemini_Generated_Image_anbkibanbkibanbk.png')",
                   backgroundSize: "cover",
                   backgroundPosition: "center"
                 }}>
@@ -115,13 +115,18 @@ const DetailsSection = () => {
 
                 {/* Card Content */}
                 <div className="bg-white/40 backdrop-blur-sm p-4 sm:p-8 border-t border-white/30">
+                  <h3 className="text-lg sm:text-xl font-display mb-6 sm:mb-8 text-black">
+                  Utility token that boosts rewards and unlocks premium benefits
+                  </h3>
                   <div className="space-y-4 sm:space-y-6">
                     <div className="flex items-start gap-3">
+                      
                       <div className="w-6 h-6 rounded-full bg-black/80 backdrop-blur-sm flex items-center justify-center mt-1 flex-shrink-0 border border-white/40">
                         <svg width="14" height="10" viewBox="0 0 14 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                           <path d="M1 5L5 9L13 1" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
                         </svg>
                       </div>
+                      
                       <div className="flex-1">
                         <div className="p-3 rounded-lg bg-white/60 backdrop-blur-sm border border-white/40">
                           <span className="font-semibold text-base text-black">CT Boost:</span> <span className="text-black/80">Stake to boost CT earnings (+5% to +30%)</span>

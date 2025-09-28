@@ -97,7 +97,7 @@ const CreditTiersSection = () => {
                     <h3 className="text-lg sm:text-xl font-display font-bold text-white relative z-10">
                       {tier.name}
                     </h3>
-                    
+
                   </div>
 
                   {/* Card Content */}

@@ -221,7 +221,7 @@ export default function FoundersCards() {
               <div className="flex items-center gap-4">
                 <div className="pulse-chip font-bold italic">
                   <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-purple-200 mr-2">
-                    12
+                    13
                   </span>
                   <span>Founders</span>
                 </div>

@@ -109,7 +109,7 @@ const NFTCreditCards = () => {
                 <div className="scale-75 sm:scale-90 lg:scale-100">
                   <Folder
                     size={3}
-                    color="#AD98FFFF"
+                    color="#7c3aed"
                     className="custom-folder"
                     items={[
                      

@@ -287,7 +287,7 @@ const IntroSection = () => {
               <div className="relative">
                 <div className="relative bg-white/30 backdrop-blur-xl rounded-[24px] p-8 border border-white/40 shadow-xl">
                   <img
-                    src="/card.jpg"
+                    src="/Gemini_Generated_Image_lstae3lstae3lsta.png"
                     alt="CLenFi Credit Card"
                     className="w-full h-auto rounded-xl shadow-lg"
                   />

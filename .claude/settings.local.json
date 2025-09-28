@@ -11,7 +11,8 @@
       "Bash(npx jsrepo add:*)",
       "WebFetch(domain:reactbits.dev)",
       "WebSearch",
-      "WebFetch(domain:www.reactbits.dev)"
+      "WebFetch(domain:www.reactbits.dev)",
+      "Bash(git checkout:*)"
     ],
     "deny": [],
     "ask": []
