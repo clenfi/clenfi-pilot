@@ -1,7 +1,215 @@
 import React from "react";
 import Marquee from "react-fast-marquee";
 import ScrollReveal from "./ScrollReveal";
-import Folder from "./Folder";
+// import Folder from "./Folder";
+import { useEffect, useState, useRef } from "react";
+import { motion } from "framer-motion";
+
+/**
+ * ClenFi Wallet → cNFT & dNFT Hover Cards
+ * - Cards stacked behind the wallet at rest, perfectly centered
+ * - Wallet redesigned with smoother gradients and glow
+ * - Wallet pulled further down and widened so both cards peek clearly
+ */
+
+const BRAND = {
+  black: "#0A0A0A",
+  white: "#FDFDFD",
+  blue: "#00CFFF",
+  gray: "#1A1A1A",
+};
+
+// Tunables
+const CARD_W = 320;
+const CARD_H = 200;
+const TAB_H = 40;
+const WALLET_W = CARD_W + 50; // wider wallet
+const WALLET_H = 300; // taller wallet
+
+type Label = "cNFT" | "dNFT";
+
+const Card = ({
+  label,
+  description,
+  zIndex = 10,
+  offsetY = 0,
+  active,
+  primary = false,
+  onTabEnter,
+  onTabLeave,
+}: {
+  label: Label;
+  description: string;
+  zIndex?: number;
+  offsetY?: number;
+  active: boolean;
+  primary?: boolean;
+  onTabEnter: () => void;
+  onTabLeave: () => void;
+}) => {
+  return (
+    <div
+      className="absolute left-1/2 -translate-x-1/2"
+      style={{
+        zIndex: active ? 1000 : zIndex,
+        width: CARD_W,
+        height: CARD_H,
+        top: offsetY,
+      }}
+    >
+      {/* Stationary TAB HITBOX */}
+      <div
+        onPointerEnter={onTabEnter}
+        onPointerLeave={onTabLeave}
+        className="absolute top-0 z-30 cursor-pointer rounded-md"
+        style={{
+          height: TAB_H,
+          width: CARD_W,
+        }}
+        aria-label={`${label} tab`}
+      />
+
+      {/* Moving visual shell */}
+      <motion.div
+        initial={{ y: 0, scale: 1, opacity: 1 }}
+        animate={{ y: active ? -170 : 0, scale: active ? 1.05 : 1, opacity: 1 }}
+        transition={{ type: "spring", stiffness: 240, damping: 22 }}
+        className="group relative w-full h-full select-none"
+      >
+        <div
+          className="absolute inset-0 rounded-2xl border border-white/10 bg-[rgba(16,16,16,0.95)] backdrop-blur-md overflow-hidden"
+          style={{
+            boxShadow:
+              primary
+                ? "0 10px 36px rgba(0,0,0,0.55), 0 0 0 1px rgba(255,255,255,0.08), 0 0 46px 3px rgba(0,207,255,0.28)"
+                : "0 10px 28px rgba(0,0,0,0.45), 0 0 0 1px rgba(255,255,255,0.05)",
+          }}
+        >
+          {/* Header */}
+          <div
+            className="flex items-center justify-between px-4 text-[13px] tracking-wide"
+            style={{
+              height: TAB_H,
+              background: `linear-gradient(180deg, rgba(0,207,255,0.55), rgba(0,207,255,0.15))`,
+              color: BRAND.white,
+              pointerEvents: "none",
+            }}
+          >
+            <span className="font-medium">{label}</span>
+            <span className="inline-block h-1 w-12 rounded-full opacity-80" style={{ background: BRAND.white }} />
+          </div>
+
+          {/* Body */}
+          <div className="flex h-[calc(100%-40px)] flex-col gap-3 p-5">
+            <div className="text-[12px] uppercase tracking-[0.18em] text-white/60">ClenFi</div>
+            <div className="text-[15px] leading-relaxed text-white/80">{description}</div>
+            <div className="mt-auto flex items-center justify-between text-xs text-white/60">
+              <span>Valid • on chain</span>
+              <span className="inline-flex items-center gap-1">
+                <span className="h-1.5 w-1.5 rounded-full" style={{ background: BRAND.blue }} />
+                <span>Credit Stack</span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </motion.div>
+    </div>
+  );
+};
+
+const WalletSVG = () => (
+  <svg
+    width={WALLET_W}
+    height={WALLET_H}
+    viewBox={`0 0 ${WALLET_W} ${WALLET_H}`}
+    role="img"
+    aria-label="wallet"
+    className="drop-shadow-[0_30px_60px_rgba(0,0,0,0.6)] "
+  >
+    <defs>
+      <linearGradient id="wgrad" x1="0" x2="1" y1="0" y2="1">
+        <stop offset="0in%" stopColor="#1e1e1e" />
+        <stop offset="100%" stopColor="#0d0d0d" />
+      </linearGradient>
+      <filter id="glow" x="-50%" y="-50%" width="200%" height="200%">
+        <feGaussianBlur stdDeviation="6" result="coloredBlur" />
+        <feMerge>
+          <feMergeNode in="coloredBlur" />
+          <feMergeNode in="SourceGraphic" />
+        </feMerge>
+      </filter>
+    </defs>
+    <g>
+      {/* Wallet body */}
+      <rect x="0" y="50" rx="26" ry="26" width={WALLET_W} height={WALLET_H - 100} fill="url(#wgrad)" stroke="rgba(255,255,255,0.1)" />
+      {/* Button */}
+      <rect x={WALLET_W - 90} y={WALLET_H / 2 - 30} width="60" height="60" rx="15" ry="15" fill="#151515" stroke="rgba(255,255,255,0.15)" />
+      <circle cx={WALLET_W - 60} cy={WALLET_H / 2} r="12" fill={BRAND.blue} filter="url(#glow)" />
+    </g>
+  </svg>
+);
+
+function ClenfiWalletCards() {
+  useEffect(() => {
+    document.documentElement.style.setProperty("--clenfi-blue", BRAND.blue);
+  }, []);
+
+  const WALLET_TOP = 120; // pulled wallet further down
+  const PEEK = TAB_H;
+
+  const CNFT_DESC = "Credit NFT: Your digital credit card that gets better over time. Artwork, rewards, and benefits automatically improve as you build trust.";
+  const DNFT_DESC = "Debt NFT: Manage your credit flexibly – transfer to others, set up auto-pay, or get creative with payments while staying protected.";
+
+  const [active, setActive] = useState<Label | null>(null);
+  const leaveTimer = useRef<number | null>(null);
+
+  const armLeave = () => {
+    if (leaveTimer.current) window.clearTimeout(leaveTimer.current);
+    leaveTimer.current = window.setTimeout(() => setActive(null), 100);
+  };
+
+  const cancelLeave = () => {
+    if (leaveTimer.current) window.clearTimeout(leaveTimer.current);
+    leaveTimer.current = null;
+  };
+
+  return (
+    <div className="w-full flex items-center justify-center bg-transparent  ">
+      <div className="relative mx-auto max-w-5xl px-2 sm:px-6  sm:py-8">
+        <div className="relative mx-auto flex flex-col items-center justify-center" style={{ width: WALLET_W }}>
+          <div className="pointer-events-auto relative flex items-center justify-center h-[250px] sm:h-[460px]">
+            <Card
+              label="dNFT"
+              description={DNFT_DESC}
+              zIndex={5}
+              offsetY={WALLET_TOP - PEEK - 100} // raised more to peek
+              primary={false}
+              active={active === "dNFT"}
+              onTabEnter={() => { cancelLeave(); setActive("dNFT"); }}
+              onTabLeave={armLeave}
+            />
+
+            <Card
+              label="cNFT"
+              description={CNFT_DESC}
+              zIndex={6}
+              offsetY={WALLET_TOP - PEEK -60} // adjusted so it's also visible
+              primary
+              active={active === "cNFT"}
+              onTabEnter={() => { cancelLeave(); setActive("cNFT"); }}
+              onTabLeave={armLeave}
+            />
+
+            {/* Wallet sits above cards at rest, centered */}
+            <div className="absolute top-0 left-1/2 -translate-x-1/2 z-50 pointer-events-none">
+              <WalletSVG />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
 
 const NFTCreditCards = () => {
   return (
@@ -41,19 +249,21 @@ const NFTCreditCards = () => {
               </p>
             </div>
 
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-12 items-center mb-8 lg:mb-16">
               {/* Content Side */}
               <div
                 className="opacity-0 animate-on-scroll"
                 style={{ animationDelay: "0.2s" }}
               >
-                <div className="space-y-8">
-                  <div className="flex items-start gap-4">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-black underline">
+                <div className="space-y-6">
+                  {/* Secure Identity Verification Card */}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                    <div className="pointer-events-none absolute -top-16 -right-16 h-32 w-32 rounded-full bg-blue-400/20 blur-2xl group-hover:bg-blue-400/30 transition-all duration-500"></div>
+                    <div className="relative p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-black ">
                         Secure Identity Verification
                       </h3>
-                      <p className="text-black/80">
+                      <p className="text-black/70 leading-relaxed">
                         Verify who you are using your government ID - safely and
                         privately. Your personal information never gets stored
                         anywhere, but we can still confirm you're a real person.
@@ -61,12 +271,14 @@ const NFTCreditCards = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-black underline">
+                  {/* Cards That Level Up Card */}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                    <div className="pointer-events-none absolute -bottom-16 -left-16 h-32 w-32 rounded-full bg-cyan-400/20 blur-2xl group-hover:bg-cyan-400/30 transition-all duration-500"></div>
+                    <div className="relative p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-black ">
                         Cards That Level Up
                       </h3>
-                      <p className="text-black/80">
+                      <p className="text-black/70 leading-relaxed">
                         Your digital credit card automatically gets better as
                         you prove you're reliable. Start with basic benefits and
                         unlock premium features, higher limits, and exclusive
@@ -75,12 +287,14 @@ const NFTCreditCards = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-black underline">
+                  {/* Flexible Payment Options Card */}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                    <div className="pointer-events-none absolute top-1/2 -right-16 h-32 w-32 rounded-full bg-teal-400/20 blur-2xl group-hover:bg-teal-400/30 transition-all duration-500"></div>
+                    <div className="relative p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-black ">
                         Flexible Payment Options
                       </h3>
-                      <p className="text-black/80">
+                      <p className="text-black/70 leading-relaxed">
                         Get creative with how you handle your credit. Transfer
                         payments to others, set up automatic payments, or even
                         trade your credit positions - all while staying
@@ -89,12 +303,14 @@ const NFTCreditCards = () => {
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-black underline">
+                  {/* Always Up-to-Date Card */}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                    <div className="pointer-events-none absolute -top-16 -left-16 h-32 w-32 rounded-full bg-sky-400/20 blur-2xl group-hover:bg-sky-400/30 transition-all duration-500"></div>
+                    <div className="relative p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-black ">
                         Always Up-to-Date
                       </h3>
-                      <p className="text-black/80">
+                      <p className="text-black/70 leading-relaxed">
                         Your credit card information updates automatically. See
                         your current balance, available credit, and payment
                         status in real-time - no waiting for monthly statements.
@@ -104,35 +320,17 @@ const NFTCreditCards = () => {
                 </div>
               </div>
 
-              {/* Folder Component on the right */}
-              <div className="flex justify-center items-center h-full mt-8 lg:mt-0">
+              {/* ClenfiWalletCards Component on the right */}
+              <div className="flex justify-center items-center h-full mt-4 lg:mt-0">
                 <div className="scale-75 sm:scale-90 lg:scale-100">
-                  <Folder
-                    size={3}
-                    color="#7c3aed"
-                    className="custom-folder"
-                    items={[
-                     
-                      
-                      <div key="debt" className="p-1">
-                        <h4 className="text-[8px] font-semibold text-gray-800">Debt NFT</h4>
-                        <p className="text-[6px] text-gray-600 leading-none">Manage your credit flexibly - transfer to others, set up auto-pay, or get creative with payments while staying protected.</p>
-                      </div>, <div key="identity" className="p-1">
-                        <h4 className="text-[8px] font-semibold text-gray-800">ID Verify</h4>
-                        <p className="text-[6px] text-gray-600 leading-none">Prove you're a real person using your government ID. Secure, private, and instantly verified.</p>
-                      </div>,<div key="credit" className="p-1">
-                        <h4 className="text-[8px] font-semibold text-gray-800">Credit NFT</h4>
-                        <p className="text-[6px] text-gray-600 leading-none">Your digital credit card that gets better over time. Artwork, rewards, and benefits automatically improve as you build trust.</p>
-                      </div>,
-                    ]}
-                  />
+                  <ClenfiWalletCards />
                 </div>
               </div>
             </div>
 
             {/* Technical Benefits */}
             <div
-              className="mt-16 opacity-0 animate-on-scroll"
+              className="mt-8 lg:mt-16 opacity-0 animate-on-scroll"
               style={{ animationDelay: "0.6s" }}
             >
               <h3 className="text-2xl sm:text-3xl font-bold text-center mb-8 text-black">

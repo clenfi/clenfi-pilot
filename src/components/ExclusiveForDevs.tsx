@@ -37,42 +37,46 @@ const ExclusiveForDevs = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Content Side */}
           <div className="animate-on-scroll" style={{ animationDelay: "0.2s" }}>
-            <div className="space-y-8">
-              <div className="flex items-start gap-3 sm:gap-4">
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 underline">Credit Scoring API</h3>
-                  <p className="text-gray-600">
+            <div className="space-y-6">
+              {/* Credit Scoring API Card */}
+              <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                <div className="pointer-events-none absolute -top-16 -right-16 h-32 w-32 rounded-full bg-blue-400/20 blur-2xl group-hover:bg-blue-400/30 transition-all duration-500"></div>
+                <div className="relative p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-black">Credit Scoring API</h3>
+                  <p className="text-black/70 leading-relaxed">
                     Access our advanced credit scoring algorithm through a simple API integration. Get real-time trust scores for users based on their on-chain financial behavior and payment history.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 sm:gap-4">
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 underline">Undercollateralized Lending</h3>
-                  <p className="text-gray-600">
+              {/* Undercollateralized Lending Card */}
+              <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                <div className="pointer-events-none absolute -bottom-16 -left-16 h-32 w-32 rounded-full bg-cyan-400/20 blur-2xl group-hover:bg-cyan-400/30 transition-all duration-500"></div>
+                <div className="relative p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-black">Undercollateralized Lending</h3>
+                  <p className="text-black/70 leading-relaxed">
                     Enable undercollateralized loans on your platform using our trust-based scoring system. Move away from traditional overcollateralization models and unlock true DeFi potential.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 sm:gap-4">
-                
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 underline">Multi-Chain Integration</h3>
-                  <p className="text-gray-600">
+              {/* Multi-Chain Integration Card */}
+              <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                <div className="pointer-events-none absolute top-1/2 -right-16 h-32 w-32 rounded-full bg-purple-400/20 blur-2xl group-hover:bg-purple-400/30 transition-all duration-500"></div>
+                <div className="relative p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-black">Multi-Chain Integration</h3>
+                  <p className="text-black/70 leading-relaxed">
                     Our API supports Ethereum, Arbitrum, and Base networks, providing comprehensive credit scoring across multiple blockchain ecosystems for maximum platform coverage.
                   </p>
                 </div>
               </div>
 
-              <div className="flex items-start gap-3 sm:gap-4">
-               
-                <div>
-                  <h3 className="text-xl font-semibold mb-2 underline">Trust-Based Architecture</h3>
-                  <p className="text-gray-600">
+              {/* Trust-Based Architecture Card */}
+              <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                <div className="pointer-events-none absolute -top-16 -left-16 h-32 w-32 rounded-full bg-teal-400/20 blur-2xl group-hover:bg-teal-400/30 transition-all duration-500"></div>
+                <div className="relative p-6">
+                  <h3 className="text-xl font-semibold mb-3 text-black">Trust-Based Architecture</h3>
+                  <p className="text-black/70 leading-relaxed">
                     Build platforms that leverage user reputation and financial behavior rather than excessive collateral requirements, creating a more inclusive and efficient lending ecosystem.
                   </p>
                 </div>
@@ -91,7 +95,7 @@ const ExclusiveForDevs = () => {
                 </div>
                 <h4 className="text-lg font-bold text-black mb-2">CLenFi Credit API</h4>
               </div>
-              
+
               <div className="space-y-4 text-sm">
                 <div className="bg-white/40 backdrop-blur-sm rounded-lg p-4 border border-white/30">
                   <div className="text-blue-600 mb-2">// Get user credit score</div>
@@ -101,7 +105,7 @@ const ExclusiveForDevs = () => {
                   <div className="text-green-600 ml-4">userAddress: <span className="text-orange-600">"0x..."</span></div>
                   <div className="text-green-600">);</div>
                 </div>
-                
+
                 <div className="bg-white/40 backdrop-blur-sm rounded-lg p-4 border border-white/30">
                   <div className="text-blue-600 mb-2">// Response</div>
                   <div className="text-black">&#123;</div>
@@ -112,7 +116,7 @@ const ExclusiveForDevs = () => {
                   <div className="text-black">&#125;</div>
                 </div>
               </div>
-              
+
               <div className="mt-6 p-4 bg-white/40 backdrop-blur-sm rounded-xl border border-white/30">
                 <div className="text-center">
                   <div className="text-2xl font-bold text-blue-700 mb-1">RESTful API</div>

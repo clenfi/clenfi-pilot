@@ -122,7 +122,7 @@ const IntroSection = () => {
 
             {/* Apple Liquid Glass TrustScore Display */}
             <div className="mb-16 animate-on-scroll">
-              <div className="relative overflow-hidden bg-gradient-to-br from-white/12 via-white/8 to-white/4 backdrop-blur-3xl rounded-[40px] p-10 sm:p-12 md:p-16 border border-white/15 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.25)] hover:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.35)] transition-all duration-700">
+              <div className="relative overflow-hidden bg-gradient-to-br from-white/12 via-white/8 to-white/4 backdrop-blur-3xl rounded-[40px] p-10  md:p-16 border border-white/15 shadow-[0_30px_100px_-20px_rgba(0,0,0,0.25)] hover:shadow-[0_40px_120px_-20px_rgba(0,0,0,0.35)] transition-all duration-700 ">
                 {/* Floating gradient orbs for depth */}
                 <div className="absolute -top-32 -right-32 w-64 h-64 bg-gradient-to-br from-blue-400/8 to-cyan-400/8 rounded-full blur-3xl"></div>
                 <div className="absolute -bottom-32 -left-32 w-64 h-64 bg-gradient-to-br from-purple-400/8 to-pink-400/8 rounded-full blur-3xl"></div>
@@ -147,11 +147,11 @@ const IntroSection = () => {
                   </div>
 
                   {/* Apple-style feature grid */}
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-full">
                     {features.map((feature, index) => (
                       <div
                         key={feature.name}
-                        className="group relative overflow-hidden bg-white/15 backdrop-blur-2xl rounded-[28px] p-8 border border-white/20 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_80px_-10px_rgba(0,0,0,0.25)] transition-all duration-600 hover:scale-[1.01] hover:bg-white/20"
+                        className="group relative overflow-hidden bg-white/15 backdrop-blur-2xl rounded-[28px] p-6 sm:p-8 border border-white/20 shadow-[0_20px_60px_-10px_rgba(0,0,0,0.15)] hover:shadow-[0_25px_80px_-10px_rgba(0,0,0,0.25)] transition-all duration-600 hover:scale-[1.01] hover:bg-white/20 w-full "
                         style={{ animationDelay: `${index * 0.15}s` }}
                       >
                         {/* Individual card gradient overlay */}
@@ -170,11 +170,11 @@ const IntroSection = () => {
                         {/* Apple-style shine effect */}
                         <div className="absolute top-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-white/40 to-transparent"></div>
 
-                        <div className="relative z-10">
+                        <div className="relative z-10 ">
                           {/* Feature header */}
                           <div className="mb-6">
                             <h4
-                              className={`text-2xl font-bold leading-tight underline`}
+                              className={`text-xl font-bold leading-tight text-center  `}
                             >
                               {feature.name}
                             </h4>
@@ -186,17 +186,7 @@ const IntroSection = () => {
                           </p>
 
                           {/* Apple-style subtle accent line */}
-                          <div
-                            className={`absolute bottom-0 left-0 h-0.5 w-0 group-hover:w-full transition-all duration-700 ${
-                              index === 0
-                                ? "bg-gradient-to-r from-emerald-500/60 to-green-500/60"
-                                : index === 1
-                                ? "bg-gradient-to-r from-blue-500/60 to-indigo-500/60"
-                                : index === 2
-                                ? "bg-gradient-to-r from-purple-500/60 to-pink-500/60"
-                                : "bg-gradient-to-r from-orange-500/60 to-amber-500/60"
-                            }`}
-                          ></div>
+                          
                         </div>
                       </div>
                     ))}
@@ -241,7 +231,7 @@ const IntroSection = () => {
 
                 <div className="space-y-8">
                   <div className="relative group">
-                    <div className="absolute inset-0 bg-gradient-to-r from-red-50/60 to-red-100/40 rounded-2xl backdrop-blur-sm border border-red-200/50"></div>
+                    <div className="absolute inset-0 bg-gradient-to-r from-red-50/60 to-red-100/40 rounded-2xl backdrop-blur-sm "></div>
                     <div className="relative p-6">
                       <h4 className="font-bold text-xl mb-3 text-black group-hover:text-red-800 transition-colors duration-300">
                         Over-Collateralization Problem

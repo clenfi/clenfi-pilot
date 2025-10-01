@@ -23,7 +23,7 @@ const founders: Founder[] = [
     role: "Co-Founder",
     // role: "Marketing and Head",
     creditScore: 890,
-    cardNumber: "4521 **** **** 1847",
+    cardNumber: "4521 ****  1847",
     tier: "Diamond",
     joinDate: "01/25",
     bgGradient: "from-gray-900 via-gray-800 to-black",
@@ -39,7 +39,7 @@ const founders: Founder[] = [
     // role: "Blockchain Developer",
      role: "Co-Founder",
     creditScore: 875,
-    cardNumber: "4521 **** **** 2956",
+    cardNumber: "4521 ****  2956",
     tier: "Diamond",
     joinDate: "01/25",
     bgGradient: "from-gray-900 via-gray-800 to-black",
@@ -55,7 +55,7 @@ const founders: Founder[] = [
     // role: "Blockchain Developer",
      role: "Co-Founder",
     creditScore: 862,
-    cardNumber: "4521 **** **** 3074",
+    cardNumber: "4521 ****  3074",
     tier: "Diamond",
     joinDate: "01/25",
     bgGradient: "from-gray-900 via-gray-800 to-black",
@@ -71,7 +71,7 @@ const founders: Founder[] = [
     // role: "Fullstack Developer",
      role: "Co-Founder",
     creditScore: 895,
-    cardNumber: "4521 **** **** 4183",
+    cardNumber: "4521 **** 4183",
     tier: "Diamond",
     joinDate: "01/25",
     bgGradient: "from-gray-900 via-gray-800 to-black",
@@ -91,11 +91,11 @@ function CreditCard({ founder, delay }: { founder: Founder; delay: number }) {
         className="opacity-0 animate-fade-in"
         style={{ animationDelay: `${delay}s` }}
       >
-        <CometCard className="w-full" rotateDepth={8} translateDepth={8}>
+        <CometCard className="w-full" rotateDepth={0} translateDepth={0}>
           <div className="relative w-full h-56 rounded-2xl bg-gradient-to-br from-black via-gray-900 to-gray-800 p-6 shadow-[0_20px_50px_rgba(0,0,0,0.5)] border border-gray-700/30">
 
             {/* Minimal overlay */}
-            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/5 via-transparent to-white/3"></div>
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-tr from-white/5 via-transparent to-white/3 pointer-events-none"></div>
 
             {/* Card Header */}
             <div className="relative z-10 flex justify-between items-start mb-6">
@@ -208,7 +208,7 @@ export default function FoundersCards() {
     <section className="w-full py-10 sm:py-16 bg-transparent" id="founders">
       <div className="container px-4 sm:px-6 lg:px-8 mx-auto">
         {/* Liquid glass card */}
-        <div className="relative overflow-hidden rounded-[28px] sm:rounded-[32px] md:rounded-[40px] border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_10px_40px_-10px_rgba(0,0,0,0.25)]">
+        <div className="relative overflow-hidden rounded-[28px] sm:rounded-[32px] md:rounded-[40px] border border-white/20 bg-white/10 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.25)]">
           {/* Soft gradient flares */}
           <div className="pointer-events-none absolute -top-32 -left-24 h-80 w-80 rounded-full bg-blue-400/20 blur-3xl"></div>
           <div className="pointer-events-none absolute -bottom-24 -right-16 h-72 w-72 rounded-full bg-purple-300/20 blur-3xl"></div>

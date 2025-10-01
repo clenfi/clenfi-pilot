@@ -119,35 +119,35 @@ const CreditScoring = () => {
               </div>
               
                   {/* Score Metrics */}
-                  <div className="mt-8 grid grid-cols-3 gap-4">
+                  <div className="mt-8 grid grid-cols-3 gap-2 sm:gap-4">
                     {/* Rating Card */}
-                    <div className="relative group overflow-hidden rounded-2xl p-6 backdrop-blur-2xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
+                    <div className="relative group overflow-hidden rounded-2xl p-3 sm:p-6 aspect-square backdrop-blur-2xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
                       {/* Animated background */}
                       <div className="absolute inset-0 bg-gradient-to-br from-green-500/5 to-emerald-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="relative z-10">
-                        <div className="text-3xl font-bold text-black">A+</div>
-                        <div className="text-sm text-black/80 mt-1">Rating</div>
+                      <div className="relative z-10 flex flex-col justify-center items-center h-full">
+                        <div className="text-2xl sm:text-3xl font-bold text-black">A+</div>
+                        <div className="text-xs sm:text-sm text-black/80 mt-1">Rating</div>
                       </div>
                       {/* Glow effect */}
                       <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-green-400/20 rounded-full filter blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
                     </div>
 
                     {/* LTV Card */}
-                    <div className="relative group overflow-hidden rounded-2xl p-6 backdrop-blur-2xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
+                    <div className="relative group overflow-hidden rounded-2xl p-3 sm:p-6 aspect-square backdrop-blur-2xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
                       <div className="absolute inset-0 bg-gradient-to-br from-blue-500/5 to-indigo-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="relative z-10">
-                        <div className="text-3xl font-bold text-black">85%</div>
-                        <div className="text-sm text-black/80 mt-1">Max LTV</div>
+                      <div className="relative z-10 flex flex-col justify-center items-center h-full">
+                        <div className="text-2xl sm:text-3xl font-bold text-black">85%</div>
+                        <div className="text-xs sm:text-sm text-black/80 mt-1">Max LTV</div>
                       </div>
                       <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-blue-400/20 rounded-full filter blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
                     </div>
 
                     {/* Rewards Card */}
-                    <div className="relative group overflow-hidden rounded-2xl p-6 backdrop-blur-2xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
+                    <div className="relative group overflow-hidden rounded-2xl p-3 sm:p-6 aspect-square backdrop-blur-2xl bg-gradient-to-br from-white/20 to-white/5 border border-white/20 shadow-[0_8px_32px_rgba(0,0,0,0.1)] hover:shadow-[0_12px_40px_rgba(0,0,0,0.15)] transition-all duration-300 hover:-translate-y-1">
                       <div className="absolute inset-0 bg-gradient-to-br from-purple-500/5 to-fuchsia-500/10 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
-                      <div className="relative z-10">
-                        <div className="text-3xl font-bold text-black">2.5x</div>
-                        <div className="text-sm text-black/80 mt-1">Rewards</div>
+                      <div className="relative z-10 flex flex-col justify-center items-center h-full">
+                        <div className="text-2xl sm:text-3xl font-bold text-black">2.5x</div>
+                        <div className="text-xs sm:text-sm text-black/80 mt-1">Rewards</div>
                       </div>
                       <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-purple-400/20 rounded-full filter blur-2xl group-hover:blur-3xl transition-all duration-700"></div>
                     </div>
@@ -157,42 +157,46 @@ const CreditScoring = () => {
 
               {/* Content Side */}
               <div>
-                <div className="space-y-8">
-                  <div className="flex items-start gap-4">
-                    
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-black underline">Payment History Tracking</h3>
-                      <p className="text-black/80">
+                <div className="space-y-6">
+                  {/* Payment History Tracking Card */}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                    <div className="pointer-events-none absolute -top-16 -right-16 h-32 w-32 rounded-full bg-green-400/20 blur-2xl group-hover:bg-green-400/30 transition-all duration-500"></div>
+                    <div className="relative p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-black">Payment History Tracking</h3>
+                      <p className="text-black/70 leading-relaxed">
                         We track how well you pay back loans and manage your credit. Every on-time payment improves your score and unlocks better rates.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-black underline">Smart Risk Evaluation</h3>
-                      <p className="text-black/80">
+                  {/* Smart Risk Evaluation Card */}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                    <div className="pointer-events-none absolute -bottom-16 -left-16 h-32 w-32 rounded-full bg-blue-400/20 blur-2xl group-hover:bg-blue-400/30 transition-all duration-500"></div>
+                    <div className="relative p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-black">Smart Risk Evaluation</h3>
+                      <p className="text-black/70 leading-relaxed">
                         Your credit score updates automatically based on how the crypto market is doing and how well you're managing your investments and payments.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-                    
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-black underline">Better Scores = Better Deals</h3>
-                      <p className="text-black/80">
+                  {/* Better Scores = Better Deals Card */}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                    <div className="pointer-events-none absolute top-1/2 -right-16 h-32 w-32 rounded-full bg-purple-400/20 blur-2xl group-hover:bg-purple-400/30 transition-all duration-500"></div>
+                    <div className="relative p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-black">Better Scores = Better Deals</h3>
+                      <p className="text-black/70 leading-relaxed">
                         Higher credit scores get you amazing perks: lower fees, higher credit limits, protection during market crashes, and access to exclusive investment opportunities.
                       </p>
                     </div>
                   </div>
 
-                  <div className="flex items-start gap-4">
-
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2 text-black  underline">Always Getting Better</h3>
-                      <p className="text-black/80">
+                  {/* Always Getting Better Card */}
+                  <div className="relative overflow-hidden rounded-3xl border border-white/20 bg-white/10 backdrop-blur-2xl shadow-[0_8px_32px_-8px_rgba(0,0,0,0.2)] hover:bg-white/15 transition-all duration-300 group">
+                    <div className="pointer-events-none absolute -top-16 -left-16 h-32 w-32 rounded-full bg-cyan-400/20 blur-2xl group-hover:bg-cyan-400/30 transition-all duration-500"></div>
+                    <div className="relative p-6">
+                      <h3 className="text-xl font-semibold mb-3 text-black">Always Getting Better</h3>
+                      <p className="text-black/70 leading-relaxed">
                         Your credit score improves with every payment you make on time. Stay consistent with payments and try different crypto activities to boost your rating.
                       </p>
                     </div>

@@ -4,7 +4,7 @@ import ScrollReveal from "./ScrollReveal";
 // NEW HERO IMPLEMENTATION (based on provided reference)
 const Hero = () => {
   return (
-    <section id="hero" className="relative py-12 md:py-16">
+    <section id="hero" className="relative py-12 md:py-16 font-">
       <div className="section-container">
         {/* Title */}
         <div className="text-center md:text-left max-w-none mx-auto">
@@ -297,7 +297,7 @@ const Hero = () => {
                 containerClassName="my-0 leading-[0.85] font-extrabold uppercase text-black"
                 textClassName="text-[clamp(160px,12vw,280px)] tracking-tight uppercase"
               >
-                BUILD
+                CREDIT
               </ScrollReveal>
             </div>
 
@@ -311,7 +311,7 @@ const Hero = () => {
                 containerClassName="my-0 leading-[0.85] font-extrabold uppercase text-black"
                 textClassName="text-[clamp(160px,12vw,280px)] tracking-tight uppercase"
               >
-                LOAN
+                BNPL
               </ScrollReveal>
             </div>
             <div className="h-[420px] rounded-[24px] overflow-hidden shadow-elegant border border-black/10">

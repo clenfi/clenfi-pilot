@@ -148,10 +148,11 @@ export default {
 				'pulse-gradient': 'linear-gradient(180deg, rgba(34,197,94,0.8) 0%, rgba(34,197,94,0) 100%)',
 			},
 			fontFamily: {
-				'sans': ['Inter', 'sans-serif'],
+				'sans': ['"DM Serif Text"', 'Inter', 'serif'],
 				'display': ['Brockmann', 'SF Pro Display', 'Inter', 'sans-serif'],
 				'brockmann': ['Brockmann', 'serif'],
 				'playfair': ['"Playfair Display"', 'serif'],
+				'dm-serif': ['"DM Serif Text"', 'serif'],
 			},
 			boxShadow: {
 				'elegant': '0 4px 20px rgba(0, 0, 0, 0.08)',
